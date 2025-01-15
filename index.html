@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
@@ -21,36 +20,34 @@
   <script src="js/script.js"></script>
   <script src="js/p5.js"></script>
 </head>
-
 <body>
 <div id="world">
   <div id="westsea">
     <div id="westland">
       <div id="westCountry">
-        <div id="titleProvince">
-          <span id="modest">anne boutet's portfolio</span>
+        <div id="titleProvince" class="header">
+          <span class="modest">anne boutet's portfolio</span>
         </div>
         <div id="projectProvince">
-          <span id="modest">list of works</span>
-          <button class="project-list-button">pART</button>
-          <button class="project-list-button">read.my.column</button>
-          <button class="project-list-button">Greenhouse Machine</button>
-          <button class="project-list-button">Magnetic Bodies</button>
+          <span class="modest header">list of works</span>
+          <button class="project-list-button" id="part">pART</button>
+          <button class="project-list-button" id="read">read.my.column</button>
+          <button class="project-list-button" id="greenhouse">Greenhouse Machine</button>
+          <button class="project-list-button" id="magnetic">Magnetic Bodies</button>
         </div>
         <div id="actionProvince">
-          <button class="action-list-button"><span id="modest">why hire me?</span></button>
-          <button class="action-list-button"><span id="modest">contact</span></button>
-          <button class="action-list-button"><span id="modest">cv + bio</span></button>
-          <button class="action-list-button"><span id="modest">artist statement</span></button>
+          <button class="action-list-button"><span class="modest">why hire me?</span></button>
+          <button class="action-list-button"><span class="modest">contact</span></button>
+          <button class="action-list-button"><span class="modest">cv + bio</span></button>
+          <button class="action-list-button"><span class="modest">artist statement</span></button>
         </div>
       </div>
     </div>
   </div>
   <div id="eastsea">
     <canvas id="hurricane"></canvas>
-    <div id="eastland">info bubbles</div>
+    <div id="eastland"></div>
   </div>
 </div>
 </body>
-
 </html>
