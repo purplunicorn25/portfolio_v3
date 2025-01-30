@@ -12,19 +12,19 @@
                 "label": "Artistic Skills",
                 "subcontent": {
                     "because": "<h2>I can draw.</h2>",
-                    "detail": "From technical drawings to free-hand painting, I can get around with many traditional medium. I think early sketches are an essentiel part of the design process and I like to use them to define my vision."
+                    "detail": "<p>From technical drawings to free-hand painting, I can get around with many traditional medium. I think early sketches are an essentiel part of the design process and I like to use them to define my vision.</p>"
                 }
             },{
                 "label": "Technical Skills",
                 "subcontent": {
                     "because": "<h2>I can code.</h2>",
-                    "detail": "I am very tech savvy and I like to get technical. I am keen to learn new programming languages or libraries and know both their potential and limits."
+                    "detail": "<p>I am very tech savvy and I like to get technical. I am keen to learn new programming languages or libraries and know both their potential and limits.</p>"
                 }
             },{
                 "label": "Social Skills",
                 "subcontent": {
                      "because": "<h2>I can animate.</h2>",
-                    "detail": "I have a lot of experience with customer service and I am comfortable with people. I have lead activities in the past and I am confident with making people at ease no matter the subject or purpose. Empathy is foundational in design and it is a skill that I have and will keep on mastering."
+                    "detail": "<p>I have a lot of experience with customer service and I am comfortable with people. I have lead activities in the past and I am confident with making people at ease no matter the subject or purpose.</p><p>Empathy is foundational in design and it is a skill that I have and will keep on mastering.</p>"
                 }
             }
         ]
@@ -37,11 +37,11 @@
         "quadrant": "narrow",
         "content": {
             "greeting": "<h2>Let's exchange ideas!</h2>",
-            "email": "<p>If you prefer e-mail:<br><a href='mailto:anne.boutet@hotmail.com'>anne.boutet@hotmail.com</a></p>",             
-            "phone": "<p>If you are curious to hear my voice:<br><a href='tel:+14388301273'>+1-(438)-830-1273</a></p>",
-            "network": "<p>If you want to join my network:<br><a href='https://ca.linkedin.com/in/anne-boutet-440b43128/en?trk=people-guest_people_search-card'>LinkedIn Profile</a></p>",
-            "where": "<p>If you wish to accidently run into me:<br><a href='https://maps.app.goo.gl/qSg733EAJuCx5hrZ8'>Montreal, H2S</a></p>",
-            "github": "<p>If you wonder how I made my portfolio:<br><a href='https://github.com/purplunicorn25'>Github Profile</a></p>"
+            "email": "<p>If you prefer e-mail:<br><a href='mailto:anne.boutet@hotmail.com'>anne.boutet@hotmail.com &#xF1C4;</a></p>",             
+            "phone": "<p>If you are curious to hear my voice:<br><a href='tel:+14388301273'>+1-(438)-830-1273 &#xF1C4;</a></p>",
+            "network": "<p>If you want to join my network:<br><a href='https://ca.linkedin.com/in/anne-boutet-440b43128/en?trk=people-guest_people_search-card'>LinkedIn Profile &#xF1C4;</a></p>",
+            "where": "<p>If you wish to accidently run into me:<br><a href='https://maps.app.goo.gl/qSg733EAJuCx5hrZ8'>Montreal, H2S &#xF1C4;</a></p>",
+            "github": "<p>If you wonder how I made my portfolio:<br><a href='https://github.com/purplunicorn25/portfolio_2025'>Github Profile &#xF1C4;</a></p>"
         }
     },{
         "id": "cv",
@@ -72,9 +72,9 @@
         "height": "auto",
         "quadrant": "wide",
         "content": {
-            "first": "I am a fashion designer.<br>I am an art historian.<br>I am a programmer.<br><br>But I am also neither.<br><br>I despise the waste and capitalist hierarchy of the fashion industry.<br>I despise the colonial past and present of museal institutions.<br>I despise my dependency for digital tools and entertainment.<br>",
-            "second": "I like to think of where these disciplines intersect.<br><br>I ask these questions: <br><br>Can the history of clothing inform largely on the spirit of an era?<br>Can digital artforms benefit museums in their display of historical clothing?<br>Can digital video games be included in traditional exhibition spaces and art education?<br>Can I answer these questions?<br>",
-            "third": "<br>I am a designer.<br><br>I am someone who likes problems: thinking, evolving, solving.<br>I am someone who prefers written words to images and who thrives with logic gates.<br>I am inspired by human beings, their beauty, their flaws.<br>I am a firm believer in beautiful things as necessary, never dismissible.<br><br>I am, also, an anaphora lover."
+            "first": "<p>I am a fashion designer.<br>I am an art historian.<br>I am a programmer.</p><p>But I am also neither.</p><p>I despise the waste and capitalist hierarchy of the fashion industry.<br>I despise the colonial past and present of museal institutions.<br>I despise my dependency for digital tools and entertainment.</p>",
+            "second": "<p>I like to think of where these disciplines intersect.</p><p>I ask these questions: </p><p>Can the history of clothing inform largely on the spirit of an era?<br>Can digital artforms benefit museums in their display of historical clothing?<br>Can digital video games be included in traditional exhibition spaces and art education?<br>Can I answer these questions?</p>",
+            "third": "<p>I am a designer.</p><p>I am someone who likes problems: thinking, evolving, solving.<br>I am someone who prefers written words to images and who thrives with logic gates.<br>I am inspired by human beings, their beauty, their flaws.<br>I am a firm believer in beautiful things as necessary, never dismissible.<br></p><p>I am, also, an anaphora lover.</p>"
         }
     }
 ],
@@ -83,51 +83,46 @@
         "id": "part",
         "barLabel": "My Best User Research Project",
         "content": {
-            "title": "<h2>pART</h2>",
-            "medium": "<h4>User Experience Design, Mobile App Prototype, Augmented Reality & Public Art</h4>",
-            "thumbnail": "<img class='thumbnail' src='assets/images/part/thumbnail.png'>",
-            "summary": "<p>pARt combines art and technology; it is a mobile application prototype that enables local artists to publish their art digitally in any public location. App users may then admire these artworks with augmented reality technologies.</p>",
-            "button": "<button class='CTA'>Tell me more...</button>"
+            "title": "pART",
+            "medium": "User Experience Design, Mobile App Prototype, Augmented Reality & Public Art",
+            "thumbnail": "assets/images/part/thumbnail.png",
+            "summary": "pARt combines art and technology; it is a mobile application prototype that enables local artists to publish their art digitally in any public location. App users may then admire these artworks with augmented reality technologies."
         }
     },{
         "id": "read",
         "barLabel": "My Best Conceptual Project",
         "content": {
-            "title": "<h2>read.my.column</h2>",
-            "medium": "<h4>Web Experience, WEBGL, Generated Poetry</h4>",
-            "thumbnail": "<img class='thumbnail' src='assets/images/read_my_column/thumbnail.jpg'>",
-            "summary": "<p><i>read.my.column</i> is a WebGL navigable prototype. It critiques how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography.</p>",
-            "button": "<button class='CTA'>Tell me more...</button>"
+            "title": "read.my.column",
+            "medium": "Web Experience, WEBGL, Generated Poetry",
+            "thumbnail": "assets/images/read_my_column/thumbnail.jpg",
+            "summary": "<i>read.my.column</i> is a WebGL navigable prototype. It critiques how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography."
         }
     },{
         "id": "greenhouse",
         "barLabel": "My Best 3D Modelling Project",
         "content": {
-            "title": "<h2>Greenhouse Machine</h2>",
-            "medium": "<h4>3D Sculpture, Blender, Procedural Texturing, Geometry Nodes</h4>",
-            "thumbnail": "<img class='thumbnail' src='assets/images/greenhouse_machine/thumbnail.png'>",
-            "summary": "<p>Greenhouse machine is a fictional scene taking place in a pre-dystopian Montreal. It showcases a small greenhouse filled with greens. Its shape is meant to echo a drone while its style recalls eerie Victorian metal and glass greenhouses.  My hope was to contrast an eerie inside with a dystopian outside.</p>",
-            "button": "<button class='CTA'>Tell me more...</button>"
+            "title": "Greenhouse Machine",
+            "medium": "3D Sculpture, Blender, Procedural Texturing, Geometry Nodes",
+            "thumbnail": "assets/images/greenhouse_machine/thumbnail.png'",
+            "summary": "Greenhouse machine is a fictional scene taking place in a pre-dystopian Montreal. It showcases a small greenhouse filled with greens. Its shape is meant to echo a drone while its style recalls eerie Victorian metal and glass greenhouses.  My hope was to contrast an eerie inside with a dystopian outside."
         }
     },{
         "id": "magnetic",
-        "barLabel": "My Best Interactive Installation Project",
+        "barLabel": "My Best Installation Project",
         "content": {
-            "title": "<h2>Magnetic Bodies</h2>",
-            "medium": "<h4>Interactive Installation, TouchDesigner</h4>",
-            "thumbnail": "<img class='thumbnail' src='assets/images/magnetic_bodies/thumbnail.jpg'>",
-            "summary": "<p>Magnetic Bodies is a project that wishes to highlight the presence of gravity in everyday actions by showcasing an unique case of magnetism: ferrofluids. This interactive installation includes a digital simulation of ferrofluids where human bodies and actions are given the role of magnetic field.</p>",
-            "button": "<button class='CTA'>Tell me more...</button>"
+            "title": "Magnetic Bodies",
+            "medium": "Interactive Installation, TouchDesigner",
+            "thumbnail": "assets/images/magnetic_bodies/thumbnail.jpg",
+            "summary": "Magnetic Bodies is a project that wishes to highlight the presence of gravity in everyday actions by showcasing an unique case of magnetism: ferrofluids. This interactive installation includes a digital simulation of ferrofluids where human bodies and actions are given the role of magnetic field."
         }
     },{
         "id": "pain",
         "barLabel": "My Best Hands-On UX Experience",
         "content": {  
-            "title": "<h2>Play The Pain</h2>",
-            "medium": "<h4>UX Evaluation, UI Design, Neuroscience Research App</h4>",
-            "thumbnail": "<img class='thumbnail' src='assets/images/play_pain/img_03.PNG'>",
-            "summary": "<p>Play the Pain is a media Health platform designed to put chronic pain patients and their caregivers at the heart of pain research. I intervened during their second iteration for a mobile and Web application. I worked as a UX/UI designer to improved their UI and the overall navigation for a better user experience. </p>",
-            "button": "<button class='CTA'>Tell me more...</button>"
+            "title": "Play The Pain",
+            "medium": "UX Evaluation, UI Design, Neuroscience Research App",
+            "thumbnail": "assets/images/play_pain/img_03.PNG",
+            "summary": "Play the Pain is a media Health platform designed to put chronic pain patients and their caregivers at the heart of pain research. I intervened during their second iteration for a mobile and Web application. I worked as a UX/UI designer to improved their UI and the overall navigation for a better user experience."
         }
     }
 ]

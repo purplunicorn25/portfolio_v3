@@ -4,7 +4,7 @@ let NUM_LINES = 100;
 let LINE_LENGTH = 8; 
 
 function p5setup() {
-  createCanvas(windowWidth/2, windowHeight, hurricane); // create a canvas half the size of the screen
+  // createCanvas(windowWidth/2, windowHeight, hurricane); // create a canvas half the size of the screen
   angleMode(DEGREES);
   // Create lines objects
   for (let i = 0; i < NUM_LINES; i++) {
