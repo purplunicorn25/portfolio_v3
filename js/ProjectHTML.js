@@ -6,10 +6,10 @@ class ProjectHTML {
         this.summary = projectContentData.content.summary;
         this.composeHTML = function () {
             let projectPOP = {
-                title: `<h2>${this.title}</h2>`,
+                title: `<h2 class="">${this.title}</h2>`,
                 medium: `<h4>${this.medium}</h4>`,
                 thumbnail: `<img class='thumbnail' src='${this.visual}'>`,
-                summary: `<p>${this.summary}<p/>`,
+                summary: `<div class="text-box"><p>${this.summary}<p/></div>`,
                 button: "<button class='cta bg-accent text-main'>Tell me more...</button>"
             };
             return projectPOP;

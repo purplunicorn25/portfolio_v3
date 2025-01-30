@@ -1,7 +1,6 @@
 /* --------------- */
 /* Reset & Presets */
 /* --------------- */
-
 body, h1, h2, h3, h4, h5, p, figure, picture {
     margin: 0; 
 } button {
@@ -17,25 +16,44 @@ body, h1, h2, h3, h4, h5, p, figure, picture {
     max-width: 100%;
     display: block;
 }
-
-/* --------------- */
-/* Utility classes */
-/* --------------- */
+/* ----------------- */
+/* Custom Properties */
+/* ----------------- */
+html {
+    font-size: 16px;
+}
 :root {
     /* colors hsl */
     --clr-main: 186, 64%, 10%;
     --clr-accent: 300, 76%, 72%;
     --clr-accent-sec: 208, 100%, 97%;
-    /* placement */
+    /* fonts sizes */
+    --fs-900: 6.25rem;
+    --fs-800: 3.5rem; 
+    --fs-700: 2rem; 
+    --fs-600: 1.75rem;
+    --fs-500: 1.4rem; 
+    --fs-400: 1rem; 
+    --fs-300: 0.875rem;
+    --fs-200: 0.75rem;
+    --fs-100: 0.5rem;
+    /* fonts families */
+    --ff-primary: tabular-regular;
+    --ff-primary-bold: tabular-bold;
+    --ff-secondary: gulax;
+    --ff-decorative: archiv-grotesk;
+    /* placement values */
     --header-common-margin: 2%;
     --project-list-btn-pad: 5%;
+    --info-pop-pad: 30px;
     --p-margin-block: 15px;
-    /* pop */
+    /* pop values */
     --pop-bg-color: hsl(var(--clr-main));
     --pop-text-color: hsl(var(--clr-accent));
     --pop-padding: 30px; 
     /* decoration */
     --border-w: 1px;
+
     /* FONTS */
     /* h1 */
     --desktop-font-display-multifunction-home-bold-size: 40px;
@@ -57,6 +75,7 @@ body, h1, h2, h3, h4, h5, p, figure, picture {
     --desktop-font-text-pop-family: tabular-regular;
     --desktop-font-button-pop-size: 40px;
     --desktop-font-button-pop-family: tabular-regular;
+    
 } 
 /* ------------------------ */
 /* Layout Hardcoded Classes */
@@ -64,14 +83,16 @@ body, h1, h2, h3, h4, h5, p, figure, picture {
 body {
     margin: 0;
     overflow: hidden;
-    line-height: 1.5;
+    line-height: 1.8;
     min-height: 100vh;
-} nav {
+    font-family: var(--ff-primary);
+    font-size:var(--fs-400);
+} #westCountry {
     /* background-color: lime; */
     position: relative; 
     width: 100%;
     height: 100%;
-    padding: 10%;
+    padding: 5%;
     margin: auto;
     justify-content: space-between;
 } #closePOP {
@@ -90,7 +111,7 @@ body {
     flex-direction: column;
 } .p-abs-h-100 {
     position: absolute;
-    height: 100%;
+    height: 100vh;
 } .container-pop {
     position: absolute;
     border: var(--border-w) solid hsl(var(--clr-accent));
@@ -103,7 +124,6 @@ body {
     padding-inline: 2%;
 } .cta {
     width: 100%;
-    margin-top: 5%;
     padding: 2%;   
 } .list-button {
     text-align: left;
@@ -113,21 +133,36 @@ body {
     text-decoration: overline;
 } p {
     margin-block: var(--p-margin-block);
-} 
+} .mobile-pop-width {
+    width: 80% !important;
+    /* color: lime !important; */
+} .text-box {
+    height: 250px;
+    overflow-y: scroll;
+    margin-block: 10%;
+}
 /* colors */
-.bg-main { background-color: hsl(var(--clr-main)); }
-.bg-accent { background-color: hsl(var(--clr-accent)); }
-.text-main { color: hsl(var(--clr-main)); }
-.text-accent { color: hsl(var(--clr-accent)); }
-
-/* ------- */
-/* Classes */
-/* --------*/
-
-.infoContent {
-    padding: 30px;
-} 
-
+.bg-main { background-color: hsl(var(--clr-main))}
+.bg-accent { background-color: hsl(var(--clr-accent))}
+.text-main { color: hsl(var(--clr-main))}
+.text-accent { color: hsl(var(--clr-accent))}
+/* fonts */
+.fs-900 { font-size: var(--fs-900)} 
+.fs-800 { font-size: var(--fs-800)} 
+.fs-700 { font-size: var(--fs-700)}
+.fs-600 { font-size: var(--fs-600)}
+.fs-500 { font-size: var(--fs-500)}
+.fs-400 { font-size: var(--fs-400)} 
+.fs-300 { font-size: var(--fs-300)}
+.fs-200 { font-size: var(--fs-200)}
+.fs-100 { font-size: var(--fs-100)}
+/* fonts families */
+.ff-primary { font-family: var(--ff-primary)}
+.ff-primary-bold { font-family: var(--ff-primary-bold)}
+.ff-secondary { font-family: var(--ff-secondary)}
+.ff-decorative { font-family: var(--ff-decorative)}
+/* font hierarchy */
+h1 { font-size: var(--fs-500); font-family: var(--ff-primary-bold);}
 
 /* ------------- */
 /* Other classes */
@@ -146,6 +181,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: pink;
 }
+
 /* remove animation for people who turned them off */
 @media (prefers-reduced-motion: reduce) {
     *,

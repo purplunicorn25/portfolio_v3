@@ -47,7 +47,7 @@
         "id": "cv",
         "barLabel": "cv + bio",
         "multi": true,
-        "width": "85%",
+        "width": "80%",
         "height": "500px",
         "quadrant": "wide",
         "content": [
@@ -68,7 +68,7 @@
         "id": "statement",
         "barLabel": "Artistic Statement",
         "multi": false,
-        "width": "85%",
+        "width": "80%",
         "height": "auto",
         "quadrant": "wide",
         "content": {
@@ -81,7 +81,7 @@
 "projects": [
     {
         "id": "part",
-        "barLabel": "My Best User Research Project",
+        "barLabel": "Best User Research Project",
         "content": {
             "title": "pART",
             "medium": "User Experience Design, Mobile App Prototype, Augmented Reality & Public Art",
@@ -90,7 +90,7 @@
         }
     },{
         "id": "read",
-        "barLabel": "My Best Conceptual Project",
+        "barLabel": "Best Conceptual Project",
         "content": {
             "title": "read.my.column",
             "medium": "Web Experience, WEBGL, Generated Poetry",
@@ -99,7 +99,7 @@
         }
     },{
         "id": "greenhouse",
-        "barLabel": "My Best 3D Modelling Project",
+        "barLabel": "Best 3D Modelling Project",
         "content": {
             "title": "Greenhouse Machine",
             "medium": "3D Sculpture, Blender, Procedural Texturing, Geometry Nodes",
@@ -108,7 +108,7 @@
         }
     },{
         "id": "magnetic",
-        "barLabel": "My Best Installation Project",
+        "barLabel": "Best Installation Project",
         "content": {
             "title": "Magnetic Bodies",
             "medium": "Interactive Installation, TouchDesigner",
@@ -117,7 +117,7 @@
         }
     },{
         "id": "pain",
-        "barLabel": "My Best Hands-On UX Experience",
+        "barLabel": "Best Hands-On UX Experience",
         "content": {  
             "title": "Play The Pain",
             "medium": "UX Evaluation, UI Design, Neuroscience Research App",

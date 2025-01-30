@@ -1,19 +1,22 @@
 "use strict"
 // TO-DO
 // 1. add visual cue that pop-up is visible with button style
-// 2. for multi pop up, make the x button individual (minor issue)
+// 2. for multi pop up, make the x button individual (major issue) !!!!
 // 3. Better thumbnail for play the pain
 // 4. Divide artistic statement in 3 visual entities
 // 5. In why hire, I can animate is not the right word...
+//  6. close all behing pop sometimes
+// 7. deal with size not in append but in responsive for all container pop +++ cv is the only one with specific height because of pdf size
 
 // CONSTANTS
 let CHECK_INTERVAL = 1;
 let MOBILE_BREAKPOINT = 900;
+let POP_MAX_WIDTH = 0.2; 
+let POP_MAX_HEIGHT = 0.2; 
 // VARIABLES
 let jsonLoaded = false; 
-let popQuadrantNarrow = {x:0.5, y:0.2};
-let popQuadrantWide = {x:-0.1, y:0.2};
 let xbuttonID = 0; 
+let mobile = false; 
 // GLOBAL ARRAYS
 let actions = []; 
 let projects = []; 
@@ -47,12 +50,12 @@ function setupHome() {
     for (let i = 0; i < projects.length; i++) {
         let project = new ProjectHTML(projects[i]); // gather project content data
         let contentHTML = project.composeHTML(); // define HTML format for data in constructor
-        managePop(projects[i].id, contentHTML, projects[i].barLabel, '50%', 'auto', 'narrow', false, i);
+        managePop(projects[i].id, contentHTML, projects[i].barLabel,'auto', false, i);
     }
     // create 4 POPs 
     // create action POPs
     for (let i = 0; i < actions.length; i++) {
-        managePop(actions[i].id, actions[i].content, actions[i].barLabel, actions[i].width, actions[i].height, actions[i].quadrant, actions[i].multi, i);
+        managePop(actions[i].id, actions[i].content, actions[i].barLabel, actions[i].height, actions[i].multi, i);
     }
 } // use breakpoint for mobile layout vs desktop layout
 function responsive() { 
@@ -61,13 +64,18 @@ function responsive() {
     let screenWidth = $(window).width();
     console.log(screenWidth)
     if (screenWidth < MOBILE_BREAKPOINT) { // if smaller than 
+        mobile = true;
+        $('html').css("font-size", "18px"); // change the default to grow all font size (set at 16px for desktop)
         console.log('mobile');
+        $('.container-pop').addClass('mobile-pop-width');
         $('#eastsea').css("width", "60%");
         $('#eastsea').css("left", "40%");
         $('#eastland').css("width", "100%");
         $('#westsea').css("width", "40%");
         $('#westland').css("width", "100%");
     } else { // largen then
+        mobile = false;
+        $('.container-pop').removeClass('mobile-pop-width');
         console.log('desktop');
         $('#eastsea').css("width", "50%");
         $('#eastsea').css("left", "50%");
@@ -82,25 +90,6 @@ function dataToString(dataObject) {
         HTMLstring += dataObject[i];
     }
     return HTMLstring; 
-} // manages the toggle of when to append or move or remove project preview pop-up
-function manageProjectPreview() {
-    let generalWidth = '50%';
-    let generalHeight = 'auto';  
-    $('.project-list-button').on("click", (e) => { // CREATE A TOGGLE TO ADD INFO BUBBLE AND HIDE THEM, THEY ALWAYS APPEAR ON TOP OF THE OTHER
-        let popID = e.currentTarget.id + 'Project'; // store the bubble ID
-        let barLabel = projectBarLabel[`${e.currentTarget.id}`]; // Create the bar label from array 
-       if ($('#eastland').children().length === 0) { // if eastland is empty add 1 by default
-            appendPOP('eastland', popID, project, barLabel, generalWidth, generalHeight, popQuadrantNarrow); // append pop-up
-       } else if (checkIfChildren(popID)) { // if it exist already
-           $(`#${popID}`).remove(); // remove
-           appendPOP('eastland', popID, project, barLabel, generalWidth, generalHeight, popQuadrantNarrow); // append pop-up
-       } else { // if it does not exist
-            appendPOP('eastland', popID, project, barLabel, generalWidth, generalHeight, popQuadrantNarrow); // create
-       } $('.button-info-hide').on("click", () => { // remove the pop-up with x button
-           $(`#${popID}`).remove();
-       });
-       overlap();
-   });    
 } // check if the id is already a children to avoid doubles
 function checkIfChildren(popID) {
     for (let children of $('#eastland').children()) { // iterate through children
@@ -112,7 +101,7 @@ function checkIfChildren(popID) {
 function createPOP(dataObject, barLabel) {
     let bar = `<div class="bar flex bg-accent text-main"><div>${barLabel}</div><button id="x${xbuttonID}" class="button-info-hide">X</button></div>`; // create bar at top
     xbuttonID ++; // make sure all exit button have unique id
-    let openContent = '<div class="infoContent flex-column" style="overflow-y: scroll;">' // open the content div
+    let openContent = '<div class="infoContent flex-column" style="overflow-y: scroll; padding: var(--info-pop-pad)">' // open the content div
     let popContent = dataToString(dataObject); // full content passed through data
     let closeContent = '</div>'; // close the content div
     let compiller = []; // array to compile
@@ -123,42 +112,36 @@ function createPOP(dataObject, barLabel) {
     }
     return HTMLtext; // return the string that contains HTML code
 } // append pop-up to container and choose ID
-function appendPOP(containerID, popID, dataObject, barLabel, width, height, quadrant) {
+function appendPOP(containerID, popID, dataObject, barLabel, height) {
     $(`#${containerID}`).append(`<div id='${popID}' class='container-pop bg-main text-accent'>${createPOP(dataObject, barLabel)}</div>`); // append pop-up
     $(`#${popID}`).css({'width': width, 'height': height});
-    let coordinates = randomCoordinates(containerID, quadrant.x, quadrant.y); // get random x,y in specific container
+    let coordinates = randomCoordinates(containerID); // get random x,y in specific container
     $(`#${popID}`).css({'left': `${coordinates.x}px`, 'top': `${coordinates.y}px`}); // assign x,y to current POP
     $(`#${popID}`).draggable()
     closePOP(); // button to close all at once
 } // create pop-up for action buttons
-function managePop(buttonID, dataObject, barLabel, width, height, quadrant, multi, index) {  
+function managePop(buttonID, dataObject, barLabel, height, multi, index) {  
     let popID = buttonID + 'POP'; // create the ID of the future pop-up
     let toggle = false; // create toggle to manage display vs hidden
-    let thisQuadrant = ''; //transpose the string from JSON to local variable
-    if (quadrant == "wide") {
-        thisQuadrant = popQuadrantWide;
-    } else if (quadrant == "narrow") {
-        thisQuadrant = popQuadrantNarrow;
-    }
     $(`#${buttonID}`).on("click", () => { // on click
         if (!toggle) { // if hidden
             if (multi) { // if multiple pop container
                 for (let i in actions[index].content) { 
-                    appendPOP('eastland', popID+i, dataObject[i].subcontent, dataObject[i].label, width, height, thisQuadrant);
+                    appendPOP('eastland', popID+i, dataObject[i].subcontent, dataObject[i].label, height);
                 }
             } else { // if single pop container
-                appendPOP('eastland', popID, dataObject, barLabel, width, height, thisQuadrant); // append pop
+                appendPOP('eastland', popID, dataObject, barLabel, height); // append pop
             }
             toggle = true; // store as displayed
         } else if (toggle) { // if displayed
             if (multi) { // if multiple pop container
                 for (let i in actions[index].content) { 
                     $(`#${popID+i}`).remove(); // remove pop
-                    appendPOP('eastland', popID+i, dataObject[i].subcontent, dataObject[i].label, width, height, thisQuadrant);
+                    appendPOP('eastland', popID+i, dataObject[i].subcontent, dataObject[i].label, height);
                 }
             } else { // if single pop container
                 $(`#${popID}`).remove(); // remove pop
-                appendPOP('eastland', popID, dataObject, barLabel, width, height, thisQuadrant); // append pop
+                appendPOP('eastland', popID, dataObject, barLabel, height); // append pop
             }
         } // exit button hides 
         $('.button-info-hide').on("click", () => { // remove the pop-up with x button
@@ -185,9 +168,9 @@ function overlap() {
         $(this).appendTo('#eastland');
     });
 } // get random coordinates inside a container
-function randomCoordinates(containerID, popWidth, popHeight) {
-    let randomX = getRandomInt(0, specs(containerID).width * popWidth); // width set as 50%
-    let randomY = getRandomInt(0, specs(containerID).height * popHeight); // height set at 80%
+function randomCoordinates(containerID) {
+    let randomX = getRandomInt(0, specs(containerID).width * POP_MAX_WIDTH); // width set as 50%
+    let randomY = getRandomInt(0, specs(containerID).height * POP_MAX_HEIGHT); // height set at 80%
     let coordinates = {
         x: randomX,
         y: randomY    }
