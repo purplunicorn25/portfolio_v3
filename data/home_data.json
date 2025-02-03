@@ -5,25 +5,22 @@
         "id": "hire",
         "barLabel": "Why hire me?",
         "multi": true,
-        "width": "50%",
-        "height": "auto",
-        "quadrant": "narrow",
         "content": [{
                 "label": "Artistic Skills",
                 "subcontent": {
-                    "because": "<h2>I can draw.</h2>",
+                    "because": "<h3>I can draw.</h3>",
                     "detail": "<p>From technical drawings to free-hand painting, I can get around with many traditional medium. I think early sketches are an essentiel part of the design process and I like to use them to define my vision.</p>"
                 }
             },{
                 "label": "Technical Skills",
                 "subcontent": {
-                    "because": "<h2>I can code.</h2>",
+                    "because": "<h3>I can code.</h3>",
                     "detail": "<p>I am very tech savvy and I like to get technical. I am keen to learn new programming languages or libraries and know both their potential and limits.</p>"
                 }
             },{
                 "label": "Social Skills",
                 "subcontent": {
-                     "because": "<h2>I can animate.</h2>",
+                     "because": "<h3>I can animate.</h3>",
                     "detail": "<p>I have a lot of experience with customer service and I am comfortable with people. I have lead activities in the past and I am confident with making people at ease no matter the subject or purpose.</p><p>Empathy is foundational in design and it is a skill that I have and will keep on mastering.</p>"
                 }
             }
@@ -32,29 +29,23 @@
         "id": "contact",
         "barLabel": "How To Contact Me",
         "multi": false,
-        "width": "50%",
-        "height": "auto",
-        "quadrant": "narrow",
         "content": {
-            "greeting": "<h2>Let's exchange ideas!</h2>",
-            "email": "<p>If you prefer e-mail:<br><a href='mailto:anne.boutet@hotmail.com'>anne.boutet@hotmail.com &#xF1C4;</a></p>",             
-            "phone": "<p>If you are curious to hear my voice:<br><a href='tel:+14388301273'>+1-(438)-830-1273 &#xF1C4;</a></p>",
-            "network": "<p>If you want to join my network:<br><a href='https://ca.linkedin.com/in/anne-boutet-440b43128/en?trk=people-guest_people_search-card'>LinkedIn Profile &#xF1C4;</a></p>",
-            "where": "<p>If you wish to accidently run into me:<br><a href='https://maps.app.goo.gl/qSg733EAJuCx5hrZ8'>Montreal, H2S &#xF1C4;</a></p>",
-            "github": "<p>If you wonder how I made my portfolio:<br><a href='https://github.com/purplunicorn25/portfolio_2025'>Github Profile &#xF1C4;</a></p>"
+            "greeting": "<h3>Let's exchange ideas!</h3>",
+            "email": "<p>If you prefer e-mail:<br><a href='mailto:anne.boutet@hotmail.com' class='link'>anne.boutet@hotmail.com</a></p>",             
+            "phone": "<p>If you are curious to hear my voice:<br><a href='tel:+14388301273' class='link'>+1-(438)-830-1273</a></p>",
+            "network": "<p>If you want to join my network:<br><a href='https://ca.linkedin.com/in/anne-boutet-440b43128/en?trk=people-guest_people_search-card' class='link'>LinkedIn Profile</a></p>",
+            "where": "<p>If you wish to accidently run into me:<br><a href='https://maps.app.goo.gl/qSg733EAJuCx5hrZ8' class='link'>Montreal, H2S</a></p>",
+            "github": "<p>If you wonder how I made my portfolio:<br><a href='https://github.com/purplunicorn25/portfolio_2025' class='link'>Github Profile</a></p>"
         }
     },{
         "id": "cv",
         "barLabel": "cv + bio",
         "multi": true,
-        "width": "80%",
-        "height": "500px",
-        "quadrant": "wide",
         "content": [
             {
                 "label": "Why did I chose Product Design?",
                  "subcontent": {
-                    "title": "<h2>528-words Long Biography</h2>",
+                    "title": "<h3>528-words Long Biography</h3>",
                     "bio": "<p>I am creative and curious.<br>I feel like I had to be creative and curious to land where I am today.</p><p>A musician?</p><p>In high school, I was a talented violinist and was encouraged to pursue this avenue in CEGEP. Yet, music was a relief to me, and I could not imagine losing that over financial needs.</p><p>I asked myself what I could make instead. Fashion was my answer. I believed – and still believe – that clothes are wearable art with an ability to be loved in ways other art forms cannot.</p><p class='subheading'>A fashion designer?</p><p>I pursued this avenue past CEGEP until my experience at the École Supérieur de Mode suggested that to sell my designs I had to sustain a persona; that creation and marketing were intertwined more than I knew.</p><p>I had this idea to attend St Martins in London for their master's in fashion history. Because if now fashion design was not in line with my aspirations, I still found its history fascinating. But, I needed an undergraduate diploma.</p><p class='subheading'>An e-fashion designer?</p><p>Luckily, the summer before I enrolled at ESM, I won this training opportunity by volunteering at Vestech Pro research center. They taught me about intelligent fashion garments and their potential. They brought us to Concordia's Textile and Materiality Labs and introduced the Computation Arts Specialization.</p><p>The degree I was introduced to at Concordia was the bridge I needed. It allowed me to keep in touch with fashion design and technology. I joined the Art History Minor and focused on classes where I could research and learn about fashion and textile history.</p><p class='subheading'>A digital designer?</p><p>I did not expect to find programming and logical gates that attractive. I never thought I would regret not taking mathematics in CEGEP, but here I was. I liked the potential of digital artifacts and their interactivity. I loved how fashion was interactive, but the array of experiences I could create with code was so wide I could not resist.</p><p>So, I dived in. I discovered various technologies and found myself in procedural texturing and WEBGL environments. It felt like I had unlocked new powers within myself.</p><p class='subheading'>Hello screentime?</p><p>What I dislike most about digital creation is that blue light burns my eyes and makes my head ache, not to mention posture.</p><p class='subheading'>A UX designer?</p><p>For my last year as a student, I discovered that UX design had the potential to satisfy both my love for interaction and logic gates, but, moreover, to put my 10 years of experience in customer service to use.</p><p>I am at ease with the public and like to understand the needs of others to provide help and solutions. I suspect that UX will provide new opportunities to learn about user needs and realities I never encountered. It should keep me creative and curious.</p><p class='subheading'>A UX designer.</p><p class='ps'><i>Post-criptum:<br>I was not only a student and will not only be an employee in this life. I pride myself in being these things too: a martial artist, a ballet dancer, a video game player, a weaver, a foodie, a traveler, a knitter, a bonsai enthusiast, a sister, a girlfriend, a daughter, and a caring friend.</i></p>"
                 }
             },{
@@ -66,11 +57,8 @@
         ]
     },{
         "id": "statement",
-        "barLabel": "Artistic Statement",
+        "barLabel": "Artist Statement",
         "multi": false,
-        "width": "80%",
-        "height": "auto",
-        "quadrant": "wide",
         "content": {
             "first": "<p>I am a fashion designer.<br>I am an art historian.<br>I am a programmer.</p><p>But I am also neither.</p><p>I despise the waste and capitalist hierarchy of the fashion industry.<br>I despise the colonial past and present of museal institutions.<br>I despise my dependency for digital tools and entertainment.</p>",
             "second": "<p>I like to think of where these disciplines intersect.</p><p>I ask these questions: </p><p>Can the history of clothing inform largely on the spirit of an era?<br>Can digital artforms benefit museums in their display of historical clothing?<br>Can digital video games be included in traditional exhibition spaces and art education?<br>Can I answer these questions?</p>",
@@ -82,46 +70,51 @@
     {
         "id": "part",
         "barLabel": "Best User Research Project",
+        "link": "projects/part.html",
         "content": {
             "title": "pART",
             "medium": "User Experience Design, Mobile App Prototype, Augmented Reality & Public Art",
-            "thumbnail": "assets/images/part/thumbnail.png",
+            "thumbnail": "assets/images/thumbnails/part.PNG",
             "summary": "pARt combines art and technology; it is a mobile application prototype that enables local artists to publish their art digitally in any public location. App users may then admire these artworks with augmented reality technologies."
         }
     },{
         "id": "read",
         "barLabel": "Best Conceptual Project",
+        "link": "projects/read.html",
         "content": {
             "title": "read.my.column",
             "medium": "Web Experience, WEBGL, Generated Poetry",
-            "thumbnail": "assets/images/read_my_column/thumbnail.jpg",
+            "thumbnail": "assets/images/thumbnails/read.jpg",
             "summary": "<i>read.my.column</i> is a WebGL navigable prototype. It critiques how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography."
         }
     },{
         "id": "greenhouse",
         "barLabel": "Best 3D Modelling Project",
+        "link": "projects/greenhouse.html",
         "content": {
             "title": "Greenhouse Machine",
             "medium": "3D Sculpture, Blender, Procedural Texturing, Geometry Nodes",
-            "thumbnail": "assets/images/greenhouse_machine/thumbnail.png'",
+            "thumbnail": "assets/images/thumbnails/greenhouse.jpg'",
             "summary": "Greenhouse machine is a fictional scene taking place in a pre-dystopian Montreal. It showcases a small greenhouse filled with greens. Its shape is meant to echo a drone while its style recalls eerie Victorian metal and glass greenhouses.  My hope was to contrast an eerie inside with a dystopian outside."
         }
     },{
         "id": "magnetic",
         "barLabel": "Best Installation Project",
+        "link": "projects/magnetic.html",
         "content": {
             "title": "Magnetic Bodies",
             "medium": "Interactive Installation, TouchDesigner",
-            "thumbnail": "assets/images/magnetic_bodies/thumbnail.jpg",
+            "thumbnail": "assets/images/thumbnails/magnetic.jpg",
             "summary": "Magnetic Bodies is a project that wishes to highlight the presence of gravity in everyday actions by showcasing an unique case of magnetism: ferrofluids. This interactive installation includes a digital simulation of ferrofluids where human bodies and actions are given the role of magnetic field."
         }
     },{
         "id": "pain",
         "barLabel": "Best Hands-On UX Experience",
+        "link": "projects/pain.html",
         "content": {  
             "title": "Play The Pain",
             "medium": "UX Evaluation, UI Design, Neuroscience Research App",
-            "thumbnail": "assets/images/play_pain/img_03.PNG",
+            "thumbnail": "assets/images/thumbnails/play.PNG",
             "summary": "Play the Pain is a media Health platform designed to put chronic pain patients and their caregivers at the heart of pain research. I intervened during their second iteration for a mobile and Web application. I worked as a UX/UI designer to improved their UI and the overall navigation for a better user experience."
         }
     }

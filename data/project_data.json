@@ -1,0 +1,78 @@
+{
+    "description": "Info & Content for each project",
+    "projects": [
+        {  
+            "id": "read",
+            "title": "read.my.column",
+            "year": "2022",
+            "context": "Computation Arts Course: CART351 - Network & Navigation",
+            "medium": "Programming, Web Experience, Generated Poetry",
+            "tools": ["Three.js", "PHP", "Rita.js", "NewsAPI", "WebScrapping"],
+            "goals": ["Generate and maintain database", "Succesfully use Three.js library"],
+            "abstract": "<i>read.my.column</i> is a WebGL navigable prototype. It hopes to critique how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography.",
+            "body": [
+                {
+                    "section": "Ideation & Inspiration",
+                    "wordCount": 200, 
+                    "content": [
+                        {
+                            "type": "tit",
+                            "text": "Ideation & Inspiration"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Where does the idea originate from"
+                        },{
+                            "type": "p",
+                            "text": "The motivation for this project comes from my personal struggles to find reliable, but also pragmatic source of information. The hyper-sensationalistic tone of headlines would often repel me from consuming news."
+                        },{
+                            "type": "p",
+                            "text": "I validated my perception by visiting numerous mainstream news media. While some were better than others, I still found clickbait headlines with content less scandalous than advertised. I suspect Web analytics to have a role in this because an online newspapers' success is measured yes in terms of subscription, but more importantly in terms of clicks."
+                        },{
+                            "type": "p",
+                            "text": "I am not focusing on the issue of 'fake news', but it is inherent to my subject. Headlines, for fake news artists, are their best weapons. They frame the rest of the experience, but can affect what existing knowledge is activated in our heads and influence our mindset to recall details that coincide with expectation.”[1] Thus, a misleading headline would have an impact not only prior reading the article (if read at all), but also after, as it is remembered and maybe shared with others. "
+                        },{
+                            "type": "p",
+                            "text": "The motivation for this project comes from my personal struggles to find reliable, but also pragmatic source of information. The hyper-sensationalistic tone of headlines would often repel me from consuming news."
+                        },{
+                            "type": "ss-tit",
+                            "text": "Why the title read.my.column?"
+                        },{
+                            "type": "p",
+                            "text": "This experience seeks to share my opinion on the subject and I thought this title best both for its reference to the recurrent publications of one's opinion - the column,- but also because it inspired the shapes my visual poetry."
+                        },{
+                            "type": "p",
+                            "text": "Why poetry? Because it bears more intensity with its artistic and expressionistic qualities and had the potential to reflect the intensity of emotion-triggering headlines."
+                        },{
+                            "type": "img",
+                            "text": "!!!!!!!!!!!!!!!"
+                        },{
+                            "type": "ss-tit",
+                            "text": "I found inspiration in these works:"
+                        },{
+                            "type": "grid",
+                            "col": 3,
+                            "text": ["AdLiPo - David Howe", 
+                            "#MeToo Anti-Network - Kim Albrecht with support of Catherine D'Ignazio, Cole Mart, and Matthew Battles", 
+                            "The Ephemerides - Allison Parrish",
+                            "[why?]<br>Because of its great technical approach, its use of RiTa, and the fact that AdLiPo permeate almost all the web pages of a user, not only one.",
+                            "[why?]<br>Because of its activist side, its clear purpose, its successful narrative, and its display of texts: simple and efficient.",
+                            "[why?]<br>Because of the quality of prose, the eery beauty it evokes, and the method Parrish used to achieve computer-generated poetry."]
+                        },{
+                            "type": "ref",
+                            "text": "[1] https://www.newyorker.com/science/maria-konnikova/headlines-change-way-think"
+                        }
+                    ]
+                },
+                {
+                    "section": "Visual Storyboard",
+                    "wordCount": 204, 
+                    "content": []
+                }
+            ]
+        },
+        {},
+        {},
+        {},
+        {}
+    ]
+}

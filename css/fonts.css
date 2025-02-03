@@ -17,6 +17,22 @@
     font-style: normal;
 }
 @font-face {
+     font-family: 'tabular-medium';
+     src: url('/assets/fonts/tabular/Tabular-Medium.woff2') format('woff2'),
+          url('/assets/fonts/tabular/Tabular-Medium.woff') format('woff'),
+          url('/assets/fonts/tabular/Tabular-Medium.ttf') format('truetype');
+     font-weight: 400;
+     font-style: normal;
+}
+@font-face {
+     font-family: 'tabular-italic';
+     src: url('/assets/fonts/tabular/Tabular-Italic.woff2') format('woff2'),
+          url('/assets/fonts/tabular/Tabular-Italic.woff') format('woff'),
+          url('/assets/fonts/tabular/Tabular-Italic.ttf') format('truetype');
+     font-weight: 400;
+     font-style: normal;
+}
+@font-face {
     font-family: 'archiv-grotesk';
     src: url('/assets/fonts/archiv_grotesk/ArchivGrotesk-Regular.otf') format('truetype');
     font-weight: 400;
@@ -38,6 +54,22 @@
     font-display: swap;
     font-style: normal;
 }
+@font-face {
+     font-family: 'author';
+     src: url('/assets/fonts/author/fonts/Author-Medium.woff') format('woff'),
+          url('/assets/fonts/author/fonts/Author-Medium.woff2') format('woff2');
+     font-weight: 400;
+     font-display: swap;
+     font-style: normal;
+ }
+ @font-face {
+     font-family: 'tanker';
+     src: url('/assets/fonts/tanker/fonts/Tanker-Regular.woff2') format('woff2'),
+          url('/assets/fonts/tanker/fonts/Tanker-Regular.woff') format('woff');
+     font-weight: 400;
+     font-display: swap;
+     font-style: normal;
+   }
 
 
 

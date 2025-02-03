@@ -3,6 +3,7 @@
 /* --------------- */
 body, h1, h2, h3, h4, h5, p, figure, picture {
     margin: 0; 
+    font-weight: 400;
 } button {
     display: block;
     text-decoration: none;
@@ -12,6 +13,8 @@ body, h1, h2, h3, h4, h5, p, figure, picture {
     color: inherit;
     font-family: inherit;
     font-size: inherit;
+} button:visited {
+    text-decoration: none;
 } img {
     max-width: 100%;
     display: block;
@@ -24,37 +27,46 @@ html {
 }
 :root {
     /* colors hsl */
-    --clr-main: 186, 64%, 10%;
+    /* --clr-main: 186, 64%, 10%;
     --clr-accent: 300, 76%, 72%;
-    --clr-accent-sec: 208, 100%, 97%;
+    --clr-accent-decline: 208, 100%, 97%; */
+
+    --clr-main: #5700FF;
+    --clr-accent: rgb(147, 255, 154);
+    --clr-accent-decline: rgb(255, 146, 133);
+    --clr-link: yellow;
+    --clr-link-hover: white;
+    --clr-contrast: white;
     /* fonts sizes */
     --fs-900: 6.25rem;
     --fs-800: 3.5rem; 
     --fs-700: 2rem; 
     --fs-600: 1.75rem;
-    --fs-500: 1.4rem; 
+    --fs-500: 1.2rem; 
     --fs-400: 1rem; 
     --fs-300: 0.875rem;
     --fs-200: 0.75rem;
     --fs-100: 0.5rem;
     /* fonts families */
     --ff-primary: tabular-regular;
+    --ff-primary-medium: tabular-medium;
     --ff-primary-bold: tabular-bold;
+    --ff-primary-italic: tabular-italic;
     --ff-secondary: gulax;
     --ff-decorative: archiv-grotesk;
+    --ff-display: tanker;
     /* placement values */
     --header-common-margin: 2%;
     --project-list-btn-pad: 5%;
     --info-pop-pad: 30px;
     --p-margin-block: 15px;
     /* pop values */
-    --pop-bg-color: hsl(var(--clr-main));
-    --pop-text-color: hsl(var(--clr-accent));
+    --pop-bg-color: var(--clr-main);
+    --pop-text-color: var(--clr-accent);
     --pop-padding: 30px; 
     /* decoration */
     --border-w: 1px;
-
-    /* FONTS */
+        /* FONTS */
     /* h1 */
     --desktop-font-display-multifunction-home-bold-size: 40px;
     --desktop-font-display-multifunction-home-bold-family: tabular-regular;
@@ -83,7 +95,7 @@ html {
 body {
     margin: 0;
     overflow: hidden;
-    line-height: 1.8;
+    line-height: 1.6;
     min-height: 100vh;
     font-family: var(--ff-primary);
     font-size:var(--fs-400);
@@ -101,6 +113,16 @@ body {
     bottom: 1%; 
     right: 2%;
     text-decoration: underline;
+    z-index: 2;
+    background-color:var(--clr-main);
+} #westProvince {
+    position: relative; 
+    color: var(--clr-main);
+    height: 90%;
+    padding: 10%;
+    overflow-y: auto; 
+} #eastContinent {
+    height: 84%;
 }
 /* --------------- */
 /* Utility classes */
@@ -114,38 +136,106 @@ body {
     height: 100vh;
 } .container-pop {
     position: absolute;
-    border: var(--border-w) solid hsl(var(--clr-accent));
+    border: var(--border-w) solid var(--clr-accent);
     display: flex;
     flex-direction: column;
     max-height: 80%;
+    max-width: 80%;
     z-index: 1;
 } .bar {
     justify-content: space-between;
-    padding-inline: 2%;
+    padding-left: var(--header-common-margin);
 } .cta {
     width: 100%;
-    padding: 2%;   
+    padding: var(--header-common-margin);   
+    background-color: var(--clr-accent);
+} .cta:hover {
+    background-color: var(--clr-accent-decline);
 } .list-button {
     text-align: left;
     margin-block: var(--header-common-margin);
 } .list-button:hover {
-    color: hsl(var(--clr-accent-sec));
+    color: var(--clr-accent-sec);
     text-decoration: overline;
 } p {
     margin-block: var(--p-margin-block);
-} .mobile-pop-width {
-    width: 80% !important;
-    /* color: lime !important; */
+    font-size: var(--fs-400);
 } .text-box {
-    height: 250px;
+    max-height: 250px;
     overflow-y: scroll;
-    margin-block: 10%;
+    /* margin-block: 10%; */
+} .infoContent {
+    overflow-y: scroll; 
+    padding: var(--info-pop-pad); 
+    gap: 20px;
+} .noScrollBar::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+} .lowercase {
+    text-transform: lowercase;
+} .underless {
+    text-decoration: none;
+} .navButton {
+    color: var(--clr-main);
+} .projectNav {
+    position: absolute;
+    bottom: 0;
+    width: 96%; 
+    height: 5%;
+    justify-content: space-between;
+    padding-inline: var(--header-common-margin); 
+    background-color: inherit;
+    align-items: center;
+    /* border-top: var(--border-w) solid var(--clr-accent-decline); */
+} .tool {
+    display: flex;
+    max-height: 20%;
+    flex-direction: column;
+    flex-wrap: wrap;
+} .section {
+    background-color: var(--clr-accent);
+    color: var(--clr-main);
+    height: 100px;
+    border: var(--border-w) solid var(--clr-main);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} .section:hover {
+    background-color: var(--clr-main);
+    color: var(--clr-accent);
+} .section-prev-txt {
+    height:fit-content;
+    margin-inline: 5%;
+} .grid {
+    width:100%;
+    display: grid;
+    grid-template-columns: 33% 33%  33%;
+
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+} .adapt {
+    height: fit-content !important;
+    flex-direction: column;
+    padding: 5%;
+    width: 90%;
+} .adapt:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-main);
+    border-width: 3px;
+} .scrollable {
+    overflow-y: scroll;
 }
+
+.link, link:visited{ color: var(--clr-link)} 
+.link:hover, link:visited:hover  { color: var(--clr-link-hover)} 
 /* colors */
-.bg-main { background-color: hsl(var(--clr-main))}
-.bg-accent { background-color: hsl(var(--clr-accent))}
-.text-main { color: hsl(var(--clr-main))}
-.text-accent { color: hsl(var(--clr-accent))}
+.bg-main { background-color: var(--clr-main)}
+.bg-accent { background-color: var(--clr-accent)}
+.bg-accent-decline { background-color: var(--clr-accent-decline)}
+.text-main { color: var(--clr-main)}
+.text-accent { color: var(--clr-accent)}
+.text-contrast { color: var(--clr-contrast)}
 /* fonts */
 .fs-900 { font-size: var(--fs-900)} 
 .fs-800 { font-size: var(--fs-800)} 
@@ -158,25 +248,40 @@ body {
 .fs-100 { font-size: var(--fs-100)}
 /* fonts families */
 .ff-primary { font-family: var(--ff-primary)}
+.ff-primary-medium { font-family: var(--ff-primary-medium)}
 .ff-primary-bold { font-family: var(--ff-primary-bold)}
 .ff-secondary { font-family: var(--ff-secondary)}
 .ff-decorative { font-family: var(--ff-decorative)}
+/* font weight */
+.bold {font-weight: bold}
+.italic {font-style: italic}
 /* font hierarchy */
-h1 { font-size: var(--fs-500); font-family: var(--ff-primary-bold);}
+/* page title */
+h1 { font-size: var(--fs-500); font-family: var(--ff-primary); margin-block: var(--header-common-margin);}
+/* action button */
+h2 { font-size: var(--fs-500); font-family: var(--ff-primary);}
+/*  pop title  */
+h3 { font-size: var(--fs-700); font-family: var(--ff-primary);}
+/* medium details */
+h4 { font-size: var(--fs-300); font-family: var(--ff-primary-italic);}
+/* cta button */
+h5 { font-size: var(--fs-500); font-family: var(--ff-primary-medium); text-align: left; margin-inline: var(--header-common-margin); }
+
 
 /* ------------- */
 /* Other classes */
 /* ------------- */
 
 ::-webkit-scrollbar {
-    height: 3px;
+    height: 3x;
     width: 3px;
 } /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--color-main);
+    background: var(--clr-main);
 } /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--color-accent);
+    background: var(--clr-accent);   
+    width: 13px;
 } /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: pink;

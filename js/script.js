@@ -5,14 +5,17 @@
 // 3. Better thumbnail for play the pain
 // 4. Divide artistic statement in 3 visual entities
 // 5. In why hire, I can animate is not the right word...
-//  6. close all behing pop sometimes
-// 7. deal with size not in append but in responsive for all container pop +++ cv is the only one with specific height because of pdf size
+// add interaction to title a boutet portfolio
 
 // CONSTANTS
 let CHECK_INTERVAL = 1;
 let MOBILE_BREAKPOINT = 900;
 let POP_MAX_WIDTH = 0.2; 
 let POP_MAX_HEIGHT = 0.2; 
+let WEST_PROPORTION = '40%';
+let EAST_PROPORTION = '60%';
+let POP_NARROW = '50%';
+let POP_WIDE = '80%';
 // VARIABLES
 let jsonLoaded = false; 
 let xbuttonID = 0; 
@@ -46,13 +49,13 @@ function setupHome() {
     responsive();
     $( window ).on( "resize", responsive);
     p5setup();
-    // manage clicks toggle diplay, random coordinates, and superposition (delete every time)
+    // determine the initial size of pop containers
+    // create project POPs
     for (let i = 0; i < projects.length; i++) {
         let project = new ProjectHTML(projects[i]); // gather project content data
         let contentHTML = project.composeHTML(); // define HTML format for data in constructor
         managePop(projects[i].id, contentHTML, projects[i].barLabel,'auto', false, i);
     }
-    // create 4 POPs 
     // create action POPs
     for (let i = 0; i < actions.length; i++) {
         managePop(actions[i].id, actions[i].content, actions[i].barLabel, actions[i].height, actions[i].multi, i);
@@ -63,27 +66,33 @@ function responsive() {
     // mobile = eastsea 1/3 + westsea 2/3 --> eastworld 100% of eastsea + westworld 75% of westsea (thirds form)
     let screenWidth = $(window).width();
     console.log(screenWidth)
+    $('#eastsea').css("width", EAST_PROPORTION);
+    $('#eastsea').css("left", WEST_PROPORTION);
+    $('#eastland').css("width", "100%");
+    $('#westsea').css("width", WEST_PROPORTION);
+    $('#westland').css("width", "100%");
     if (screenWidth < MOBILE_BREAKPOINT) { // if smaller than 
         mobile = true;
+        popSize(); // adjust size of pop containers
         $('html').css("font-size", "18px"); // change the default to grow all font size (set at 16px for desktop)
         console.log('mobile');
-        $('.container-pop').addClass('mobile-pop-width');
-        $('#eastsea').css("width", "60%");
-        $('#eastsea').css("left", "40%");
-        $('#eastland').css("width", "100%");
-        $('#westsea').css("width", "40%");
-        $('#westland').css("width", "100%");
     } else { // largen then
         mobile = false;
-        $('.container-pop').removeClass('mobile-pop-width');
+        popSize(); // adjust size of pop containers
+        $('html').css("font-size", "16px"); // change to default
         console.log('desktop');
-        $('#eastsea').css("width", "50%");
-        $('#eastsea').css("left", "50%");
-        $('#eastland').css("width", "100%");
-        $('#westsea').css("width", "50%");
-        $('#westland').css("width", "50%");
     }
-} // convert object into single string
+} 
+function popSize() {
+    if (mobile) {   
+        $('.container-pop').css("width", POP_WIDE); // all pop are 50%
+    } else {
+        $('.container-pop').css("width", POP_NARROW); // all pop are 50%
+        $('#cvPOP1').css("width", POP_WIDE); // exception
+        $('#cvPOP0').css("width", POP_WIDE); // exception
+        $('#statementPOP').css("width", POP_WIDE); // exception
+    }
+}// convert object into single string
 function dataToString(dataObject) {
     let HTMLstring = '';
     for (let i in dataObject) {
@@ -99,9 +108,9 @@ function checkIfChildren(popID) {
     }
 } // return a string for a typical pop (bar, contentBox, exit button)
 function createPOP(dataObject, barLabel) {
-    let bar = `<div class="bar flex bg-accent text-main"><div>${barLabel}</div><button id="x${xbuttonID}" class="button-info-hide">X</button></div>`; // create bar at top
+    let bar = `<div class="bar flex bg-accent text-main ff-primary-medium lowercase"><div>${barLabel}</div><button id="x${xbuttonID}" class="button-info-hide">X</button></div>`; // create bar at top
     xbuttonID ++; // make sure all exit button have unique id
-    let openContent = '<div class="infoContent flex-column" style="overflow-y: scroll; padding: var(--info-pop-pad)">' // open the content div
+    let openContent = '<div class="infoContent flex-column" style="">' // open the content div
     let popContent = dataToString(dataObject); // full content passed through data
     let closeContent = '</div>'; // close the content div
     let compiller = []; // array to compile
@@ -114,10 +123,11 @@ function createPOP(dataObject, barLabel) {
 } // append pop-up to container and choose ID
 function appendPOP(containerID, popID, dataObject, barLabel, height) {
     $(`#${containerID}`).append(`<div id='${popID}' class='container-pop bg-main text-accent'>${createPOP(dataObject, barLabel)}</div>`); // append pop-up
-    $(`#${popID}`).css({'width': width, 'height': height});
+    popSize(); 
+    // $(`#${popID}`).css({'width': width, 'height': height});
     let coordinates = randomCoordinates(containerID); // get random x,y in specific container
     $(`#${popID}`).css({'left': `${coordinates.x}px`, 'top': `${coordinates.y}px`}); // assign x,y to current POP
-    $(`#${popID}`).draggable()
+    $(`#${popID}`).draggable();
     closePOP(); // button to close all at once
 } // create pop-up for action buttons
 function managePop(buttonID, dataObject, barLabel, height, multi, index) {  
@@ -151,6 +161,9 @@ function managePop(buttonID, dataObject, barLabel, height, multi, index) {
                 }
             } else { // if single pop container
                 $(`#${popID}`).remove(); // remove pop
+            }
+            if ($('#eastland').children().length === 0) { // if no pop, hide the close all button
+                $('#closePOP').hide()
             }
         });
         overlap(); 
