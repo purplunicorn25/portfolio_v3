@@ -7,20 +7,17 @@
             "year": "2022",
             "context": "Computation Arts Course: CART351 - Network & Navigation",
             "medium": "Programming, Web Experience, Generated Poetry",
-            "tools": ["Three.js", "PHP", "Rita.js", "NewsAPI", "WebScrapping"],
+            "tools": ["Three.js", "PHP", "RiTa.js", "NewsAPI", "WebScrapping"],
             "goals": ["Generate and maintain database", "Succesfully use Three.js library"],
             "abstract": "<i>read.my.column</i> is a WebGL navigable prototype. It hopes to critique how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography.",
             "body": [
                 {
                     "section": "Ideation & Inspiration",
-                    "wordCount": 200, 
+                    "wordCount": 331,
                     "content": [
                         {
-                            "type": "tit",
-                            "text": "Ideation & Inspiration"
-                        },{
                             "type": "ss-tit",
-                            "text": "Where does the idea originate from"
+                            "text": "The origin"
                         },{
                             "type": "p",
                             "text": "The motivation for this project comes from my personal struggles to find reliable, but also pragmatic source of information. The hyper-sensationalistic tone of headlines would often repel me from consuming news."
@@ -29,34 +26,43 @@
                             "text": "I validated my perception by visiting numerous mainstream news media. While some were better than others, I still found clickbait headlines with content less scandalous than advertised. I suspect Web analytics to have a role in this because an online newspapers' success is measured yes in terms of subscription, but more importantly in terms of clicks."
                         },{
                             "type": "p",
-                            "text": "I am not focusing on the issue of 'fake news', but it is inherent to my subject. Headlines, for fake news artists, are their best weapons. They frame the rest of the experience, but can affect what existing knowledge is activated in our heads and influence our mindset to recall details that coincide with expectation.”[1] Thus, a misleading headline would have an impact not only prior reading the article (if read at all), but also after, as it is remembered and maybe shared with others. "
-                        },{
-                            "type": "p",
-                            "text": "The motivation for this project comes from my personal struggles to find reliable, but also pragmatic source of information. The hyper-sensationalistic tone of headlines would often repel me from consuming news."
+                            "text": "I did not focus on the issue of 'fake news', but it is inherent to my subject. Headlines, for fake news artists, are the best weapon. They frame the rest of the experience, but can affect what existing knowledge is activated in our heads and influence our mindset to recall details that coincide with expectation.”[1] Thus, a misleading headline would have an impact not only prior reading the article (if read at all), but also after, as it is remembered and maybe shared with others. "
                         },{
                             "type": "ss-tit",
-                            "text": "Why the title read.my.column?"
+                            "text": "Why call it \"read.my.column\"?"
                         },{
                             "type": "p",
-                            "text": "This experience seeks to share my opinion on the subject and I thought this title best both for its reference to the recurrent publications of one's opinion - the column,- but also because it inspired the shapes my visual poetry."
-                        },{
-                            "type": "p",
-                            "text": "Why poetry? Because it bears more intensity with its artistic and expressionistic qualities and had the potential to reflect the intensity of emotion-triggering headlines."
+                            "text": "This digital experience seeks to share my opinion on the subject and I thought this title best both for its reference to the recurrent publications of one's opinion - the column,- but also because it inspired the shapes my visual poetry."
                         },{
                             "type": "img",
-                            "text": "!!!!!!!!!!!!!!!"
+                            "text": "visual representation of the \"columns\"",
+                            "href": "/assets/images/read_my_column/sketch.png",
+                            "size": "50%"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Why poetry?"
+                        },{
+                            "type": "p",
+                            "text": "Because it bears more intensity with its artistic and expressionistic qualities and had the potential to reflect the intensity of emotion-triggering headlines."
                         },{
                             "type": "ss-tit",
                             "text": "I found inspiration in these works:"
                         },{
-                            "type": "grid",
-                            "col": 3,
-                            "text": ["AdLiPo - David Howe", 
-                            "#MeToo Anti-Network - Kim Albrecht with support of Catherine D'Ignazio, Cole Mart, and Matthew Battles", 
-                            "The Ephemerides - Allison Parrish",
-                            "[why?]<br>Because of its great technical approach, its use of RiTa, and the fact that AdLiPo permeate almost all the web pages of a user, not only one.",
-                            "[why?]<br>Because of its activist side, its clear purpose, its successful narrative, and its display of texts: simple and efficient.",
-                            "[why?]<br>Because of the quality of prose, the eery beauty it evokes, and the method Parrish used to achieve computer-generated poetry."]
+                            "type": "cards",
+                            "orientation": "column",
+                            "text": [{
+                                "header": "<a href='https://rednoise.org/adlipo/' target='_blank'>AdLiPo</a><br>by David Howe",
+                                "image": "<a href='https://rednoise.org/adlipo/' target='_blank'><img src='/assets/images/read_my_column/adlipo.png' width='100%'></a>",
+                                "body": "[why?]<br>Because of its great technical approach, its use of RiTa, and the fact that AdLiPo permeate almost all the web pages of a user, not only one."
+                            },{
+                                "header": "<a href='https://metoo.kimalbrecht.com/' target='_blank'>#MeToo Anti-Network</a><br>by Kim Albrecht",
+                                "image": "<a href='https://metoo.kimalbrecht.com/' target='_blank'><img src='/assets/images/read_my_column/metoo.png' width='100%'></a>",
+                                "body": "[why?]<br>Because of its activist side, its clear purpose, its successful narrative, and its display of texts: simple and efficient."
+                            },{
+                                "header": "<a href='https://www.decontextualize.com/2015/08/the-ephemerides/' target='_blank'>The Ephemerides</a><br>by Allison Parrish",
+                                "image": "<a href='https://www.decontextualize.com/2015/08/the-ephemerides/' target='_blank'><img src='/assets/images/read_my_column/ephemerides.png' width='100%'></a>",
+                                "body": "[why?]<br>Because of the quality of prose, the eery beauty it evokes, and the method Parrish used to achieve computer-generated poetry."
+                            }]
                         },{
                             "type": "ref",
                             "text": "[1] https://www.newyorker.com/science/maria-konnikova/headlines-change-way-think"
@@ -65,8 +71,115 @@
                 },
                 {
                     "section": "Visual Storyboard",
+                    "wordCount": 189, 
+                    "content": [{
+                        "type": "ss-tit",
+                        "text": "Defining the interaction"
+                    },{
+                        "type": "p",
+                        "text": "The experience is meant to present itself as a forest of columns growing each day from the latest news. Each column is composed of a single headline positioned in a helicoidal string rotating on its central axis."
+                    },{
+                        "type": "ss-tit",
+                        "text": "Counter-clockwise storyboard"
+                    },{
+                        "type": "img",
+                        "text": "sketch // storyboard",
+                        "href": "/assets/images/read_my_column/storyboard.jpg",
+                        "size": "80%"
+                    },{
+                        "type": "ol-large",
+                        "text": [
+                            "<span>1. </span>User enter the 3D space and navigate using AWSD keys and mouse. Text columns are at a reasonable distance from one another to minimize the overlap, maximize readability, and ensure a one-at-a-time experience.",
+                            "<span>2. </span>On click, show the poem. The poem is generated once when columns are added daily. It is the same for all users.", 
+                            "&emsp;&emsp;&emsp;<span>2.1 </span>Button interaction → Users may compose a line and contribute to the poem.", 
+                            "&emsp;&emsp;&emsp;<span>2.2 </span>Button interaction → Users may show their appreciation.", 
+                            "&emsp;&emsp;&emsp;<span>2.3 </span>Button interaction → Users may share a comment on current column content.", 
+                            "<span>3. </span>Additional lines will show up as roots below the column.", 
+                            "<span>4. </span>And additional lines will be permanently added to the poem for all to read and edit.", 
+                            "<span>5. </span>Columns that have been interacted with (clicks, comments, lines, appreciations) will grow larger and higher. Those with no interaction will slowly decay and leave space for newer columns."
+                        ]
+                    }]
+                },{
+                    "section": "Tools & System Diagram",
                     "wordCount": 204, 
-                    "content": []
+                    "content": [{
+                        "type": "ss-tit",
+                        "text": "The right tool for the right job"
+                    },{
+                        "type": "grid",
+                        "col": "25% 25% 50%",   
+                        "text": [{
+                            "feature": "<span>Feature</span>",
+                            "tool": "<span>Tool</span>",
+                            "why": "<span>Relevance to Goals</span>"
+                        },{
+                            "feature": "3D Typography",
+                            "tool": "Three.js",
+                            "why": "Unusual, dynamic, and memorable text treatment."
+                        },{
+                            "feature": "3D Environment",
+                            "tool": "Three.js",
+                            "why": "Sense of infinite space, freedom of movement, and highly interactive with camera and arrow-key navigation built-in."
+                        },{
+                            "feature": "Generative Poetry",
+                            "tool": "RiTa.js",
+                            "why": "Allows for unexpected poetry, either very good or pretty bad."
+                        },{
+                            "feature": "News Finder",
+                            "tool": "NewsAPI",
+                            "why": "Locate articles and breaking news headlines from news sources and blogs across the web."
+                        },{
+                            "feature": "Web Scraping ",
+                            "tool": "PHP",
+                            "why": "Bypass subscription requirements to get more words and data into the poem generator program."
+                        }]
+                    },{
+                        "type": "ss-tit",
+                        "text": "System Diagram"
+                    },{
+                        "type": "p",
+                        "text": "This chart helped to establish the steps and interdependencies of the system."
+                    },{
+                        "type": "flow-chart",
+                        "text": [{
+                            "header": "NewsAPI",
+                            "body": "Provides URL and Headline."
+                        },{
+                            "header": "PHP WebScrapping",
+                            "body": "Get the full article through HTML tags, like \"p\" or \"article\"."
+                        },{
+                            "header": "RiTa.js",
+                            "body": "The article's body is deconstructed into parts of speech and reconstructed placing words according to poem templates."
+                        },{
+                            "header": "Database",
+                            "body": "Add the generated poem, the article URL, and its healdine to a database."
+                        },{
+                            "header": "Three.js",
+                            "body": "Append headlines as interactive columns rotating."
+                        },{
+                            "header": "User interactions",
+                            "body": "Manage user interactions (navigation, clicks, comments, likes, etc.) and store into database."
+                        }]
+                    },{
+                        "type": "p",
+                        "text": "The development was divided into two sections: <ul><li>NewsAPI, PHP Webscrapping & RiTa.js</li><li>Three.js & User interactions</li></ul>"
+                    },{
+                        "type": "p",
+                        "text": "The database was the last intended step: the bridge connecting the two independent programs into one seemless experience."
+                    }]
+
+                },{
+                    "section": "Early Prototype & User Testing",
+                    "wordCount": 204, 
+                    "content": ""
+                },{
+                    "section": "read.my.column in Motion",
+                    "wordCount": 0, 
+                    "content": ""
+                },{
+                    "section": "Conclusion & Afterthoughts",
+                    "wordCount": 204, 
+                    "content": ""
                 }
             ]
         },

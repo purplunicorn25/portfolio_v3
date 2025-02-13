@@ -1,6 +1,4 @@
-/* --------------- */
 /* Reset & Presets */
-/* --------------- */
 body, h1, h2, h3, h4, h5, p, figure, picture {
     margin: 0; 
     font-weight: 400;
@@ -19,27 +17,21 @@ body, h1, h2, h3, h4, h5, p, figure, picture {
     max-width: 100%;
     display: block;
 }
-/* ----------------- */
 /* Custom Properties */
-/* ----------------- */
 html {
     font-size: 16px;
 }
 :root {
-    /* colors hsl */
-    /* --clr-main: 186, 64%, 10%;
-    --clr-accent: 300, 76%, 72%;
-    --clr-accent-decline: 208, 100%, 97%; */
-
-    --clr-main: #5700FF;
-    --clr-accent: rgb(147, 255, 154);
-    --clr-accent-decline: rgb(255, 146, 133);
-    --clr-link: yellow;
+    --clr-main: rgb(12, 0, 248);
+    --clr-secondary: rgb(148, 114, 228);
+    --clr-accent: rgb(255, 255, 255);
+    --clr-accent-decline: rgb(228, 61, 61);
+    --clr-link: rgb(255, 0, 212);
     --clr-link-hover: white;
-    --clr-contrast: white;
+    --clr-contrast: rgb(211, 21, 192);
     /* fonts sizes */
     --fs-900: 6.25rem;
-    --fs-800: 3.5rem; 
+    --fs-800: 3.5rem;   
     --fs-700: 2rem; 
     --fs-600: 1.75rem;
     --fs-500: 1.2rem; 
@@ -56,38 +48,15 @@ html {
     --ff-decorative: archiv-grotesk;
     --ff-display: tanker;
     /* placement values */
+    --section-marg-inline: 5%;
     --header-common-margin: 2%;
     --project-list-btn-pad: 5%;
-    --info-pop-pad: 30px;
-    --p-margin-block: 15px;
-    /* pop values */
-    --pop-bg-color: var(--clr-main);
-    --pop-text-color: var(--clr-accent);
-    --pop-padding: 30px; 
+    --pad-marg-s: 0.5em; 
+    --pad-marg-m: 1em;
+    --pad-marg-l: 1.5em;
+    --pad-marg-xl: 2em;
     /* decoration */
-    --border-w: 1px;
-        /* FONTS */
-    /* h1 */
-    --desktop-font-display-multifunction-home-bold-size: 40px;
-    --desktop-font-display-multifunction-home-bold-family: tabular-regular;
-    /* h2 */
-    --desktop-font-display-list-home-regular-size: 40px;
-    --desktop-font-display-list-home-regular-family: tabular-regular;
-    /* h4 */
-    --desktop-font-display-pop-bar-label-size: 20px;
-    --desktop-font-display-pop-bar-label-family: tabular-regular;
-    /* h3 */
-    --desktop-font-display-pop-header-size: 40px;
-    --desktop-font-display-pop-header-family: tabular-regular;
-    /* h4 */
-    --desktop-font-display-pop-detail-size: 20px;
-    --desktop-font-display-pop-detail-family: tabular-regular;
-    
-    --desktop-font-text-pop-size: 20px;
-    --desktop-font-text-pop-family: tabular-regular;
-    --desktop-font-button-pop-size: 40px;
-    --desktop-font-button-pop-family: tabular-regular;
-    
+    --border-w: 1px;  
 } 
 /* ------------------------ */
 /* Layout Hardcoded Classes */
@@ -112,12 +81,9 @@ body {
     position: absolute; 
     bottom: 1%; 
     right: 2%;
-    text-decoration: underline;
     z-index: 2;
-    background-color:var(--clr-main);
 } #westProvince {
     position: relative; 
-    color: var(--clr-main);
     height: 90%;
     padding: 10%;
     overflow-y: auto; 
@@ -127,10 +93,11 @@ body {
 /* --------------- */
 /* Utility classes */
 /* --------------- */
-.flex { display: flex; } 
+.flex {display: flex}
 .flex-column {
     display: flex;
     flex-direction: column;
+    justify-content: baseline;
 } .p-abs-h-100 {
     position: absolute;
     height: 100vh;
@@ -154,20 +121,18 @@ body {
 } .list-button {
     text-align: left;
     margin-block: var(--header-common-margin);
+    font-size: var(--fs-500);
 } .list-button:hover {
     color: var(--clr-accent-sec);
     text-decoration: overline;
-} p {
-    margin-block: var(--p-margin-block);
-    font-size: var(--fs-400);
 } .text-box {
     max-height: 250px;
     overflow-y: scroll;
     /* margin-block: 10%; */
 } .infoContent {
     overflow-y: scroll; 
-    padding: var(--info-pop-pad); 
-    gap: 20px;
+    padding: var(--pad-marg-xl); 
+    gap: var(--pad-marg-m);
 } .noScrollBar::-webkit-scrollbar {
     height: 0px;
     width: 0px;
@@ -175,8 +140,6 @@ body {
     text-transform: lowercase;
 } .underless {
     text-decoration: none;
-} .navButton {
-    color: var(--clr-main);
 } .projectNav {
     position: absolute;
     bottom: 0;
@@ -193,44 +156,110 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
 } .section {
-    background-color: var(--clr-accent);
-    color: var(--clr-main);
-    height: 100px;
-    border: var(--border-w) solid var(--clr-main);
+    border: var(--border-w) solid var(--clr-accent);
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-} .section:hover {
-    background-color: var(--clr-main);
-    color: var(--clr-accent);
-} .section-prev-txt {
-    height:fit-content;
-    margin-inline: 5%;
-} .grid {
-    width:100%;
-    display: grid;
-    grid-template-columns: 33% 33%  33%;
-
-    /* grid-column-start: 1;
-    grid-column-end: 2; */
-} .adapt {
-    height: fit-content !important;
     flex-direction: column;
-    padding: 5%;
-    width: 90%;
-} .adapt:hover {
+    justify-content: center;
+    /* gap: var(--pad-marg-l); */
+} .section:hover {
     background-color: var(--clr-accent);
     color: var(--clr-main);
-    border-width: 3px;
+} .sectionHeader {
+    display: flex;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+} .section-active {
+    background-color: var(--clr-accent) ;
+    color: var(--clr-main);
+} .grid {
+    display: grid;
+    justify-items: stretch;
+} .grid > * + * + * + * {
+    border-top: 1px solid var(--clr-accent);
+} .grid > div > span {
+    font-weight: bold;
+    font-size: var(--fs-500);
+    /* background-color: var(--clr-main); */
+} .adapt {
+    /* height: fit-content !important; */
+    flex-direction: column;
+    /* padding-bottom: var(--pad-marg-s); */
+    width: 100%;
+} .adapt:hover {
+    background-color: var(--clr-secondary);
+    color: var(--clr-accent);
+    /* border-width: 3px; */
 } .scrollable {
     overflow-y: scroll;
+} .caption {
+    background-color: var(--clr-main);
+    color: var(--clr-accent);   
+    margin: 0; 
+    text-align: center;
+} .image {
+    display: flex;
+    flex-direction: column; 
+} .cards {
+    gap: var(--pad-marg-l);
+    justify-items: baseline;
+} .cards > div > * {
+    margin-block: var(--pad-marg-m);
+} #westProvince > p {
+    padding-block: var(--pad-marg-s);
+} .longView > *{
+    margin-block: var(--margin-p, 1.5rem);
+    margin-inline: var(--section-marg-inline);
+} a, a:visited {
+    color: var(--clr-link)
+} a:hover, a:visited:hover {
+    color: var(--clr-link-hover)
+} p {
+    margin-block: var(--margin-p, 0);
+    font-size: var(--fs-400);
+} .navButton {
+    text-decoration: underline;
+    background-color:var(--clr,--clr-main);
+} .navButton:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-main);
+    
+} .ol-large > p > span {
+    /* font-weight: bold; */
+    font-size: var(--fs-700)
+} .flow-chart {
+    flex-direction: column;
+} .flow-line {
+    height: 30px;
+    /* background-color: blue; */
+} .island {
+    background-color: var(--clr-accent);
+    color: var(--clr-main);
+    padding: var(--pad-marg-s);
+    margin-inline: 15%;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 25%;
+} .flow-line-top {
+    /* background-color: lime; */
+    width: 30%; 
+    height: 100%;
+    border-right: 1px dashed var(--clr-accent);
+} .flow-chart-header {
+    /* background-color: blueviolet; */
+    width: 50px;
+    font-weight: bold;
+    color: var(--clr-secondary);
+    font-size: var(--fs-500);
 }
 
 .link, link:visited{ color: var(--clr-link)} 
 .link:hover, link:visited:hover  { color: var(--clr-link-hover)} 
 /* colors */
 .bg-main { background-color: var(--clr-main)}
+.bg-secondary { background-color: var(--clr-secondary)}
 .bg-accent { background-color: var(--clr-accent)}
 .bg-accent-decline { background-color: var(--clr-accent-decline)}
 .text-main { color: var(--clr-main)}

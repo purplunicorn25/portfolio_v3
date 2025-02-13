@@ -1,3 +1,13 @@
+/* 
+TO DO 
+- change the arrow when a section is open
+- on section hover show a background image  
+
+
+*/
+
+
+
 "use strict"
 
 let CHECK_INTERVAL = 1;
@@ -31,24 +41,46 @@ function setupProject() {
     project.specs('westland'); // specs section left
     project.sections('eastContinent'); // content sections on left
     toggleView();
-    console.log(project.sectionsArr)
 }
-function toggleView() {
-    // console.log(project.sectionsArr);
-    $('.section').on('click', function() {
-        // console.log($(this).attr('id'));
-        let thisSection = $(this).attr('id'); // get id
-        let thisIndex = thisSection.replace("section", ""); // get index
-        if (project.sectionsArr[thisIndex].open) { // if close
-            $(`#${thisSection}`).addClass('adapt');
-            $(`#${thisSection}`).html(project.formatSection(thisIndex));
-            project.sectionsArr[thisIndex].open = false;
-        } else { // if open
+function toggleView() { 
+    $('.sectionHeader').on('click', function() {
+        let thisButton = $(this).attr('id'); // get id
+        let thisIndex = thisButton.replace("sectionHeader", ""); // get index
+        let thisSection =  "section" + thisIndex;  // create id of section
+        let thisWordCount = 'word' + thisIndex; 
+        let close = function() {
+            $(`#${thisButton}`).removeClass('section-active');
             $(`#${thisSection}`).removeClass('adapt');
-            $(`#${thisSection}`).html(project.sectionsArr[thisIndex].short);
-            project.sectionsArr[thisIndex].open = true;
-            console.log('long');
+            $(`#${thisSection}Long`).remove();
+            $(`#${thisWordCount}`).show();
+            $(`#navButton${thisIndex}`).remove();
+            project.sectionsArr[thisIndex].open = false;
         }
+        let open = function() {
+
+            $(`#${thisButton}`).addClass('section-active');
+            $(`#${thisSection}`).addClass('adapt'); // add a class to elongate the box
+            $(`#${thisSection}`).append(`<div id="${thisSection}Long" class="longView">${project.formatSection(thisIndex)}</div><button id='navButton${thisIndex}' class='navButton'>minimize section</button>`); // add the content
+            $(`#${thisWordCount}`).hide();
+            project.sectionsArr[thisIndex].open = true; // 
+            imgCaption();   
+        }
+        if (!project.sectionsArr[thisIndex].open) { // if closed
+            open();
+        } else {
+            close();
+        }
+        $(`#navButton${thisIndex}`).on('click', function() {
+            close();
+        })
+    });
+}
+function imgCaption() { 
+    $('.caption').hide(); 
+    $('img').on('mouseenter', function() {
+        $('.caption').show(); 
+    }).on('mouseleave', function() {
+        $('.caption').hide(); 
     });
 }
 function dataToString(dataObject) {

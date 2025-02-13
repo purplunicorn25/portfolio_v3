@@ -52,7 +52,7 @@ function setupHome() {
     // determine the initial size of pop containers
     // create project POPs
     for (let i = 0; i < projects.length; i++) {
-        let project = new ProjectHTML(projects[i]); // gather project content data
+        let project = new PopHTML(projects[i]); // gather project content data
         let contentHTML = project.composeHTML(); // define HTML format for data in constructor
         managePop(projects[i].id, contentHTML, projects[i].barLabel,'auto', false, i);
     }
@@ -108,7 +108,7 @@ function checkIfChildren(popID) {
     }
 } // return a string for a typical pop (bar, contentBox, exit button)
 function createPOP(dataObject, barLabel) {
-    let bar = `<div class="bar flex bg-accent text-main ff-primary-medium lowercase"><div>${barLabel}</div><button id="x${xbuttonID}" class="button-info-hide">X</button></div>`; // create bar at top
+    let bar = `<div class="bar flex bg-accent text-main ff-primary-medium lowercase"><div>${barLabel}</div><button id="x${xbuttonID}" class="button-info-hide">x</button></div>`; // create bar at top
     xbuttonID ++; // make sure all exit button have unique id
     let openContent = '<div class="infoContent flex-column" style="">' // open the content div
     let popContent = dataToString(dataObject); // full content passed through data
@@ -127,7 +127,7 @@ function appendPOP(containerID, popID, dataObject, barLabel, height) {
     // $(`#${popID}`).css({'width': width, 'height': height});
     let coordinates = randomCoordinates(containerID); // get random x,y in specific container
     $(`#${popID}`).css({'left': `${coordinates.x}px`, 'top': `${coordinates.y}px`}); // assign x,y to current POP
-    $(`#${popID}`).draggable();
+    $(`#${popID}`).draggable({ containment: "#world" });
     closePOP(); // button to close all at once
 } // create pop-up for action buttons
 function managePop(buttonID, dataObject, barLabel, height, multi, index) {  
