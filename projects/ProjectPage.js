@@ -21,7 +21,7 @@ class ProjectPage {
                     goalList += '■ ' + this.goals[i];
                     goalList += '<br>';
                 } let specs = {  // assemble all the component of the specs section
-                container: '<div id="westProvince" class="flex-column">',
+                container: '<div id="westWorld" class="flex-column">',
                 title: `<h1 class="bold fs-700">${this.title}</h1>`,
                 medium: `<h4 class="">${this.medium}</h4>`,
                 abstract: `<p><span class="bold">abstract<br></span>${this.abstract}</p>`,
@@ -38,7 +38,7 @@ class ProjectPage {
                 let section = { // assemble all components
                     container: `<div id="section${i}" class="section">`,
                     box: `<div id="sectionHeader${i}" class="sectionHeader">`,
-                    title: `<div class="section-prev-txt fs-500" style="margin-inline: var(--section-marg-inline)"><span class="fs-600">${this.arrow.r}</span> ${this.body[i].section}</div>`,
+                    title: `<div id="section-prev-txt${i}" class="section-prev-txt fs-500" style="margin-inline: var(--section-marg-inline)"><span class="fs-600">${this.arrow.r}</span> ${this.body[i].section}</div>`,
                     wordCount: `<div id="word${i}" class="wordCount section-prev-txt italic" style="margin-inline: var(--section-marg-inline)">${this.body[i].wordCount} words</div>`,
                     boxEnd: '</div>',
                     containerEnd: `</div>`
@@ -49,7 +49,7 @@ class ProjectPage {
                 this.sectionsArr.push({index: i, id: 'section' + i, short: section.box + section.title + section.wordCount + section.boxEnd, long: this.body[i].content, open: false});
             }
         };
-        this.formatSection = function(sectionIndex) {
+        this.formatSection = function(sectionIndex) { // function to adjust the display depending on the text type from JSON file
             let compiller = [];
             let proj = this.body[sectionIndex].content;
             console.log(proj)
@@ -58,7 +58,7 @@ class ProjectPage {
                 if (proj[i].type === 'p') {
                     string = `<p>${proj[i].text}</p>`
                 } else if (proj[i].type === 'ss-tit') {
-                    string = `<p class='fs-700'>${proj[i].text}</p>`
+                    string = `<p class='fs-800 ${proj[i].type}'>${proj[i].text}</p>`
                 } else if (proj[i].type === 'img') {
                     string = `<div class="image" style="width:${proj[i].size}"><img id="img${i}"src="${proj[i].href}" width="100%"><span id="caption${i}" class="caption fs-200">${proj[i].text}</span></div>`
                 } else if (proj[i].type === 'cards') {

@@ -1,6 +1,19 @@
 {
     "description": "Info & Content for each project",
+    "note": "projects should appear in the same order as on the index page",
     "projects": [
+        {
+            "id": "read",
+            "title": "read.my.column",
+            "year": "2022",
+            "context": "Computation Arts Course: CART351 - Network & Navigation",
+            "medium": "Programming, Web Experience, Generated Poetry",
+            "tools": ["Three.js", "PHP", "RiTa.js", "NewsAPI", "WebScrapping"],
+            "goals": ["Generate and maintain database", "Succesfully use Three.js library"],
+            "abstract": "<i>read.my.column</i> is a WebGL navigable prototype. It hopes to critique how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography.",
+            "href": "/projects/part.html", 
+            "body": []
+        },
         {  
             "id": "read",
             "title": "read.my.column",
@@ -10,6 +23,7 @@
             "tools": ["Three.js", "PHP", "RiTa.js", "NewsAPI", "WebScrapping"],
             "goals": ["Generate and maintain database", "Succesfully use Three.js library"],
             "abstract": "<i>read.my.column</i> is a WebGL navigable prototype. It hopes to critique how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography.",
+            "href": "/projects/read.html", 
             "body": [
                 {
                     "section": "Ideation & Inspiration",
@@ -46,7 +60,7 @@
                             "text": "Because it bears more intensity with its artistic and expressionistic qualities and had the potential to reflect the intensity of emotion-triggering headlines."
                         },{
                             "type": "ss-tit",
-                            "text": "I found inspiration in these works:"
+                            "text": "A Tribute to these inspiring artworks"
                         },{
                             "type": "cards",
                             "orientation": "column",
@@ -104,7 +118,7 @@
                     "wordCount": 204, 
                     "content": [{
                         "type": "ss-tit",
-                        "text": "The right tool for the right job"
+                        "text": "The Right tool for the right job"
                     },{
                         "type": "grid",
                         "col": "25% 25% 50%",   
@@ -138,7 +152,7 @@
                         "text": "System Diagram"
                     },{
                         "type": "p",
-                        "text": "This chart helped to establish the steps and interdependencies of the system."
+                        "text": "This chart helped establish the steps and interdependencies of the system. It allowed to map tasks and create a project timeline."
                     },{
                         "type": "flow-chart",
                         "text": [{
@@ -170,20 +184,120 @@
 
                 },{
                     "section": "Early Prototype & User Testing",
-                    "wordCount": 204, 
-                    "content": ""
+                    "wordCount": 174, 
+                    "content": [{
+                        "type": "img",
+                        "text": "screenshot from testing prototype",
+                        "href": "/assets/images/read_my_column/still.png",
+                        "size": ""
+                    },{
+                        "type": "ss-tit",
+                        "text": "I wanted to learn"
+                    },{
+                        "type": "p",
+                        "text": "<ul><li>If the experience was compelling or felt meaningful;</li><li>If the randomness of the poem was bothersome or enjoyable;</li><li>In what ways where users compelled to interact with the column and poems;</li><li>How many column would they click and read during one session;</li><li>What would motivate users to stay longer and navigate the forest;</li><li>If the experience would benefit from a map, a search bar, or a filter?</li></ul>"
+                    },{
+                        "type": "ss-tit",
+                        "text": "I learned"
+                    },{
+                        "type": "p",
+                        "text": "<ul><li>That the metaphor of the tree could use some refinement: concepts of leaves, a canopy, behaviors, and wind were discussed.</li><li>That the number of daily columns added to the forest is a fragile equilibrium. It needs enough to maintain interest, but making it too vast could possibly overwhelm or discourage users.</li></ul>"
+                    },{
+                        "type": "ss-tit",
+                        "text": "I planned"
+                    },{
+                        "type": "p",
+                        "text": "<ul><li>To research Three.js function for wind type interactions.</li><li>To reduce to a daily addition of 10 column for now and test again later before launch.</li><li>To create sectors in the forest or new forests altogether based on a fixed timespan. For example, each year could have a forest.</li></ul>"
+                    }]
                 },{
-                    "section": "read.my.column in Motion",
-                    "wordCount": 0, 
-                    "content": ""
+                    "section": "Prototype in motion",
+                    "wordCount": 99, 
+                    "content": [{
+                        "type": "ss-tit",
+                        "text": "Preview of navigation"
+                    },{
+                        "type": "p",
+                        "text": "Controls are straightfoward, WASD for movement and mouse for camera."
+                    },{
+                        "type": "img",
+                        "text": "",
+                        "href": "/assets/images/read_my_column/navigation.gif",
+                        "size": ""
+                    },{
+                        "type": "ss-tit",
+                        "text": "Close-up on columns"
+                    },{
+                        "type": "p",
+                        "text": "The size of the columns was designed so the user can \"stand\" in the middle, surrounded by the moving words."
+                    },{
+                        "type": "img",
+                        "text": "",
+                        "href": "/assets/images/read_my_column/inside_view.gif",
+                        "size": ""
+                    },{
+                        "type": "ss-tit",
+                        "text": "Global view of columns cluster"
+                    },{
+                        "type": "p",
+                        "text": "View from a distance of a cluster of 9 columns."
+                    },{
+                        "type": "img",
+                        "text": "",
+                        "href": "/assets/images/read_my_column/global_view.gif  ",
+                        "size": ""
+                    },{
+                        "type": "ss-tit",
+                        "text": "Generating poems"
+                    },{
+                        "type": "p",
+                        "text": "For the prototype, the database was not yet setup. This program was responsible of generating the poems, but was not connected to the 3D environment."
+                    },{
+                        "type": "img",
+                        "text": "",
+                        "href": "/assets/images/read_my_column/poem_create.gif",
+                        "size": ""
+                    },{
+                        "type": "ss-tit",
+                        "text": "Full experience mock-up"
+                    },{
+                        "type": "p",
+                        "text": "Using video compositing, this mock-up was made to showcase what the final experience should look and feel like."
+                    },{
+                        "type": "img",
+                        "text": "",
+                        "href": "/assets/images/read_my_column/mockup_poem.gif",
+                        "size": ""
+                    }]
                 },{
                     "section": "Conclusion & Afterthoughts",
-                    "wordCount": 204, 
-                    "content": ""
+                    "wordCount": 253, 
+                    "content": [{
+                        "type": "ss-tit",
+                        "text": "Strengths"
+                    },{
+                        "type": "p",
+                        "text": "<ul><li>The columns are aligned on a grid with equal spacing and thus creates narrow corridors that are easy to navigate.</li><li>The height of the columns is high enough to evoke trees or even skyscraper and street.</li><li>The fonts and random colors are shared by all units to avoid competition and hierarchy. The sole indicator of individuality is the headline string.</li><li>Poem structure is respected and results are occasionally witty or funny.</li></ul>"
+                    },{
+                        "type": "img",
+                        "text": "columns in their final form",
+                        "href": "/assets/images/read_my_column/col.png",
+                        "size": ""
+                    },{
+                        "type": "ss-tit",
+                        "text": "Areas of Improvement"
+                    },{
+                        "type": "p",
+                        "text": "<ul><li>The overall quality of the poems is lesser than expected.<ul><li>Potential solution: Building my own language recognition system and researching English poem structure could fix this issue, but my lack of knowledge in these areas are non-negligable.</ul></li><li>The display of the poem on a flat 2D surface creates a disconnect from the 3D environment. However, to ensure optimal legibility other options have to be explored and tested thoroughly. Videogames have a lot of in-game texts and dialog and could provide inspiration for creative ways to solve this issue.</li><li>The rotation of the text-geometry is heavy on the browser. This could be solved by having different level of details and activate the rotation by user radius.</li></ul>"
+                    },{
+                        "type": "ss-tit",
+                        "text": "At last"
+                    },{
+                        "type": "p",
+                        "text": "The critical intent of <i>read.my.column</i> is well vehiculated by the disconnect between headline and content. The 3D environment is easy to navigate and is successful in creating a sense of materiality to text and typography that is uncommon and appreciable. The poetry and interaction features enable a creative potential while still reinforcing the concept that the tone of a headline matters. "
+                    }]
                 }
             ]
         },
-        {},
         {},
         {},
         {}

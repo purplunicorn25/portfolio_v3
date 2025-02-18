@@ -23,6 +23,7 @@ let mobile = false;
 // GLOBAL ARRAYS
 let actions = []; 
 let projects = []; 
+let projectPages = ['test','test2'];
 // PROGRAM INITIATE
 $(document).ready(preloadHome);
 // Download JSON before calling setup
@@ -82,7 +83,7 @@ function responsive() {
         $('html').css("font-size", "16px"); // change to default
         console.log('desktop');
     }
-} 
+} // deal with the size of pop divs if mobile
 function popSize() {
     if (mobile) {   
         $('.container-pop').css("width", POP_WIDE); // all pop are 50%

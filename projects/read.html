@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,17 +21,14 @@
     <!-- My script(s) -->
     <script src="script.js"></script>
     <script src="ProjectPage.js"></script>
-
-</head>
-<body>
-    <div id="world" class="p-abs-h-100 bg-secondary text-accent" style="width: 100%;">  
-        <div id="westsea" class="p-abs-h-100" style="width: 30%">
-            <div id="westland" class="p-abs-h-100 flex-column"></div>
-        </div>
-        <div id="eastsea" class="p-abs-h-100" style="width: 70%; left:30%">
-          <div id="eastContinent" class="p-abs-h-100 flex-column scrollable" style="width: 84%; padding: 8%; gap: 5%;"></div>   
-        </div>
-      <nav class="flex projectNav"><button class="navButton text-accent">🡐 previous project</button><button class="navButton text-accent">home</button><button class="navButton text-accent">next project 🡒</button></nav>
+  </head>
+  <body>
+    <div  id="world" data-page="read" class="p-abs-h-100 bg-secondary text-accent scrollable" style="width: 100%;">  
+      <div id="west" class="p-abs-h-100 flex-column" style="width: 30%"></div>
+      <div id="east" class="p-abs-h-100" style="width: 70%; left: 30%;">
+        <div id="eastIslands" class="flex-column"></div> 
+      </div>   
+      <nav class="flex projectNav"><button id="previous" class="navButton text-accent">🡐 previous project</button><a href="/index.html"><button class="navButton text-accent">home</button></a><button id="next" class="navButton text-accent">next project 🡒</button></nav>
     </div>
-    </body>
+  </body>
 </html>
