@@ -26,7 +26,7 @@ class ProjectPage {
                 medium: `<h4 class="">${this.medium}</h4>`,
                 abstract: `<p><span class="bold">abstract<br></span>${this.abstract}</p>`,
                 year: `<p><span class="bold">year<br></span>${this.year}</p>`,
-                tools: `<p><span class="bold">tools<br></span><span class="tool"${toolList}</span></p>`,
+                tools: `<p><span class="bold">tools<br></span><span class="tool">${toolList}</span></p>`,
                 goals: `<p><span class="bold">learning goals<br></span>${goalList}</p>`,
                 containerEnd: '</div>'
             } // Turn into a single string
@@ -37,7 +37,7 @@ class ProjectPage {
             for (let i in this.body) { // for all sections create the box and its content
                 let section = { // assemble all components
                     container: `<div id="section${i}" class="section">`,
-                    box: `<div id="sectionHeader${i}" class="sectionHeader">`,
+                    box: `<div id="sectionHeader${i}" class="sectionHeader" data-active='false'>`,
                     title: `<div id="section-prev-txt${i}" class="section-prev-txt fs-500" style="margin-inline: var(--section-marg-inline)"><span class="fs-600">${this.arrow.r}</span> ${this.body[i].section}</div>`,
                     wordCount: `<div id="word${i}" class="wordCount section-prev-txt italic" style="margin-inline: var(--section-marg-inline)">${this.body[i].wordCount} words</div>`,
                     boxEnd: '</div>',
@@ -55,13 +55,13 @@ class ProjectPage {
             console.log(proj)
             for (let i in proj) {
                 let string = '';
-                if (proj[i].type === 'p') {
+                if (proj[i].type === 'p') { // PARAGRAPH 
                     string = `<p>${proj[i].text}</p>`
-                } else if (proj[i].type === 'ss-tit') {
+                } else if (proj[i].type === 'ss-tit') { // SOUS-TITRE
                     string = `<p class='fs-800 ${proj[i].type}'>${proj[i].text}</p>`
-                } else if (proj[i].type === 'img') {
-                    string = `<div class="image" style="width:${proj[i].size}"><img id="img${i}"src="${proj[i].href}" width="100%"><span id="caption${i}" class="caption fs-200">${proj[i].text}</span></div>`
-                } else if (proj[i].type === 'cards') {
+                } else if (proj[i].type === 'img') { // IMG
+                    string = `<div class="flex-column" style="width:${proj[i].size}"><img id="img${i}"src="${proj[i].href}" width="100%"><span id="caption${i}" class="caption fs-300">${proj[i].text}</span></div>`
+                } else if (proj[i].type === 'cards') { // CARDS
                     for (let ii in proj[i].text) {
                         let temp = `<p class='fs-400 bg-main' style='padding: 0.5em'>${proj[i].text[ii].header}</p>`;
                         temp += proj[i].text[ii].image;
@@ -69,12 +69,12 @@ class ProjectPage {
                         string += `<div>${temp}</div>`;
                     }
                     string = `<div class='flex cards'>${string}</div>`;
-                } else if (proj[i].type === 'ol-large') {
+                } else if (proj[i].type === 'ol-large') { // ORDERED LIST LARGE NUMBERS
                     for (let ii in proj[i].text) {
                         string += `<p>${proj[i].text[ii]}</p>`
                     }
                     string = `<div class="${proj[i].type}">`+string+'</div>';
-                } else if (proj[i].type === 'grid') {
+                } else if (proj[i].type === 'grid') { // GRID
                     for (let ii in proj[i].text) {
                         let temp = ''; 
                         for (let iii in proj[i].text[ii]) {
@@ -83,7 +83,7 @@ class ProjectPage {
                         string += temp;
                     }
                     string = `<div class="${proj[i].type}" style='grid-template-columns:${proj[i].col}'>`+string+'</div>';
-                } else if (proj[i].type === 'flow-chart') {
+                } else if (proj[i].type === 'flow-chart') { // FLOW-CHART
                     for (let ii in proj[i].text) {
                         if (ii < proj[i].text.length -1) {
                             string += `<div class='island'><p class="flow-chart-header">${proj[i].text[ii].header}</p><p>${proj[i].text[ii].body}</p></div><div class=" flex flow-line"><div class="flow-line-top"></div><div></div></div>`;
@@ -92,7 +92,15 @@ class ProjectPage {
                         }
                     }
                     string = `<div class="flex ${proj[i].type}">`+string+'</div>';
-                }                                                                              
+                } else if (proj[i].type === 'ref') { // BIBLIOGRAPHY REF
+                    string = `<p class="${proj[i].type}">${proj[i].text}</p>`;
+                } else if (proj[i].type === 'gallery') { // IMAGE GALLERY
+                    let temp = '';
+                    for (let ii in proj[i].images) {
+                        temp += `<div class="gallery-item flex-column" style="width:${proj[i].size}"><img src="${proj[i].images[ii].href}" width="100%"><span id="caption-gal${i}" class="caption fs-100">${proj[i].images[ii].caption}</span></div>`;
+                    }
+                    string = `<div class='gallery-label'>${proj[i].text}</div><div class='gallery'>${temp}</div>`;
+                }                                                                            
                 compiller.push(string);
             }
             let HTMLstring = dataToString(compiller);

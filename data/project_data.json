@@ -28,6 +28,7 @@
                 {
                     "section": "Ideation & Inspiration",
                     "wordCount": 331,
+                    "background": "/assets/images/read_my_column/sketch.png",
                     "content": [
                         {
                             "type": "ss-tit",
@@ -86,7 +87,9 @@
                 {
                     "section": "Visual Storyboard",
                     "wordCount": 189, 
-                    "content": [{
+                    "background": "/assets/images/read_my_column/storyboard.jpg",
+                    "content": [
+                        {
                         "type": "ss-tit",
                         "text": "Defining the interaction"
                     },{
@@ -112,193 +115,590 @@
                             "<span>4. </span>And additional lines will be permanently added to the poem for all to read and edit.", 
                             "<span>5. </span>Columns that have been interacted with (clicks, comments, lines, appreciations) will grow larger and higher. Those with no interaction will slowly decay and leave space for newer columns."
                         ]
-                    }]
+                    }
+                    ]
                 },{
                     "section": "Tools & System Diagram",
-                    "wordCount": 204, 
-                    "content": [{
-                        "type": "ss-tit",
-                        "text": "The Right tool for the right job"
-                    },{
-                        "type": "grid",
-                        "col": "25% 25% 50%",   
-                        "text": [{
-                            "feature": "<span>Feature</span>",
-                            "tool": "<span>Tool</span>",
-                            "why": "<span>Relevance to Goals</span>"
+                    "wordCount": 204,
+                    "background": "", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "The Right tool for the right job"
                         },{
-                            "feature": "3D Typography",
-                            "tool": "Three.js",
-                            "why": "Unusual, dynamic, and memorable text treatment."
+                            "type": "grid",
+                            "col": "25% 25% 50%",   
+                            "text": [{
+                                "feature": "<span>Feature</span>",
+                                "tool": "<span>Tool</span>",
+                                "why": "<span>Relevance to Goals</span>"
+                            },{
+                                "feature": "3D Typography",
+                                "tool": "Three.js",
+                                "why": "Unusual, dynamic, and memorable text treatment."
+                            },{
+                                "feature": "3D Environment",
+                                "tool": "Three.js",
+                                "why": "Sense of infinite space, freedom of movement, and highly interactive with camera and arrow-key navigation built-in."
+                            },{
+                                "feature": "Generative Poetry",
+                                "tool": "RiTa.js",
+                                "why": "Allows for unexpected poetry, either very good or pretty bad."
+                            },{
+                                "feature": "News Finder",
+                                "tool": "NewsAPI",
+                                "why": "Locate articles and breaking news headlines from news sources and blogs across the web."
+                            },{
+                                "feature": "Web Scraping ",
+                                "tool": "PHP",
+                                "why": "Bypass subscription requirements to get more words and data into the poem generator program."
+                            }]
                         },{
-                            "feature": "3D Environment",
-                            "tool": "Three.js",
-                            "why": "Sense of infinite space, freedom of movement, and highly interactive with camera and arrow-key navigation built-in."
+                            "type": "ss-tit",
+                            "text": "System Diagram"
                         },{
-                            "feature": "Generative Poetry",
-                            "tool": "RiTa.js",
-                            "why": "Allows for unexpected poetry, either very good or pretty bad."
+                            "type": "p",
+                            "text": "This chart helped establish the steps and interdependencies of the system. It allowed to map tasks and create a project timeline."
                         },{
-                            "feature": "News Finder",
-                            "tool": "NewsAPI",
-                            "why": "Locate articles and breaking news headlines from news sources and blogs across the web."
+                            "type": "flow-chart",
+                            "text": [{
+                                "header": "NewsAPI",
+                                "body": "Provides URL and Headline."
+                            },{
+                                "header": "PHP WebScrapping",
+                                "body": "Get the full article through HTML tags, like \"p\" or \"article\"."
+                            },{
+                                "header": "RiTa.js",
+                                "body": "The article's body is deconstructed into parts of speech and reconstructed placing words according to poem templates."
+                            },{
+                                "header": "Database",
+                                "body": "Add the generated poem, the article URL, and its healdine to a database."
+                            },{
+                                "header": "Three.js",
+                                "body": "Append headlines as interactive columns rotating."
+                            },{
+                                "header": "User interactions",
+                                "body": "Manage user interactions (navigation, clicks, comments, likes, etc.) and store into database."
+                            }]
                         },{
-                            "feature": "Web Scraping ",
-                            "tool": "PHP",
-                            "why": "Bypass subscription requirements to get more words and data into the poem generator program."
-                        }]
-                    },{
-                        "type": "ss-tit",
-                        "text": "System Diagram"
-                    },{
-                        "type": "p",
-                        "text": "This chart helped establish the steps and interdependencies of the system. It allowed to map tasks and create a project timeline."
-                    },{
-                        "type": "flow-chart",
-                        "text": [{
-                            "header": "NewsAPI",
-                            "body": "Provides URL and Headline."
+                            "type": "p",
+                            "text": "The development was divided into two sections: <ul><li>NewsAPI, PHP Webscrapping & RiTa.js</li><li>Three.js & User interactions</li></ul>"
                         },{
-                            "header": "PHP WebScrapping",
-                            "body": "Get the full article through HTML tags, like \"p\" or \"article\"."
-                        },{
-                            "header": "RiTa.js",
-                            "body": "The article's body is deconstructed into parts of speech and reconstructed placing words according to poem templates."
-                        },{
-                            "header": "Database",
-                            "body": "Add the generated poem, the article URL, and its healdine to a database."
-                        },{
-                            "header": "Three.js",
-                            "body": "Append headlines as interactive columns rotating."
-                        },{
-                            "header": "User interactions",
-                            "body": "Manage user interactions (navigation, clicks, comments, likes, etc.) and store into database."
-                        }]
-                    },{
-                        "type": "p",
-                        "text": "The development was divided into two sections: <ul><li>NewsAPI, PHP Webscrapping & RiTa.js</li><li>Three.js & User interactions</li></ul>"
-                    },{
-                        "type": "p",
-                        "text": "The database was the last intended step: the bridge connecting the two independent programs into one seemless experience."
-                    }]
-
+                            "type": "p",
+                            "text": "The database was the last intended step: the bridge connecting the two independent programs into one seemless experience."
+                        }
+                    ]
                 },{
                     "section": "Early Prototype & User Testing",
                     "wordCount": 174, 
-                    "content": [{
-                        "type": "img",
-                        "text": "screenshot from testing prototype",
-                        "href": "/assets/images/read_my_column/still.png",
-                        "size": ""
-                    },{
-                        "type": "ss-tit",
-                        "text": "I wanted to learn"
-                    },{
-                        "type": "p",
-                        "text": "<ul><li>If the experience was compelling or felt meaningful;</li><li>If the randomness of the poem was bothersome or enjoyable;</li><li>In what ways where users compelled to interact with the column and poems;</li><li>How many column would they click and read during one session;</li><li>What would motivate users to stay longer and navigate the forest;</li><li>If the experience would benefit from a map, a search bar, or a filter?</li></ul>"
-                    },{
-                        "type": "ss-tit",
-                        "text": "I learned"
-                    },{
-                        "type": "p",
-                        "text": "<ul><li>That the metaphor of the tree could use some refinement: concepts of leaves, a canopy, behaviors, and wind were discussed.</li><li>That the number of daily columns added to the forest is a fragile equilibrium. It needs enough to maintain interest, but making it too vast could possibly overwhelm or discourage users.</li></ul>"
-                    },{
-                        "type": "ss-tit",
-                        "text": "I planned"
-                    },{
-                        "type": "p",
-                        "text": "<ul><li>To research Three.js function for wind type interactions.</li><li>To reduce to a daily addition of 10 column for now and test again later before launch.</li><li>To create sectors in the forest or new forests altogether based on a fixed timespan. For example, each year could have a forest.</li></ul>"
-                    }]
+                    "background": "/assets/images/read_my_column/ready.png",
+                    "content": [
+                        {
+                            "type": "img",
+                            "text": "screenshot from testing prototype",
+                            "href": "/assets/images/read_my_column/still.png",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "I wanted to learn"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>If the experience was compelling or felt meaningful;</li><li>If the randomness of the poem was bothersome or enjoyable;</li><li>In what ways where users compelled to interact with the column and poems;</li><li>How many column would they click and read during one session;</li><li>What would motivate users to stay longer and navigate the forest;</li><li>If the experience would benefit from a map, a search bar, or a filter?</li></ul>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "I learned"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>That the metaphor of the tree could use some refinement: concepts of leaves, a canopy, behaviors, and wind were discussed.</li><li>That the number of daily columns added to the forest is a fragile equilibrium. It needs enough to maintain interest, but making it too vast could possibly overwhelm or discourage users.</li></ul>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "I planned"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>To research Three.js function for wind type interactions.</li><li>To reduce to a daily addition of 10 column for now and test again later before launch.</li><li>To create sectors in the forest or new forests altogether based on a fixed timespan. For example, each year could have a forest.</li></ul>"
+                        }
+                    ]
                 },{
-                    "section": "Prototype in motion",
+                    "section": "Prototype In Motion",
                     "wordCount": 99, 
-                    "content": [{
-                        "type": "ss-tit",
-                        "text": "Preview of navigation"
-                    },{
-                        "type": "p",
-                        "text": "Controls are straightfoward, WASD for movement and mouse for camera."
-                    },{
-                        "type": "img",
-                        "text": "",
-                        "href": "/assets/images/read_my_column/navigation.gif",
-                        "size": ""
-                    },{
-                        "type": "ss-tit",
-                        "text": "Close-up on columns"
-                    },{
-                        "type": "p",
-                        "text": "The size of the columns was designed so the user can \"stand\" in the middle, surrounded by the moving words."
-                    },{
-                        "type": "img",
-                        "text": "",
-                        "href": "/assets/images/read_my_column/inside_view.gif",
-                        "size": ""
-                    },{
-                        "type": "ss-tit",
-                        "text": "Global view of columns cluster"
-                    },{
-                        "type": "p",
-                        "text": "View from a distance of a cluster of 9 columns."
-                    },{
-                        "type": "img",
-                        "text": "",
-                        "href": "/assets/images/read_my_column/global_view.gif  ",
-                        "size": ""
-                    },{
-                        "type": "ss-tit",
-                        "text": "Generating poems"
-                    },{
-                        "type": "p",
-                        "text": "For the prototype, the database was not yet setup. This program was responsible of generating the poems, but was not connected to the 3D environment."
-                    },{
-                        "type": "img",
-                        "text": "",
-                        "href": "/assets/images/read_my_column/poem_create.gif",
-                        "size": ""
-                    },{
-                        "type": "ss-tit",
-                        "text": "Full experience mock-up"
-                    },{
-                        "type": "p",
-                        "text": "Using video compositing, this mock-up was made to showcase what the final experience should look and feel like."
-                    },{
-                        "type": "img",
-                        "text": "",
-                        "href": "/assets/images/read_my_column/mockup_poem.gif",
-                        "size": ""
-                    }]
+                    "background": "/assets/images/read_my_column/still.png",
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Preview of navigation"
+                        },{
+                            "type": "p",
+                            "text": "Controls are straightfoward, WASD for movement and mouse for camera."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/read_my_column/navigation.gif",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "Close-up on columns"
+                        },{
+                            "type": "p",
+                            "text": "The size of the columns was designed so the user can \"stand\" in the middle, surrounded by the moving words."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/read_my_column/inside_view.gif",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "Global view of columns cluster"
+                        },{
+                            "type": "p",
+                            "text": "View from a distance of a cluster of 9 columns."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/read_my_column/global_view.gif  ",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "Generating poems"
+                        },{
+                            "type": "p",
+                            "text": "For the prototype, the database was not yet setup. This program was responsible of generating the poems, but was not connected to the 3D environment."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/read_my_column/poem_create.gif",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "Full experience mock-up"
+                        },{
+                            "type": "p",
+                            "text": "Using video compositing, this mock-up was made to showcase what the final experience should look and feel like."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/read_my_column/mockup_poem.gif",
+                            "size": ""
+                        }
+                    ]
                 },{
                     "section": "Conclusion & Afterthoughts",
                     "wordCount": 253, 
-                    "content": [{
-                        "type": "ss-tit",
-                        "text": "Strengths"
-                    },{
-                        "type": "p",
-                        "text": "<ul><li>The columns are aligned on a grid with equal spacing and thus creates narrow corridors that are easy to navigate.</li><li>The height of the columns is high enough to evoke trees or even skyscraper and street.</li><li>The fonts and random colors are shared by all units to avoid competition and hierarchy. The sole indicator of individuality is the headline string.</li><li>Poem structure is respected and results are occasionally witty or funny.</li></ul>"
-                    },{
-                        "type": "img",
-                        "text": "columns in their final form",
-                        "href": "/assets/images/read_my_column/col.png",
-                        "size": ""
-                    },{
-                        "type": "ss-tit",
-                        "text": "Areas of Improvement"
-                    },{
-                        "type": "p",
-                        "text": "<ul><li>The overall quality of the poems is lesser than expected.<ul><li>Potential solution: Building my own language recognition system and researching English poem structure could fix this issue, but my lack of knowledge in these areas are non-negligable.</ul></li><li>The display of the poem on a flat 2D surface creates a disconnect from the 3D environment. However, to ensure optimal legibility other options have to be explored and tested thoroughly. Videogames have a lot of in-game texts and dialog and could provide inspiration for creative ways to solve this issue.</li><li>The rotation of the text-geometry is heavy on the browser. This could be solved by having different level of details and activate the rotation by user radius.</li></ul>"
-                    },{
-                        "type": "ss-tit",
-                        "text": "At last"
-                    },{
-                        "type": "p",
-                        "text": "The critical intent of <i>read.my.column</i> is well vehiculated by the disconnect between headline and content. The 3D environment is easy to navigate and is successful in creating a sense of materiality to text and typography that is uncommon and appreciable. The poetry and interaction features enable a creative potential while still reinforcing the concept that the tone of a headline matters. "
-                    }]
+                    "background": "/assets/images/read_my_column/col.png",
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Strengths"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>The columns are aligned on a grid with equal spacing and thus creates narrow corridors that are easy to navigate.</li><li>The height of the columns is high enough to evoke trees or even skyscraper and street.</li><li>The fonts and random colors are shared by all units to avoid competition and hierarchy. The sole indicator of individuality is the headline string.</li><li>Poem structure is respected and results are occasionally witty or funny.</li></ul>"
+                        },{
+                            "type": "img",
+                            "text": "columns in their final form",
+                            "href": "/assets/images/read_my_column/col.png",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "Areas of Improvement"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>The overall quality of the poems is lesser than expected.<ul><li>Potential solution: Building my own language recognition system and researching English poem structure could fix this issue, but my lack of knowledge in these areas are non-negligable.</ul></li><li>The display of the poem on a flat 2D surface creates a disconnect from the 3D environment. However, to ensure optimal legibility other options have to be explored and tested thoroughly. Videogames have a lot of in-game texts and dialog and could provide inspiration for creative ways to solve this issue.</li><li>The rotation of the text-geometry is heavy on the browser. This could be solved by having different level of details and activate the rotation by user radius.</li></ul>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "At last"
+                        },{
+                            "type": "p",
+                            "text": "The critical intent of <i>read.my.column</i> is well vehiculated by the disconnect between headline and content. The 3D environment is easy to navigate and is successful in creating a sense of materiality to text and typography that is uncommon and appreciable. The poetry and interaction features enable a creative potential while still reinforcing the concept that the tone of a headline matters. "
+                        }
+                    ]
                 }
             ]
         },
-        {},
+        {
+            "id": "greenhouse",
+            "title": "Greenhouse Machine",
+            "year": "2022",
+            "context": "Computation Arts Course: CART434 - Advanced 3D Studio",
+            "medium": "3D Sculpture, Blender",
+            "tools": ["Blender", "Adobe Illustrator", "Adobe Photoshop"],
+            "goals": ["Align weekly deliverables with final project goals.","Focus on procedural texturing","Generate realistic plants and trees."],
+            "abstract": "Greenhouse machine is a fictional scene taking place in a pre-dystopian Montreal. It showcases a small greenhouse filled with greens. Its shape is meant to echo a drone while its style recalls eerie Victorian metal and glass greenhouses. My hope with this scene was to contrast eerie inside with dystopian outside.", 
+            "href": "/projects/greenhouse.html", 
+            "body": [
+                {
+                "section": "Inspiration & Narrative Development",
+                "wordCount": 174,
+                "background": "/assets/images/greenhouse_machine/sketch.png", 
+                "content": [
+                    {
+                        "type": "ss-tit",
+                        "text": "Ever heard of rooftop agriculture?"
+                    },{
+                        "type": "p",
+                        "text": "This environment design project is inspired by the leadership of Montreal in terms of rooftop greenhouse agriculture. <span class='accentTXT'>As of April 2021, the world's largest rooftop greenhouse was in Montreal.</span><a href='https://montreal.lufa.com/en/farms'><span class=ref>[1]</span></a>"
+                    },{
+                        "type": "ss-tit",
+                        "text": "Why a greenhouse?"
+                    },{
+                        "type": "p",
+                        "text": "The choice of a greenhouse is no accident. It is rooted in my fascination with Victorian greenhouses, full of exotic plants and curiosities."
+                    },{
+                        "type": "ss-tit",
+                        "text": "Narrative & Worldbuilding"
+                    },{
+                        "type": "p",
+                        "text": "<i>Greenhouse machine sets up in a time where access to sunlight is limited in large cities like Montreal because of thick smog pollution. Availability of fresh fruits and veggies is inconsistent and unaffordable for most urban citizens. An initiative to promote local food growth and household vegetable garden launches this flying greenhouse product that sits atop buildings during dark hours, but flies above smog to get sunlight during daytime.</i>"
+                    },{
+                        "type": "p",
+                        "text": "<i>Hopes are to improve air quality, fresh food intake, reduce pollution from perishable transportation, and water usage with rainwater collector and filter. The greenhouse machine proudly includes the  City of Montreal logo in its design to commemorate its leadership in rooftop agriculture.</i>"
+                    },{
+                        "type": "img",
+                        "text": "Rough sketch during ideation phase",
+                        "href": "/assets/images/greenhouse_machine/sketch.png",
+                        "size": "75%"
+                    },{
+                        "type": "img",
+                        "text": "Quick storyboad",
+                        "href": "/assets/images/greenhouse_machine/storyboard.png",
+                        "size": "45%"
+                    }
+                    ]
+                },{
+                    "section": "Defining the Vision",
+                    "wordCount": 366, 
+                    "background": "/assets/images/greenhouse_machine/sketch_final.jpg", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Moodboard"
+                        },{
+                            "type": "p",
+                            "text": "Greenhouse machine is meant to evoke both drones and Victorian greenhouses.  This visual research helped me set the tone and find inspiration for details."
+                        },{
+                            "type": "img",
+                            "text": "SOURCES IN ORDER:<br> • https://i.pinimg.com/originals/63/5b/78/635b7856f65540557c9d052db240e926.png<br>  • https://media.istockphoto.com/vectors/vector-set-of-drone-vectorid547539984?k=20&m=547539984&s=612x612&w=0&h=xWGoASdFkDd3rGnn99HHScLYBaZ6EWvnCzkOK5D-3w=<br>  • https://i.pinimg.com/564x/4d/82/55/4d8255feb6e60c0ffcfaa77196725a2a.jpg<br>  • https://i.pinimg.com/564x/dc/e8/1c/dce81c977a13e2ad90c65c65ad9aafc9.jpg<br>  • https://i.pinimg.com/564x/07/20/93/072093ad475eca02f871fd55018121c4.jpg<br>  • https://cdna.artstation.com/p/assets/images/images/035/708/712/large/craig-tolliver-view1.jpg?1615684841<br>  • https://i.pinimg.com/564x/0e/71/6b/0e716b60bad65cdd7a58a26e1c1fbd78.jpg<br>  • https://www.wallpaperflare.com/static/307/763/693/studio-ghibli-howl-s-moving-castle-anime-movieswallpaper.jpg<br>  • https://cdnb.artstation.com/p/assets/images/images/000/662/461/large/tim-bergholz-trirotors.jpg?1430192832",
+                            "href": "/assets/images/greenhouse_machine/moodboard.jpg",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "Final Sketches"
+                        },{
+                            "type": "p",
+                            "text": "The greenhouse object itself is the centerpiece of the environment design. From the outside, you may see the more functional requirements of a flying greenhouse and clues of its pre-dystopian setting, but also visible and inviting greenery through the stained glass windows. Inside, the room is filled with consumable greens and the tools needed to grow and harvest them."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/greenhouse_machine/sketch_final.jpg",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "How to convey my story?"
+                        },{
+                            "type": "p",
+                            "text": "I wished to stay true to the backstory and wanted my design to consider these factors: <ul><li>How is it powered? → Solar energy.</li><li>Is there a possibility of burglary? → Yes, add lock on door.</li><li>Where is the energy stored? In a generator.<li>How is the rainwater collected? Through gutters.</li><li>Where is the rainwater stored? → In blue water tanks.</li><li>What happens if there is a storm? → It won't fly.</li><li>Can someone recall the greenhouse at anytime of the day? → Yes, it may take a few minutes to come back down.</li><li>What happens to households without a flat rooftop or without the necessary structure to support the weight? → No idea, it is still in testing. Commercial roofs could be rented for that purpose as are community gardens lots. If it is atop a multiple unit building, what happens? Larger models are in production for that purpose. Assuming people are keen to work together, it should be a worthwhile solution.</li><li>If there is any surplus, do people need a licence to sell their produce? → This is a legal question that will need to be examined. The greenhouse is not designed to provide a lot of surplus, we imagine people growing different things may trade with one another.</li><li>Does it work well in winter time? → Yes, it is built to withstand Canadian winters. However, not all plants are recommended for wintertime period.</li></ul> "
+                        },{
+                            "type": "p",
+                            "text": "Thus, my greenhouse design included these elements:<ul><li>Watertanks & gutters;</li><li>Solar panels, wires & generator;</li><li>Doorlock;</li><li>Digital panel that read weather data, manages recall functions, avoid collision, open and close windows, and display energy usage;</li> <li>Stabilisator for  heavy wind gushes.</li></ul>"
+                        }
+                    ]
+                },{
+                    "section": "The Final Delivery in 8 PNGs",
+                    "wordCount": 4, 
+                    "background": "/assets/images/greenhouse_machine/renders/inside_2.png", 
+                    "content": [
+                    {
+                        "type": "ss-tit",
+                        "text": "Seven weeks later..."
+                    },{
+                        "type": "p",
+                        "text": "Up to due date, I managed to make almost all the outdoor and indoor elements."
+                    },{
+                        "type": "img",
+                        "text": "Global view of outdoor",
+                        "href": "/assets/images/greenhouse_machine/renders/outside.png",
+                        "size": ""
+                    },{
+                        "type": "img",
+                        "text": "Peeking inside through the glassroof",
+                        "href": "/assets/images/greenhouse_machine/renders/outside_1.png",
+                        "size": ""
+                    },{
+                        "type": "img",
+                        "text": "Details - Generator, Wires, Stabilizers & Jet Engines",
+                        "href": "/assets/images/greenhouse_machine/renders/outside_2.png",
+                        "size": ""
+                    },{
+                        "type": "img",
+                        "text": "Jet Engines Up Close",
+                        "href": "/assets/images/greenhouse_machine/renders/outside_3.png",
+                        "size": ""
+                    },{
+                        "type": "img",
+                        "text": "The Way In",
+                        "href": "/assets/images/greenhouse_machine/renders/outside_4.png",
+                        "size": ""
+                    },{
+                        "type": "img",
+                        "text": "Central Worktable & Montreal Stained Glass Design",
+                        "href": "/assets/images/greenhouse_machine/renders/inside.png",
+                        "size": ""
+                    },{
+                        "type": "img",
+                        "text": "Backwall & Plants",
+                        "href": "/assets/images/greenhouse_machine/renders/inside_2.png",
+                        "size": ""
+                    },{
+                        "type": "img",
+                        "text": "Aromatic Herbs & City Backdrop",
+                        "href": "/assets/images/greenhouse_machine/renders/inside_3.png",
+                        "size": ""
+                    }
+                    ]
+                },{
+                    "section": "Goal #1: Procedural Texturing",
+                    "wordCount": 133, 
+                    "background": "/assets/images/greenhouse_machine/textures/wood_bark.png", 
+                    "content": [
+                    {
+                        "type": "ss-tit",
+                        "text": "What is Procedural Texturing?"
+                    },{
+                        "type": "p",
+                        "text": "Procedural texturing refers to a method in computer graphics where textures are generated using mathematical algorithms or functions. Rather than being created directly from pre-existing images, it allowds for dynamic and customizable textures by manipulating parameters within the algorithm. It is commonly used to create natural-looking surfaces like wood, marble, or stone. "
+                    },{
+                        "type": "ss-tit",
+                        "text": "A Technical Challenge"
+                    },{
+                        "type": "p",
+                        "text": "Procedural shading was amongst the technical focuses of <i>Greenhouse Machine</i>. I created wood and rust textures and applied them to various object in my scene."
+                    },{
+                        "type": "ss-tit",
+                        "text": "Old & Rusty"
+                    },{
+                        "type": "gallery",
+                        "text": "Visual References",
+                        "size": "33%",
+                        "images": [{
+                            "href": "/assets/images/greenhouse_machine/textures/rust_ref.jpeg",
+                            "caption": "https://www.smetals.co.uk/wp-content/uploads/2023/09/rust-on-metal-scaled.jpeg"
+                        },{
+                            "href": "/assets/images/greenhouse_machine/textures/rust_ref_1.png",
+                            "caption": "https://images.newscientist.com/wp-content/uploads/2020/03/17163753/gettyimages-1140732656_web.jpg"
+                        },{
+                            "href": "/assets/images/greenhouse_machine/textures/rust_ref_2.jpg",
+                            "caption": "https://images.pexels.com/photos/27901403/pexels-photo-27901403.jpeg?cs=srgb&dl=pexels-shottrotter-27901403.jpg&fm=jpg"
+                        }]
+                    },{
+                        "type": "img",
+                        "text": "Texture for the metal structure of the greenhouse. ",
+                        "href": "/assets/images/greenhouse_machine/textures/rust_green.png",
+                        "size": "70%"
+                    },{
+                        "type": "img",
+                        "text": "Darker shade of rust used on the pipes holding the counters and table.",
+                        "href": "/assets/images/greenhouse_machine/textures/rust_grey.png",
+                        "size": "70%"
+                    },{
+                        "type": "ss-tit",
+                        "text": "Understanding Woodgrain"
+                    },{
+                        "type": "gallery",
+                        "text": "Visual References",
+                        "size": "33%",
+                        "images": [{
+                            "href": "/assets/images/greenhouse_machine/textures/wood_ref.jpg",
+                            "caption": "https://bunny-wp-pullzone-7ckloq9aqo.b-cdn.net/wp-content/uploads/2020/04/ART-WD-004-1-600x600.jpg"
+                        },{
+                            "href": "/assets/images/greenhouse_machine/textures/wood_ref_2.jpg" ,
+                            "caption": "https://ekvintagewood.com/wp-content/uploads/2023/03/Oak-Resawn-Face-scaled.jpeg"
+                        },{
+                            "href": "/assets/images/greenhouse_machine/textures/wood_ref_3.jpg",
+                            "caption": "https://img.freepik.com/free-photo/relief-texture-brown-bark-tree-close-up_158595-6482.jpg"
+                        }]
+                    },{
+                        "type": "img",
+                        "text": "Light and fine grain wood texture.",
+                        "href": "/assets/images/greenhouse_machine/textures/wood_fine.png",
+                        "size": "70%"
+                    },{
+                        "type": "img",
+                        "text": "Wood slate with some used patches.",
+                        "href": "/assets/images/greenhouse_machine/textures/wood_used.png",
+                        "size": "70%"
+                    },{
+                        "type": "img",
+                        "text": "Bark texture used on trees and bushes.",
+                        "href": "/assets/images/greenhouse_machine/textures/wood_bark.png",
+                        "size": "70%"
+                    }
+                    ]
+                },{
+                    "section": "Goal #2: Geometry Nodes & Plants",
+                    "wordCount": 186, 
+                    "background": "/assets/images/greenhouse_machine/tree_nodes.png", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Experimenting With Geometry Nodes"
+                        },{
+                            "type": "p",
+                            "text": "<span class='large-quote'>\"</span>In version 2.92, Blender introduced a node-based workflow for constructing and manipulating geometry, hence the name “geometry nodes”. It's a procedural workflow, which - in simple terms - guides the software step by step through the completion of a set of operations based on user-defined parameters.<span class='large-quote'>\"</span><a href='https://all3dp.com/2/blender-geometry-nodes-simply-explained/'><span class=ref>[2]</span></a>"
+                        },{
+                            "type": "p",
+                            "text": "One of the learning goals of greenhouse machine was to model various 3D plants. A lot of plants were build using geometry nodes to quickly accommodate various leaves and fruits in a few clicks."
+                        },{
+                            "type": "ss-tit",
+                            "text": "Simple Stalk & Leaves"
+                        },{
+                            "type": "p",
+                            "text": "The setup was tweaked to make almost all the aromatic herbs and some leafy veggies."
+                        },{
+                            "type": "img",
+                            "text": "First attempt at making the simplest plant structure.",
+                            "href": "/assets/images/greenhouse_machine/stalk_leaf.png",
+                            "size": "40%"
+                        },{
+                            "type": "img",
+                            "text": "Spinach",
+                            "href": "/assets/images/greenhouse_machine/leafy.png",
+                            "size": "50%"
+                        },{
+                            "type": "img",
+                            "text": "Herbs",
+                            "href": "/assets/images/greenhouse_machine/herbs.png",
+                            "size": "50%"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Multi-Level Plants"
+                        },{
+                            "type": "p",
+                            "text": "This complex node setup includes four levels: stalk, branch, leaf, and fruit."
+                        },{
+                            "type": "img",
+                            "text": "Lime Tree",
+                            "href": "/assets/images/greenhouse_machine/tree.png",
+                            "size": "50%"
+                        },{
+                            "type": "img",
+                            "text": "Preview of the node setup with all its layers",
+                            "href": "/assets/images/greenhouse_machine/tree_nodes.png",
+                            "size": ""
+                        },{
+                            "type": "img",
+                            "text": "Pomagranate Tree Close-Up",
+                            "href": "/assets/images/greenhouse_machine/tree_2.png",
+                            "size": "75%"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Drawing Branches"
+                        },{
+                            "type": "p",
+                            "text": "This node setup allows to draw branches and fit all shapes and manage all volumes."
+                        },{
+                            "type": "img",
+                            "text": "Tomato Vine Pen",
+                            "href": "/assets/images/greenhouse_machine/vine.gif",
+                            "size": "75%"
+                        },{
+                            "type": "img",
+                            "text": "Preview of Node Setup",
+                            "href": "/assets/images/greenhouse_machine/vine_nodes.png",
+                            "size": ""
+                        },{
+                            "type": "p",
+                            "text": "The vine pen was used on the trellis, but also for potted plants."
+                        },{
+                            "type": "img",
+                            "text": "Final Tomato Vine in Context",
+                            "href": "/assets/images/greenhouse_machine/vine_context.png",
+                            "size": ""
+                        },{
+                            "type": "img",
+                            "text": "Red Currants Bush",
+                            "href": "/assets/images/greenhouse_machine/0101.png",
+                            "size": ""
+                        }
+                    ]
+                },{
+                    "section": "Strenghts, Challenges & Areas of Improvements",
+                    "wordCount": 338, 
+                    "background": "/assets/images/greenhouse_machine/jet.png", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "To Sum It Up"
+                        },{
+                            "type": "p",
+                            "text": "All in all, the strenghts of <i>Greenhouse Machine</i> are that:<ul><li>The end result accurately represents the original design;</li><li>The narrative is embedded into details supporting the “viability” of the machine.</li><li>I successfully implemented geometry nodes for plant modelling;</li><li>I created procedural textures and applied them unto many surfaces.</li></ul>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Challenging Challenges"
+                        },{
+                            "type": "p",
+                            "text": "Time is of the essence...I learned that:"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>I drastically underestimated the quantity of objects a scene required to make a rich environment and atmosphere;</li><li>I did not have any assets at the ready and I was too optimistic for the time versus detail ratio. I wanted to achieve a photorealistic look, but quickly had to reduce my expectations.</li><li>Due to time constraints, I had to rely on a few external models. While it ultimately saved a few hours, the search for good quality free model was still time consuming and unnerving.</li></ul>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Areas of Improvement"
+                        },{
+                            "type": "p",
+                            "text": "<span class='accentTXT'>IT IS TOO CLEAN.</span>"
+                        },{
+                            "type": "p",
+                            "text": "The glass is clean, tables are clean, air is clean... Where is the dirt, the bird droppings, the bugs, the dead leaves, the moss, the mess...? "
+                        },{
+                            "type": "p",
+                            "text": "Because I was unable to add chaos and messiness to my scene, the rusty frame feels off.  "
+                        },{
+                            "type": "p",
+                            "text": "<span class='accentTXT'>IT IS TOO HEAVY.</span>"
+                        },{
+                            "type": "p",
+                            "text": "My ambitions to create natural looking textures got the better of me. There is no way this thing could fly. Concrete, wood, rocks, metal, glass... What was I thinking? The concept in that sense definitely needs some refining."
+                        },{
+                            "type": "ss-tit",
+                            "text": "Special Mention: Jet Engines"
+                        },{
+                            "type": "p",
+                            "text": "The jet engines are my favourite part of this scene and were given a lot of time and attention. They were a challenge to model, but ended up being the section I am most fond of. They reference common plane engines and Hayao Miyazaki's use of organic shapes and movement on flying devices."
+                        },{
+                            "type": "img",
+                            "text": "Side view of the jet engines",
+                            "href": "/assets/images/greenhouse_machine/jet.png",
+                            "size": ""
+                        },{
+                            "type": "img",
+                            "text": "Close-up on single engine",
+                            "href": "/assets/images/greenhouse_machine/jet_1.png",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "Overall, Greenhouse Machine Would Benefit From"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>Being animated and rendered as a video;</li><li>An immersive soundscape;</li><li>Recognizable Montreal landmarks in the distance;</li><li>Lighter materials and design - while echoing eerie Victorian Greenhouses.</li></ul>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "A Tribute to Borrowed Works"
+                        },{
+                            "type": "p",
+                            "text": "I believe in referecing my fellow creators."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/greenhouse_machine/other.png",
+                            "size": ""
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/greenhouse_machine/other2.png",
+                            "size": ""
+                        }
+                    ]
+                }
+            ]
+        },
         {},
         {}
     ]

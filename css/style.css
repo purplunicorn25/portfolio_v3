@@ -22,9 +22,11 @@ html {
     font-size: 16px;
 }
 :root {
-    --clr-main: rgb(12, 0, 248);
-    --clr-secondary: rgb(148, 114, 228);
-    --clr-accent: rgb(255, 255, 255);
+    --clr-main: rgb(88, 255, 32);
+    --clr-secondary: rgb(199, 255, 199);
+    --clr-secondary-decline-dark: hsla(115, 100%, 76%, 0.646);
+    --clr-secondary-decline-light: hsla(115, 100%, 95%, 0.5);
+    --clr-accent: rgb(35, 0, 163);
     --clr-accent-decline: rgb(228, 61, 61);
     --clr-link: rgb(255, 0, 212);
     --clr-link-hover: white;
@@ -55,6 +57,7 @@ html {
     --pad-marg-m: 1em;
     --pad-marg-l: 1.5em;
     --pad-marg-xl: 2em;
+    --pad-marg-jumbo: 5em;
     /* decoration */
     --border-w: 1px;  
 } 
@@ -86,15 +89,15 @@ body {
     /* position: relative; 
     width: 30%;
     height: 90%; */
-    padding: 10%;
+    padding: var(--pad-marg-xl);
     overflow-y: auto; 
 } #east {
     overflow-y: auto; 
     overflow-x: hidden;
 } #eastIslands {
     gap: var(--pad-marg-xl);
-    padding-block: 5em;
-    padding-inline: 10%;
+    padding-block: var(--pad-marg-jumbo);
+    padding-inline: var(--pad-marg-xl);
     justify-content:baseline;
 }
 /* --------------- */
@@ -168,17 +171,19 @@ body {
     justify-content: center;
     /* gap: var(--pad-marg-l); */
 } .section:hover {
-    background-color: var(--clr-accent);
-    color: var(--clr-main);
+    /* background-color: var(--clr-accent);
+    color: var(--clr-secondary); */
 } .sectionHeader {
     display: flex;
-    height: 75px;
+    min-height: 85px;
     justify-content: space-between;
     align-items: center;
     width:100%;
+    background-color: var(--clr-secondary-decline-dark);
 } .section-active {
-    background-color: var(--clr-accent) ;
-    color: var(--clr-main);
+    background-color: var(--clr-accent) !important;
+    color: var(--clr-secondary);
+
 } .grid {
     display: grid;
     justify-items: stretch;
@@ -193,21 +198,21 @@ body {
     flex-direction: column;
     /* padding-bottom: var(--pad-marg-s); */
     width: 100%;
+    background-color: var(--clr-secondary-decline-light);
 } .adapt:hover {
-    background-color: var(--clr-secondary);
-    color: var(--clr-accent);
+    /* background-color: var(--clr-secondary);
+    color: var(--clr-accent); */
     /* border-width: 3px; */
 } .scrollable {
     overflow-y: scroll;
     overflow-x: hidden;
 } .caption {
-    background-color: var(--clr-main);
+    background-color: hsla(0, 0%, 100%, 0.5);
     color: var(--clr-accent);   
     margin: 0; 
-    text-align: center;
-} .image {
-    display: flex;
-    flex-direction: column; 
+    padding-inline-start: var(--pad-marg-s);
+    text-transform: capitalize;
+    /* text-align: center; */
 } .cards {
     gap: var(--pad-marg-l);
     justify-items: baseline;
@@ -230,8 +235,7 @@ body {
     background-color:var(--clr,--clr-main);
 } .navButton:hover {
     background-color: var(--clr-accent);
-    color: var(--clr-main);
-    
+    color: var(--clr-secondary);
 } .ol-large > p > span {
     /* font-weight: bold; */
     font-size: var(--fs-700)
@@ -241,13 +245,15 @@ body {
     height: 30px;
     /* background-color: blue; */
 } .island {
-    background-color: var(--clr-accent);
-    color: var(--clr-main);
+    /* background-color: var(--clr-accent); */
+    background-color: var(--clr-secondary-decline-dark);
+    /* color: var(--clr-accent); */
     padding: var(--pad-marg-s);
     margin-inline: 15%;
     display: flex;
     /* justify-content: space-between; */
     gap: 25%;
+    border: var(--border-w) solid var(--clr-accent);
 } .flow-line-top {
     /* background-color: lime; */
     width: 30%; 
@@ -257,11 +263,30 @@ body {
     /* background-color: blueviolet; */
     width: 50px;
     font-weight: bold;
-    color: var(--clr-secondary);
+    /* color: var(--clr-secondary); */
     font-size: var(--fs-500);
 } .ss-tit {
    /* color: red;  */
    font-family: var(--ff-secondary);
+} .ref {
+    font-size: var(--fs-200);
+} .accentTXT {
+    color: var(--clr-secondary);
+    /* font-family: var(--ff-display); */
+    background-color: var(--clr-accent);
+} .gallery {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: var(--pad-marg-s);
+} .gallery-item {
+    position: relative;
+} .large-quote {
+    font-weight: bold;
+    font-size: var(--fs-500);
+} .invincibleTXT {
+    background: var(--clr-accent);
+    color: var(--clr-secondary);
+    /* font-size: var(--fs-500); */
 }
 
 .link, link:visited{ color: var(--clr-link)} 

@@ -1,17 +1,15 @@
 /* 
 TO DO 
 - on section hover show a background image :) 
-- navigation button menu okayyy
-store a data in html file
-create array of projects
-find the right one and find it in the json
-start the program
+- find howw to signal that there is more to read in the specs section (west) gradient? animation? arrows?
 */
 
 "use strict"
 // constants
 let CHECK_INTERVAL = 1;
 let MOBILE_BREAKPOINT = 900;
+let MOBILE_PROPORTION = .4; // proportion of the first part
+let DESKTOP_PROPORTION = .3;
 // variables
 let project = '';
 let projects = []; 
@@ -49,6 +47,7 @@ function setupProject() {
     toggleView(); // allow clicks on section to view content
     navPages(); // Move seamlessly from one page to the other in order
     responsive();
+    sectionHover();
     $( window ).on( "resize", responsive);
 } // Find the correct JSON data from html data value in #world so its can be used for all pages
 function findMe() {
@@ -71,6 +70,7 @@ function toggleView() {
         let thisPrevTxt = 'section-prev-txt'+ thisIndex;
         let close = function() {
             $(`#${thisButton}`).removeClass('section-active');
+            $(`#${thisButton}`).data('active', false);
             $(`#${thisSection}`).removeClass('adapt');
             $(`#${thisSection}Long`).remove();
             $(`#${thisWordCount}`).show();
@@ -80,12 +80,13 @@ function toggleView() {
         }
         let open = function() {
             $(`#${thisButton}`).addClass('section-active');
+            $(`#${thisButton}`).data('active', true);
             $(`#${thisSection}`).addClass('adapt'); // add a class to elongate the box
             $(`#${thisSection}`).append(`<div id="${thisSection}Long" class="longView">${project.formatSection(thisIndex)}</div><button id='navButton${thisIndex}' class='navButton'>minimize section</button>`); // add the content
             $(`#${thisWordCount}`).hide();
             $(`#${thisPrevTxt}>span`).text(project.arrow.d);
             project.sectionsArr[thisIndex].open = true; // 
-            imgCaption();   
+            imgCaption(thisIndex);   
         }
         if (!project.sectionsArr[thisIndex].open) { // if closed
             open();
@@ -97,10 +98,26 @@ function toggleView() {
         })
     });
 } // Manage the caption of images
-function imgCaption() { 
-    $('.caption').hide(); 
+function imgCaption(parentIndex) { 
+    // console.log($("#eastIslands").children('#img'))
+    $('img').each(function(){ // create a unique id for each picture
+        let thisIMG = $(this).attr('id');
+        $(this).attr('id', `${thisIMG}-${parentIndex}`)
+    })
+    $('.caption').each(function(){ // create a unique id for each caption
+        let thisCaption= $(this).attr('id');
+        $(this).attr('id', `${thisCaption}-${parentIndex}`)
+    })
+    if (!mobile) {
+        $('.caption').hide();
+    } else {
+        $('.caption').show();
+    }
     $('img').on('mouseenter', function() {
-        $('.caption').show(); 
+        let thisIMG = $(this).attr('id'); // get id
+        let thisIndex = thisIMG.replace("img", ""); // get index
+        console.log(thisIndex)
+        $(`#caption${thisIndex}`).show(); 
     }).on('mouseleave', function() {
         $('.caption').hide(); 
     });
@@ -127,22 +144,57 @@ function navPages() { // !!!!!!!!!!!!!!!!!!!! check if disable works okay once t
             window.location.replace(pages[thisProjectIndex+1].url);
         });
     }
-}
+} // Manage the layout according to screen size
 function responsive() {
     let screenWidth = $(window).width();
     console.log(screenWidth)
     if (screenWidth < MOBILE_BREAKPOINT) { // if smaller than 
         mobile = true;
-        $('html').css("font-size", "18px"); // change the default to grow all font size (set at 16px for desktop)
+        // $('html').css("font-size", "16px"); // change the default to grow all font size (set at 16px for desktop)
         console.log('mobile');
-        $("#westsea").css({
+        $("#west").css({
             'width': '100%',
-            'height': '40%'
+            'height': `${100*MOBILE_PROPORTION}%`
+        });
+        $("#east").css({
+            'width': '100%',
+            'height': `${100*(1-MOBILE_PROPORTION)}%`,
+            'top': `${100*MOBILE_PROPORTION}%`,
+            'left': 0
         })
+        $("#eastIslands").css('padding-inline-end', 'var(--pad-marg-xl)');
     } else { // largen then
         mobile = false;
-        $('html').css("font-size", "16px"); // change to default
+        // $('html').css("font-size", "16px"); // change to default
         console.log('desktop');
+        $("#west").css({
+            'width': `${100*DESKTOP_PROPORTION}%`,
+            'height': '100%'
+        });
+        $("#east").css({
+            'width': `${100*(1-DESKTOP_PROPORTION)}%`,
+            'height': '100%',
+            'top': '0',
+            'left': `${100*DESKTOP_PROPORTION}%`,
+        });
+        $("#eastIslands").css('padding-inline-end', 'var(--pad-marg-jumbo)');
     }
+} // On hover make the section background an image  
+function sectionHover() {
+    $('.sectionHeader').on('mouseenter',function() {
+        let thisIndex = $(this).attr('id').replace("sectionHeader", ""); // get index
+        if (!$(this).data('active')) { // check if open HTML data
+            $(this).css({'background-image':`url('${projects[thisProjectIndex].body[thisIndex].background}')`,"background-position": "center", "background-size": "cover"}); // use image as background on hover
+            // $(this).children().css({"background-color": "var(--clr-accent)", "color": "var(--clr-secondary)"});
+            $(this).children().addClass('invincibleTXT');
+            $('.invincibleTXT>span').css({'font-size':'inherit', 'color': 'var(--clr-accent)'});    
+            // $(this).find('.sectionTitle').css('background-color', 'lime');
+        }   
+    }).on('mouseleave', function() { // return to default
+        $(this).css('background', 'var(--clr-secondary-decline-dark)');
+        $('.invincibleTXT>span').css('font-size','var(--fs-600)');
+        $(this).children().removeClass('invincibleTXT');
+             
+    });
 }
-
+/// based on click not only the active, it should go and I should have a default if no images
