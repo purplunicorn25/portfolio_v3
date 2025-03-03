@@ -4,7 +4,7 @@
     "projects": [
         {
             "id": "read",
-            "title": "read.my.column",
+            "title": "read.&shymy.&shycolumn",
             "year": "2022",
             "context": "Computation Arts Course: CART351 - Network & Navigation",
             "medium": "Programming, Web Experience, Generated Poetry",
@@ -16,7 +16,7 @@
         },
         {  
             "id": "read",
-            "title": "read.my.column",
+            "title": "read.&shymy.&shycolumn",
             "year": "2022",
             "context": "Computation Arts Course: CART351 - Network & Navigation",
             "medium": "Programming, Web Experience, Generated Poetry",
@@ -315,7 +315,7 @@
         },
         {
             "id": "greenhouse",
-            "title": "Greenhouse Machine",
+            "title": "Green&shyhouse Machine",
             "year": "2022",
             "context": "Computation Arts Course: CART434 - Advanced 3D Studio",
             "medium": "3D Sculpture, Blender",
@@ -476,7 +476,8 @@
                     },{
                         "type": "gallery",
                         "text": "Visual References",
-                        "size": "33%",
+                        "size": "30%",
+                        "wrap": "none",
                         "images": [{
                             "href": "/assets/images/greenhouse_machine/textures/rust_ref.jpeg",
                             "caption": "https://www.smetals.co.uk/wp-content/uploads/2023/09/rust-on-metal-scaled.jpeg"
@@ -503,7 +504,8 @@
                     },{
                         "type": "gallery",
                         "text": "Visual References",
-                        "size": "33%",
+                        "size": "30%",
+                        "wrap": "none",
                         "images": [{
                             "href": "/assets/images/greenhouse_machine/textures/wood_ref.jpg",
                             "caption": "https://bunny-wp-pullzone-7ckloq9aqo.b-cdn.net/wp-content/uploads/2020/04/ART-WD-004-1-600x600.jpg"
@@ -699,7 +701,283 @@
                 }
             ]
         },
-        {},
+        {
+            "id": "magnetic",
+            "title": "Magnetic Bodies",
+            "year": "2021",
+            "context": "Computation Arts Course: CART451 - Networked Media Studio (TouchDesigner) &<br>Art History Course: ARTH356 - Studies in the Materials and Processes of Art",
+            "medium": "Interactive Installation, TouchDesigner, Simulation",
+            "tools": ["TouchDesigner", "Blob Tracking", "Art Historical Research"],
+            "goals": ["Get intermediate knowledge and proficiency with TouchDesigner","Get experience building a physical interactive installation","Use ferrofluids and connect with its unique behaviors and attributes."],
+            "abstract": "Magnetic Bodies is a project that wishes to highlight the presence of gravity in everyday actions by showcasing an unique case of magnetism: ferrofluids. This interactive installation includes a digital simulation of ferrofluids where human bodies and actions are given the role of magnetic field.", 
+            "href": "/projects/magnetic.html", 
+            "body": [
+                {
+                "section": "Acknowledging the Physics of Our Daily Existence",
+                "wordCount": 239,
+                "background": "/assets/images/magnetic_bodies/example.jpg", 
+                "content": [
+                    {
+                        "type": "ss-tit",
+                        "text": "Common Knowledge"
+                    },{
+                        "type": "p",
+                        "text": "We - us human beings and everything on this planet - are so conditionned by gravity that we stop noticing it. Yet, it has a fundamental role in all the forms and events we are able to achieve on Earth."
+                    },{
+                        "type": "ss-tit",
+                        "text": "Noticing the status quo"
+                    },{
+                        "type": "p",
+                        "text": "My objective with <i>Magnetic Bodies</i> was to acknowledge the creative opportunities of neutralizing gravity, either digitally or physically."
+                    },{
+                        "type": "ss-tit",
+                        "text": "Choosing Ferrofluids"
+                    },{
+                        "type": "p",
+                        "text": "Once, someone mentionned ferrofluids and I told myself I could not forget about them; they have so much creative potential. They were the perfect case study for this \"gravity-oriented\" exploration because of their magnetic properties."
+                    },{
+                        "type": "ss-tit",
+                        "text": "Never heard of ferrofluids?"
+                    },{
+                        "type": "p",
+                        "text": "They are nanoscale particles of ferrimagnetic compound in liquid that reacts to magnetic fields."
+                    },{
+                        "type": "img",
+                        "text": "Ferrofluids at home",
+                        "href": "/assets/images/magnetic_bodies/example.jpg",
+                        "size": "40%"
+                    },{
+                        "type": "ss-tit",
+                        "text": "Why Them?"
+                    },{
+                        "type": "p",
+                        "text": "They were my primary inspiration and where the idea sparked from. They are a strange and mysterious material and I wanted to approach creation with a playful and curious mind."
+                    },{
+                        "type": "ss-tit",
+                        "text": "An interactive installation in a gallery?"
+                    },{
+                        "type": "p",
+                        "text": "Created for two simultaneous courses - one to learn TouchDesigner and the other with a mandate to create an exhibition as a group, - the combo provided an amazing opportunity to create an interactive installation for <i>Magnetic Bodies</i>. It was a bliss to bring this project beyond the classroom."
+                    },{
+                        "type": "ss-tit",
+                        "text": "What is TouchDesigner? What does it do?"
+                    },{
+                        "type": "p",
+                        "text": "TouchDesigner or TD is a node-based visual programming language for real-time interactive multimedia content. It is commonly used to create performances, installations, and fixed media works."
+                    }
+                    ]
+                },{
+                    "section": "Learning about & from Antigravitropsim",
+                    "wordCount": 95,
+                    "background": "/assets/images/magnetic_bodies/mood.jpg", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "The 60s Witnessed Antigravitropism"
+                        },{
+                            "type": "p",
+                            "text": "Research on gravity-related art and natural phenomenon lead me to discover this small artistic movement from the 60s: antigravitropism <a href='https://www.ekac.org/levitation.html'><span class=ref>[1]</span></a>. It involves the creation of new forms unconditioned by gravity and commonly uses magnets and magnetic fields to free materials from gravitational constraints."
+                        },{
+                            "type": "p",
+                            "text": "Amongst it more famous figures, you can find artists Sinclair Beiles, Takis, and Eduardo Kac."
+                        },{
+                            "type": "img",
+                            "text": "They published a manifesto about atomic bombs.",
+                            "href": "/assets/images/magnetic_bodies/manifesto.jpg",
+                            "size": "60%"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Compilling findings"
+                        },{
+                            "type": "p",
+                            "text": "Additionally, I researched other instances where mathematics or physics create aesthetically pleasing phenomena. I came across fractals, cymatics, and acoustic levitation, to name a few, and compilled it into a moodboard."
+                        },{
+                            "type": "img",
+                            "text": "*All image references were provided at delivery, but unfortunately lost now.",
+                            "href": "/assets/images/magnetic_bodies/mood.jpg",
+                            "size": ""
+                        }
+                    ]
+                },{
+                    "section": "Tangible Research",
+                    "wordCount": 83,
+                    "background": "/assets/images/magnetic_bodies/thumbnail.jpg", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Learning by Doing"
+                        },{
+                            "type": "p",
+                            "text": "Before diving into simulation ferrofluids digitally I thought it relevant to play and experiment with the real thing first and foremost. I wanted to learn more about its peculiar behavior, reactions, and movements."
+                        },{
+                            "type": "gallery",
+                            "text": "Snippets from the homemade experiment",
+                            "size": "48%",
+                            "wrap": "wrap",
+                            "images": [{
+                                "href": "/assets/images/magnetic_bodies/thumbnail.jpg",
+                                "caption": "Single Magnet / Lots of Spikes / More Liquid"
+                            },{
+                                "href": "/assets/images/magnetic_bodies/ferro_strong.jpg",
+                                "caption": "Single Magnet / Numerous & High Spikes / Less Liquid"
+                            },{
+                                "href": "/assets/images/magnetic_bodies/ferro_no.jpg",
+                                "caption": "No Magnet"
+                            },{
+                                "href": "/assets/images/magnetic_bodies/ferro_double.jpg",
+                                "caption": "Double Magnets / Few Undefined Spikes / Larger Blobs"
+                            }]
+                        },{
+                            "type": "p",
+                            "text": "This experiment truly informed my design direction in TouchDesigner. The shape of the “blobs”, the relationship between the number of spikes and magnet distance, how it behaved with multiple magnets at once, and the size of the gap before two “blobs” connected."
+                        }
+                    ]
+                },{
+                    "section": "Technical Research: Visual or Mathematical Simulation?",
+                    "wordCount": 87,
+                    "background": "", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Aesthetics or Physics?"
+                        },{
+                            "type": "p",
+                            "text": "My technical research sought to answer two questions:"
+                        },{
+                            "type": "ol-large",
+                            "text": ["<span>1. </span>Has it been attempted before to reproduce ferrofluids digitally with accurate physics?", "<span>2. </span>Are the mathematical formulas transposable to TouchDesigner?"]
+                        },{
+                            "type": "p",
+                            "text": "Both questions were answered with “yes”. It soon became evident that I neither had the ressources, the Python and TouchDesigner experience, the mathematical knowledge, but most importantly the time to get to that sort of result."
+                        },{
+                            "type": "p",
+                            "text": "Magnetic bodies thus focused on reproducing the main visual qualities of ferrofluids namely its “blob”, “spikes”, and fluid movements."
+                        }
+                        
+
+                    ]
+                },{
+                    "section": "The Making-of",
+                    "wordCount": 239,
+                    "background": "/assets/images/magnetic_bodies/td.jpg", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Getting accustomed to TD"
+                        },{
+                            "type": "p",
+                            "text": "As mentionned before, the project involved a TouchDesigner program in which the visual attribute of ferrofluids were mimicked. The “blob”, the “spikes”, the fluid movements, and the glossy black liquid composed the simulation."
+                        },{
+                            "type": "img",
+                            "text": "Preview of the TouchDesign Program",
+                            "href": "/assets/images/magnetic_bodies/td.jpg",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "Interactive, how?"
+                        },{
+                            "type": "p",
+                            "text": "As for the installation component of the project, the initial idea was to assign designated space for people to navigate and walk in and where their bodies would be the magnets that trigger the ferrofluids movements and interactions."
+                        },{
+                            "type": "img",
+                            "text": "Plan for the exhibition space",
+                            "href": "/assets/images/magnetic_bodies/plan.png",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "The Limits of a Student's Budget: Plan B"
+                        },{
+                            "type": "p",
+                            "text": "The method to achieve this result is designated as blob tracking in TouchDesigner. However, this function is limited for non-pro subscribed users: only two thing might be tracked simultaneously and very contrast dependent. Unfortunately, the licence was too pricey for a single student and not deemed relevant by the department to invest in. "
+                        },{
+                            "type": "p",
+                            "text": "Instead of bodies, I turned to find an objects that could be easily interacted with while having an interesting movement quality. Spinning tops were my solution. They are predictable enough, but travel on their own so users may watch the impact of their movement on the screen."
+                        },{
+                            "type": "img",
+                            "text": "The spinning tops replacements",
+                            "href": "/assets/images/magnetic_bodies/tops.jpg",
+                            "size": ""
+                        }
+                    ]
+                },{
+                    "section": "Exhibition",
+                    "wordCount": 122,
+                    "background": "/assets/images/magnetic_bodies/expo/00.jpg", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Prototype in Action"
+                        },{
+                            "type": "p",
+                            "text": "I was lucky to have the opportunity to test my project with a live-audience. While the exhibition at 4th Space lasted a short time, I was able to witness users firsthand."
+                        },{
+                            "type": "ss-tit",
+                            "text": "Setting-up"
+                        },{
+                            "type": "p",
+                            "text": "The set-up at 4th Space include:<ul><li>A light table (for the best contrast);</li><li>A Webcam;</li><li>My PC;</li><li>The Spinning tops;</li><li>A TV to project the TD live program (was changed to a monitor last minute);</li><li>The actual ferrofluids used for tangible research;</li></ul>"
+                        },{
+                            "type": "img",
+                            "text": "Preview of the TouchDesign Program",
+                            "href": "/assets/images/magnetic_bodies/expo/00.jpg",
+                            "size": ""
+                        },{
+                            "type": "gallery",
+                            "text": "",
+                            "size": "50%",
+                            "wrap": "none",
+                            "images": [{
+                                "href": "/assets/images/magnetic_bodies/expo/01-1.jpg",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/magnetic_bodies/expo/01-2.jpg",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "gallery",
+                            "text": "",
+                            "size": "",
+                            "wrap": "none",
+                            "images": [{
+                                "href": "/assets/images/magnetic_bodies/expo/03-1.gi",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/magnetic_bodies/expo/02.jpg",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/magnetic_bodies/expo/03-2.gi",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "ss-tit",
+                            "text": "Intention Versus Result"
+                        },{
+                            "type": "p",
+                            "text": "The scale of the installation was far lesser than what I initally wished for. Not only did it not track human movements, but changing from TV size to monitor size - because of availability - disminished the visual impact of the simulation."
+                        }
+                    ]
+                },{
+                    "section": "Lessons Learned",
+                    "wordCount": 124,
+                    "background": "", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "A Second chance?"
+                        },{
+                            "type": "p",
+                            "text": "If the prototype was to be redone from scratch with more time and resources, I would:<ul><li>Invest in a pro licence to track human bodies instead of objects as intended;</li><li>Create the simulation in TouchDesigner with its OpenGL feature that was not covered in class;</li><li>Associate myself with someone with python and physics knowledge for a more accurate simulation;</li><li>Have the simulation projected on a large screen to attract traffic and make it more immersive;</li><li>Have it implemented that the strengh of the \"magnetic field\" is mapped and dependent on quick versus slow movements.</li></ul>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Proud Nevertheless"
+                        },{
+                            "type": "p",
+                            "text": "Despite this long list of to-do improvements, I trust this concept to be strong and would love to see it realised in its full capacity."
+                        }
+                    ]
+                }
+            ]
+        },
         {}
     ]
 }

@@ -109,7 +109,7 @@ function checkIfChildren(popID) {
     }
 } // return a string for a typical pop (bar, contentBox, exit button)
 function createPOP(dataObject, barLabel) {
-    let bar = `<div class="bar flex bg-accent text-main ff-primary-medium lowercase"><div>${barLabel}</div><button id="x${xbuttonID}" class="button-info-hide">x</button></div>`; // create bar at top
+    let bar = `<div class="bar flex bg-accent text-main capitalize"><div>${barLabel}</div><button id="x${xbuttonID}" class="button-info-hide fs-500">✕</button></div>`; // create bar at top
     xbuttonID ++; // make sure all exit button have unique id
     let openContent = '<div class="infoContent flex-column" style="">' // open the content div
     let popContent = dataToString(dataObject); // full content passed through data

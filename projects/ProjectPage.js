@@ -22,12 +22,12 @@ class ProjectPage {
                     goalList += '<br>';
                 } let specs = {  // assemble all the component of the specs section
                 container: '<div id="westWorld" class="flex-column">',
-                title: `<h1 class="bold fs-700">${this.title}</h1>`,
+                title: `<h1 class="bold ff-decorative fs-900">${this.title}</h1>`,
                 medium: `<h4 class="">${this.medium}</h4>`,
-                abstract: `<p><span class="bold">abstract<br></span>${this.abstract}</p>`,
-                year: `<p><span class="bold">year<br></span>${this.year}</p>`,
-                tools: `<p><span class="bold">tools<br></span><span class="tool">${toolList}</span></p>`,
-                goals: `<p><span class="bold">learning goals<br></span>${goalList}</p>`,
+                abstract: `<p><span class="bold fs-600">abstract<br></span>${this.abstract}</p>`,
+                year: `<p><span class="bold fs-600">year<br></span>${this.year}</p>`,
+                tools: `<p><span class="bold fs-600">tools<br></span><span class="tool">${toolList}</span></p>`,
+                goals: `<p><span class="bold fs-600">learning goals<br></span>${goalList}</p>`,
                 containerEnd: '</div>'
             } // Turn into a single string
             let HTMLstring = dataToString(specs); 
@@ -38,7 +38,7 @@ class ProjectPage {
                 let section = { // assemble all components
                     container: `<div id="section${i}" class="section">`,
                     box: `<div id="sectionHeader${i}" class="sectionHeader" data-active='false'>`,
-                    title: `<div id="section-prev-txt${i}" class="section-prev-txt fs-500" style="margin-inline: var(--section-marg-inline)"><span class="fs-600">${this.arrow.r}</span> ${this.body[i].section}</div>`,
+                    title: `<div id="section-prev-txt${i}" class="section-prev-txt fs-500" style="margin-inline: var(--section-marg-inline)"><span class=" ">${this.arrow.r}</span> ${this.body[i].section}</div>`,
                     wordCount: `<div id="word${i}" class="wordCount section-prev-txt italic" style="margin-inline: var(--section-marg-inline)">${this.body[i].wordCount} words</div>`,
                     boxEnd: '</div>',
                     containerEnd: `</div>`
@@ -58,9 +58,13 @@ class ProjectPage {
                 if (proj[i].type === 'p') { // PARAGRAPH 
                     string = `<p>${proj[i].text}</p>`
                 } else if (proj[i].type === 'ss-tit') { // SOUS-TITRE
-                    string = `<p class='fs-800 ${proj[i].type}'>${proj[i].text}</p>`
-                } else if (proj[i].type === 'img') { // IMG
-                    string = `<div class="flex-column" style="width:${proj[i].size}"><img id="img${i}"src="${proj[i].href}" width="100%"><span id="caption${i}" class="caption fs-300">${proj[i].text}</span></div>`
+                    string = `<p class='fs-700 ${proj[i].type}'>${proj[i].text}</p>`
+                } else if (proj[i].type === 'ss-ss-tit') { // SOUS-TITRE
+                    string = `<p class='fs-700 ${proj[i].type}'>${proj[i].text}</p>`
+                }else if (proj[i].type === 'img') { // IMG
+                    string = `<div id="image${i}" class="image flex-column" style="width:${proj[i].size}">
+                    <img src="${proj[i].href}" width="100%">
+                    <span id="caption${i}" class="caption fs-300">${proj[i].text}</span></div>`
                 } else if (proj[i].type === 'cards') { // CARDS
                     for (let ii in proj[i].text) {
                         let temp = `<p class='fs-400 bg-main' style='padding: 0.5em'>${proj[i].text[ii].header}</p>`;
@@ -97,9 +101,12 @@ class ProjectPage {
                 } else if (proj[i].type === 'gallery') { // IMAGE GALLERY
                     let temp = '';
                     for (let ii in proj[i].images) {
-                        temp += `<div class="gallery-item flex-column" style="width:${proj[i].size}"><img src="${proj[i].images[ii].href}" width="100%"><span id="caption-gal${i}" class="caption fs-100">${proj[i].images[ii].caption}</span></div>`;
+                        temp += `<div id="image-gal${ii}" class="image-gal gallery-item flex-column" style="width:${proj[i].size};">
+                        <img src="${proj[i].images[ii].href}" width="100%">
+                        <span id="caption-gal${ii}" class="caption caption-gal fs-200">${proj[i].images[ii].caption}</span></div>`;
                     }
-                    string = `<div class='gallery-label'>${proj[i].text}</div><div class='gallery'>${temp}</div>`;
+                    console.log(proj[i].wrap)
+                    string = `<div class='gallery-label'>${proj[i].text}</div><div class='gallery' style="flex-wrap: ${proj[i].wrap}">${temp}</div>`;
                 }                                                                            
                 compiller.push(string);
             }

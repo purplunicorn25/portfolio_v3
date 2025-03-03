@@ -1,9 +1,10 @@
 /* 
 TO DO 
-- on section hover show a background image :) 
 - find howw to signal that there is more to read in the specs section (west) gradient? animation? arrows?
+- add the name of the next and previous projects on hover
+- scroll bar???
+- in mobile view have the center be a two button situation two expand one or the other section for better view
 */
-
 "use strict"
 // constants
 let CHECK_INTERVAL = 1;
@@ -99,28 +100,41 @@ function toggleView() {
     });
 } // Manage the caption of images
 function imgCaption(parentIndex) { 
-    // console.log($("#eastIslands").children('#img'))
-    $('img').each(function(){ // create a unique id for each picture
+    let uniqueIDimg = 0; 
+    $('.image, .image-gal').each(function(){ // create a unique id for each picture
         let thisIMG = $(this).attr('id');
-        $(this).attr('id', `${thisIMG}-${parentIndex}`)
-    })
-    $('.caption').each(function(){ // create a unique id for each caption
+        console.log(thisIMG)
+        $(this).attr('id', `${thisIMG}-${uniqueIDimg}-${parentIndex}`)
+        uniqueIDimg ++;
+    });
+    let uniqueIDcap = 0; 
+    $('.caption, .caption-gal').each(function(){ // create a unique id for each caption
         let thisCaption= $(this).attr('id');
-        $(this).attr('id', `${thisCaption}-${parentIndex}`)
-    })
+        $(this).attr('id', `${thisCaption}-${uniqueIDcap}-${parentIndex}`)
+        uniqueIDcap ++;
+    });
     if (!mobile) {
-        $('.caption').hide();
+        $('.caption, .caption-gal').hide();
     } else {
-        $('.caption').show();
+        $('.caption, .caption-gal').show();
     }
-    $('img').on('mouseenter', function() {
+    $('.image').on('mouseenter', function() {
         let thisIMG = $(this).attr('id'); // get id
-        let thisIndex = thisIMG.replace("img", ""); // get index
+        console.log(thisIMG)
+        let thisIndex = thisIMG.replace("image", ""); // get index
         console.log(thisIndex)
         $(`#caption${thisIndex}`).show(); 
     }).on('mouseleave', function() {
         $('.caption').hide(); 
     });
+    $('.image-gal').on('mouseenter', function() {
+        let thisIMG = $(this).attr('id'); // get id
+        let thisIndex = thisIMG.replace("image-gal", ""); // get index
+        console.log(thisIndex)
+        $(`#caption-gal${thisIndex}`).show(); 
+    }).on('mouseleave', function() {
+        $('.caption').hide(); 
+    })
 } // Turn an array object into a single string
 function dataToString(dataObject) {
     let HTMLstring = '';
@@ -143,6 +157,9 @@ function navPages() { // !!!!!!!!!!!!!!!!!!!! check if disable works okay once t
         $("#next").on("click", function() {
             window.location.replace(pages[thisProjectIndex+1].url);
         });
+        $("#home").on("click", function() {
+            window.location.replace("/index.html");
+        });
     }
 } // Manage the layout according to screen size
 function responsive() {
@@ -154,8 +171,10 @@ function responsive() {
         console.log('mobile');
         $("#west").css({
             'width': '100%',
-            'height': `${100*MOBILE_PROPORTION}%`
+            'height': `${100*MOBILE_PROPORTION}%`,
+            'border-bottom': 'var(--border-w) solid var(--clr-main)'
         });
+        $("#westWorld>h1").css('font-size','var(--fs-800)');
         $("#east").css({
             'width': '100%',
             'height': `${100*(1-MOBILE_PROPORTION)}%`,
@@ -171,6 +190,7 @@ function responsive() {
             'width': `${100*DESKTOP_PROPORTION}%`,
             'height': '100%'
         });
+        $("#westWorld>h1").css('font-size','var(--fs-900)');
         $("#east").css({
             'width': `${100*(1-DESKTOP_PROPORTION)}%`,
             'height': '100%',
@@ -184,17 +204,17 @@ function sectionHover() {
     $('.sectionHeader').on('mouseenter',function() {
         let thisIndex = $(this).attr('id').replace("sectionHeader", ""); // get index
         if (!$(this).data('active')) { // check if open HTML data
-            $(this).css({'background-image':`url('${projects[thisProjectIndex].body[thisIndex].background}')`,"background-position": "center", "background-size": "cover"}); // use image as background on hover
-            // $(this).children().css({"background-color": "var(--clr-accent)", "color": "var(--clr-secondary)"});
+            if (projects[thisProjectIndex].body[thisIndex].background === "") {
+                $(this).css({"background-color": "var(--clr-unique-accent)"});
+            } else {
+                $(this).css({'background-image':`url('${projects[thisProjectIndex].body[thisIndex].background}')`,"background-position": "center", "background-size": "cover"}); // use image as background on hover
+            }
             $(this).children().addClass('invincibleTXT');
-            $('.invincibleTXT>span').css({'font-size':'inherit', 'color': 'var(--clr-accent)'});    
-            // $(this).find('.sectionTitle').css('background-color', 'lime');
         }   
     }).on('mouseleave', function() { // return to default
-        $(this).css('background', 'var(--clr-secondary-decline-dark)');
-        $('.invincibleTXT>span').css('font-size','var(--fs-600)');
+        $(this).css('background', 'var(--clr-secondary)');
         $(this).children().removeClass('invincibleTXT');
+        
              
     });
 }
-/// based on click not only the active, it should go and I should have a default if no images

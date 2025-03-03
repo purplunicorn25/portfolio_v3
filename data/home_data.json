@@ -57,9 +57,10 @@
         ]
     },{
         "id": "statement",
-        "barLabel": "Artist Statement",
+        "barLabel": "Who I am as an artist? Who do I want to be?",
         "multi": false,
         "content": {
+            "title": "<h3>Artist Statement</h3>",
             "first": "<p>I am a fashion designer.<br>I am an art historian.<br>I am a programmer.</p><p>But I am also neither.</p><p>I despise the waste and capitalist hierarchy of the fashion industry.<br>I despise the colonial past and present of museal institutions.<br>I despise my dependency for digital tools and entertainment.</p>",
             "second": "<p>I like to think of where these disciplines intersect.</p><p>I ask these questions: </p><p>Can the history of clothing inform largely on the spirit of an era?<br>Can digital artforms benefit museums in their display of historical clothing?<br>Can digital video games be included in traditional exhibition spaces and art education?<br>Can I answer these questions?</p>",
             "third": "<p>I am a designer.</p><p>I am someone who likes problems: thinking, evolving, solving.<br>I am someone who prefers written words to images and who thrives with logic gates.<br>I am inspired by human beings, their beauty, their flaws.<br>I am a firm believer in beautiful things as necessary, never dismissible.<br></p><p>I am, also, an anaphora lover.</p>"
@@ -72,17 +73,17 @@
         "barLabel": "Best User Research Project",
         "link": "projects/part.html",
         "content": {
-            "title": "pART",
+            "title": "<span class='proj-tit'>pART</span>",
             "medium": "User Experience Design, Mobile App Prototype, Augmented Reality & Public Art",
             "thumbnail": "assets/images/thumbnails/part.PNG",
-            "summary": "pARt combines art and technology; it is a mobile application prototype that enables local artists to publish their art digitally in any public location. App users may then admire these artworks with augmented reality technologies."
+            "summary": "<i>pARt</i> combines art and technology; it is a mobile application prototype that enables local artists to publish their art digitally in any public location. App users may then admire these artworks with augmented reality technologies."
         }
     },{
         "id": "read",
         "barLabel": "Best Conceptual Project",
         "link": "projects/read.html",
         "content": {
-            "title": "read.my.column",
+            "title": "<span class='proj-tit'>read.my.column</span>",
             "medium": "Web Experience, WEBGL, Generated Poetry",
             "thumbnail": "assets/images/thumbnails/read.jpg",
             "summary": "<i>read.my.column</i> is a WebGL navigable prototype. It critiques how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography."
@@ -92,30 +93,30 @@
         "barLabel": "Best 3D Modelling Project",
         "link": "projects/greenhouse.html",
         "content": {
-            "title": "Greenhouse Machine",
+            "title": "<span class='proj-tit'>Greenhouse Machine</span>",
             "medium": "3D Sculpture, Blender, Procedural Texturing, Geometry Nodes",
             "thumbnail": "assets/images/thumbnails/greenhouse.jpg'",
-            "summary": "Greenhouse machine is a fictional scene taking place in a pre-dystopian Montreal. It showcases a small greenhouse filled with greens. Its shape is meant to echo a drone while its style recalls eerie Victorian metal and glass greenhouses.  My hope was to contrast an eerie inside with a dystopian outside."
+            "summary": "<i>Greenhouse machine</i> is a fictional scene taking place in a pre-dystopian Montreal. It showcases a small greenhouse filled with greens. Its shape is meant to echo a drone while its style recalls eerie Victorian metal and glass greenhouses.  My hope was to contrast an eerie inside with a dystopian outside."
         }
     },{
         "id": "magnetic",
         "barLabel": "Best Installation Project",
         "link": "projects/magnetic.html",
         "content": {
-            "title": "Magnetic Bodies",
+            "title": "<span class='proj-tit'>Magnetic Bodies</span>",
             "medium": "Interactive Installation, TouchDesigner",
             "thumbnail": "assets/images/thumbnails/magnetic.jpg",
-            "summary": "Magnetic Bodies is a project that wishes to highlight the presence of gravity in everyday actions by showcasing an unique case of magnetism: ferrofluids. This interactive installation includes a digital simulation of ferrofluids where human bodies and actions are given the role of magnetic field."
+            "summary": "<i>Magnetic Bodies</i> is a project that wishes to highlight the presence of gravity in everyday actions by showcasing an unique case of magnetism: ferrofluids. This interactive installation includes a digital simulation of ferrofluids where human bodies and actions are given the role of magnetic field."
         }
     },{
         "id": "pain",
         "barLabel": "Best Hands-On UX Experience",
         "link": "projects/pain.html",
         "content": {  
-            "title": "Play The Pain",
+            "title": "<span class='proj-tit'>Play The Pain</span>",
             "medium": "UX Evaluation, UI Design, Neuroscience Research App",
             "thumbnail": "assets/images/thumbnails/play.PNG",
-            "summary": "Play the Pain is a media Health platform designed to put chronic pain patients and their caregivers at the heart of pain research. I intervened during their second iteration for a mobile and Web application. I worked as a UX/UI designer to improved their UI and the overall navigation for a better user experience."
+            "summary": "<i>Play the Pain</i> is a media Health platform designed to put chronic pain patients and their caregivers at the heart of pain research. I intervened during their second iteration for a mobile and Web application. I worked as a UX/UI designer to improved their UI and the overall navigation for a better user experience."
         }
     }
 ]

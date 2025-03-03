@@ -17,57 +17,13 @@ body, h1, h2, h3, h4, h5, p, figure, picture {
     max-width: 100%;
     display: block;
 }
-/* Custom Properties */
-html {
-    font-size: 16px;
-}
-:root {
-    --clr-main: rgb(88, 255, 32);
-    --clr-secondary: rgb(199, 255, 199);
-    --clr-secondary-decline-dark: hsla(115, 100%, 76%, 0.646);
-    --clr-secondary-decline-light: hsla(115, 100%, 95%, 0.5);
-    --clr-accent: rgb(35, 0, 163);
-    --clr-accent-decline: rgb(228, 61, 61);
-    --clr-link: rgb(255, 0, 212);
-    --clr-link-hover: white;
-    --clr-contrast: rgb(211, 21, 192);
-    /* fonts sizes */
-    --fs-900: 6.25rem;
-    --fs-800: 3.5rem;   
-    --fs-700: 2rem; 
-    --fs-600: 1.75rem;
-    --fs-500: 1.2rem; 
-    --fs-400: 1rem; 
-    --fs-300: 0.875rem;
-    --fs-200: 0.75rem;
-    --fs-100: 0.5rem;
-    /* fonts families */
-    --ff-primary: tabular-regular;
-    --ff-primary-medium: tabular-medium;
-    --ff-primary-bold: tabular-bold;
-    --ff-primary-italic: tabular-italic;
-    --ff-secondary: gulax;
-    --ff-decorative: archiv-grotesk;
-    --ff-display: tanker;
-    /* placement values */
-    --section-marg-inline: 5%;
-    --header-common-margin: 2%;
-    --project-list-btn-pad: 5%;
-    --pad-marg-s: 0.5em; 
-    --pad-marg-m: 1em;
-    --pad-marg-l: 1.5em;
-    --pad-marg-xl: 2em;
-    --pad-marg-jumbo: 5em;
-    /* decoration */
-    --border-w: 1px;  
-} 
 /* ------------------------ */
 /* Layout Hardcoded Classes */
 /* ------------------------ */
 body {
     margin: 0;
     overflow: hidden;
-    line-height: 1.6;
+    line-height: 1.4;
     min-height: 100vh;
     font-family: var(--ff-primary);
     font-size:var(--fs-400);
@@ -90,15 +46,18 @@ body {
     width: 30%;
     height: 90%; */
     padding: var(--pad-marg-xl);
-    overflow-y: auto; 
+    overflow-y: auto;
+    overflow-x: hidden; 
+    gap: var(--pad-marg-s)
 } #east {
     overflow-y: auto; 
     overflow-x: hidden;
+    background-color: hsl(240, 100%, 50%, 0) ;
 } #eastIslands {
     gap: var(--pad-marg-xl);
     padding-block: var(--pad-marg-jumbo);
     padding-inline: var(--pad-marg-xl);
-    justify-content:baseline;
+    background-color: hsl(240, 100%, 50%, 0) ;
 }
 /* --------------- */
 /* Utility classes */
@@ -119,21 +78,40 @@ body {
     max-height: 80%;
     max-width: 80%;
     z-index: 1;
+    background-color: var(--clr-main);
+    /* box-shadow: 10px 10px grey; */
+    /* color: LightGreen; */
 } .bar {
     justify-content: space-between;
+    align-items: center;
     padding-left: var(--header-common-margin);
+    display: flex;
+    color: var(--clr-main);
+    font-weight: 500;
 } .cta {
     width: 100%;
-    padding: var(--header-common-margin);   
+    padding-inline: var(--pad-marg-m);   
+    padding-block: var(--pad-marg-s); 
     background-color: var(--clr-accent);
+    color: var(--clr-main);
+    /* border: var(--border-w) solid lime; */
 } .cta:hover {
-    background-color: var(--clr-accent-decline);
-} .list-button {
+    background-color: var(--clr-contrast);
+    /* color: red; */
+    /* border: var(--border-w) solid magenta; */
+    /* font-family: var(--ff-primary-medium); */
+    /* box-shadow: 5px 5px red;      */
+} .nav-list-button, .list-button {
     text-align: left;
     margin-block: var(--header-common-margin);
+    padding-inline-end: var(--pad-marg-m);
     font-size: var(--fs-500);
+    width:max-content;
 } .list-button:hover {
-    color: var(--clr-accent-sec);
+    background-color: var(--clr-contrast);
+    color: var(--clr-main);
+    /* text-decoration: overline; */
+} .nav-list-button:hover {
     text-decoration: overline;
 } .text-box {
     max-height: 250px;
@@ -157,33 +135,32 @@ body {
     padding-inline: var(--header-common-margin); 
     background-color: inherit;
     align-items: center;
-    /* border-top: var(--border-w) solid var(--clr-accent-decline); */
+} .projectNav:hover {
+    background-color: var(--clr-main);
+    color: var(--clr-secondary);
 } .tool {
     display: flex;
     max-height: 20%;
     flex-direction: column;
     flex-wrap: wrap;
 } .section {
-    border: var(--border-w) solid var(--clr-accent);
+    border: var(--border-w) solid var(--clr-main);
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* gap: var(--pad-marg-l); */
-} .section:hover {
-    /* background-color: var(--clr-accent);
-    color: var(--clr-secondary); */
 } .sectionHeader {
     display: flex;
     min-height: 85px;
     justify-content: space-between;
     align-items: center;
     width:100%;
-    background-color: var(--clr-secondary-decline-dark);
 } .section-active {
-    background-color: var(--clr-accent) !important;
+    background-color: var(--clr-main) !important;
     color: var(--clr-secondary);
-
+} .section-active:hover {
+    background-color: var(--clr-unique-accent) !important;
+    color: var(--clr-main);
 } .grid {
     display: grid;
     justify-items: stretch;
@@ -194,15 +171,9 @@ body {
     font-size: var(--fs-500);
     /* background-color: var(--clr-main); */
 } .adapt {
-    /* height: fit-content !important; */
     flex-direction: column;
-    /* padding-bottom: var(--pad-marg-s); */
     width: 100%;
     background-color: var(--clr-secondary-decline-light);
-} .adapt:hover {
-    /* background-color: var(--clr-secondary);
-    color: var(--clr-accent); */
-    /* border-width: 3px; */
 } .scrollable {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -226,16 +197,17 @@ body {
 } a, a:visited {
     color: var(--clr-link)
 } a:hover, a:visited:hover {
-    color: var(--clr-secondary)
+    color: var(--clr-link-hover)
 } p {
     margin-block: var(--margin-p, 0);
     font-size: var(--fs-400);
 } .navButton {
     text-decoration: underline;
-    background-color:var(--clr,--clr-main);
+    /* background-color: var(--clr-secondary); */
+    /* color: var(--clr-main); */
 } .navButton:hover {
-    background-color: var(--clr-accent);
-    color: var(--clr-secondary);
+    background-color: var(--clr-unique-accent);
+    color: var(--clr-main);
 } .ol-large > p > span {
     /* font-weight: bold; */
     font-size: var(--fs-700)
@@ -265,9 +237,6 @@ body {
     font-weight: bold;
     /* color: var(--clr-secondary); */
     font-size: var(--fs-500);
-} .ss-tit {
-   /* color: red;  */
-   font-family: var(--ff-secondary);
 } .ref {
     font-size: var(--fs-200);
 } .accentTXT {
@@ -284,64 +253,24 @@ body {
     font-weight: bold;
     font-size: var(--fs-500);
 } .invincibleTXT {
-    background: var(--clr-accent);
-    color: var(--clr-secondary);
-    /* font-size: var(--fs-500); */
+    background: var(--clr-unique-accent);
+    color: var(--clr-main);
+} .proj-tit {
+    font-family: var(--ff-decorative);
+    font-size: var(--fs-800);
 }
 
 .link, link:visited{ color: var(--clr-link)} 
 .link:hover, link:visited:hover  { color: var(--clr-link-hover)} 
-/* colors */
-.bg-main { background-color: var(--clr-main)}
-.bg-secondary { background-color: var(--clr-secondary)}
-.bg-accent { background-color: var(--clr-accent)}
-.bg-accent-decline { background-color: var(--clr-accent-decline)}
-.text-main { color: var(--clr-main)}
-.text-accent { color: var(--clr-accent)}
-.text-contrast { color: var(--clr-contrast)}
-/* fonts */
-.fs-900 { font-size: var(--fs-900)} 
-.fs-800 { font-size: var(--fs-800)} 
-.fs-700 { font-size: var(--fs-700)}
-.fs-600 { font-size: var(--fs-600)}
-.fs-500 { font-size: var(--fs-500)}
-.fs-400 { font-size: var(--fs-400)} 
-.fs-300 { font-size: var(--fs-300)}
-.fs-200 { font-size: var(--fs-200)}
-.fs-100 { font-size: var(--fs-100)}
-/* fonts families */
-.ff-primary { font-family: var(--ff-primary)}
-.ff-primary-medium { font-family: var(--ff-primary-medium)}
-.ff-primary-bold { font-family: var(--ff-primary-bold)}
-.ff-secondary { font-family: var(--ff-secondary)}
-.ff-decorative { font-family: var(--ff-decorative)}
-/* font weight */
-.bold {font-weight: bold}
-.italic {font-style: italic}
-.lowercase {text-transform: lowercase}
-/* font hierarchy */
-/* page title */
-h1 { font-size: var(--fs-500); font-family: var(--ff-primary); margin-block: var(--header-common-margin);}
-/* action button */
-h2 { font-size: var(--fs-500); font-family: var(--ff-primary);}
-/*  pop title  */
-h3 { font-size: var(--fs-700); font-family: var(--ff-primary);}
-/* medium details */
-h4 { font-size: var(--fs-300); font-family: var(--ff-primary-italic);}
-/* cta button */
-h5 { font-size: var(--fs-500); font-family: var(--ff-primary-medium); text-align: left; margin-inline: var(--header-common-margin); }
-
-
 /* ------------- */
 /* Other classes */
 /* ------------- */
-
 ::-webkit-scrollbar {
-    height: 3x;
-    width: 3px;
+    height: 3px;
+    width: 1px;
 } /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--clr-main);
+    background: inherit;
 } /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--clr-accent);   
@@ -350,7 +279,6 @@ h5 { font-size: var(--fs-500); font-family: var(--ff-primary-medium); text-align
 ::-webkit-scrollbar-thumb:hover {
     background: pink;
 }
-
 /* remove animation for people who turned them off */
 @media (prefers-reduced-motion: reduce) {
     *,

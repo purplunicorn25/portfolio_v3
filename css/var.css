@@ -1,0 +1,116 @@
+/* Custom Properties */
+html {
+    font-size: 16px;
+}:root {
+    /* COLOR SCHEME 1 */
+    --clr-main: #144C4B; 
+    --clr-secondary: honeydew;
+    --clr-accent: mediumspringgreen;
+    --clr-contrast: orchid;
+    --clr-punch: #f7323d;
+    --clr-focus: #cec14f;
+    --clr-highlight: RoyalBlue;
+    /* unique color for each project page (5 now) */
+    --clr-unique-accent: var(--clr-accent);
+
+
+    --clr-link: orchid;
+    --clr-link-hover: #f7323d; 
+    --clr-secondary-decline-dark: hsla(115, 100%, 76%, 0.646);
+    --clr-secondary-decline-light: hsla(115, 100%, 95%, 0.5);
+    --clr-display: #ff6230;
+    --clr-display-light: #ffBE98;
+    /* COLOR SCHEME 2 */
+
+
+
+    /* great color */
+    /* --clr-link: rgb(255, 0, 212); */
+
+
+
+
+    /* --clr-main: #d599fb;
+    --clr-secondary: lavenderBlush;
+    --clr-secondary-decline-dark: hsla(115, 100%, 76%, 0.646);
+    --clr-secondary-decline-light: hsla(115, 100%, 95%, 0.5);
+    --clr-accent: #5E1Af4;
+    --clr-display: #ff6230;
+    --clr-display-light: #ffBE98;
+    --clr-link: rgb(255, 0, 212);
+    --clr-link-hover: white;
+    --clr-contrast: rgb(211, 21, 192); */
+    /* fonts sizes */
+    --fs-900: 6.25rem;
+    --fs-800: 3.5rem;   
+    --fs-700: 2rem; 
+    --fs-600: 1.75rem;
+    --fs-500: 1.2rem; 
+    --fs-400: 1rem; 
+    --fs-300: 0.875rem;
+    --fs-200: 0.75rem;
+    --fs-100: 0.5rem;
+    /* fonts families */
+    --ff-primary: tabular-regular;
+    --ff-display: tabular-medium;
+    --ff-primary-medium: tabular-medium;
+    --ff-primary-bold: tabular-bold;
+    --ff-primary-italic: tabular-italic;
+    --ff-secondary: archiv-grotesk-bold;
+    --ff-decorative: archiv-grotesk-bold;
+    
+    /* placement values */
+    --section-marg-inline: 5%;
+    --header-common-margin: 2%;
+    --project-list-btn-pad: 5%;
+    --pad-marg-s: 0.5em; 
+    --pad-marg-m: 1em;
+    --pad-marg-l: 1.5em;
+    --pad-marg-xl: 2em;
+    --pad-marg-jumbo: 5em;
+    /* decoration */
+    --border-w: 1px;  
+} 
+/* SINGLE VALUE CLASSES */
+/* colors */
+.bg-main { background-color: var(--clr-main)}
+.bg-secondary { background-color: var(--clr-secondary)}
+.bg-accent { background-color: var(--clr-accent)}
+.bg-accent-decline { background-color: var(--clr-accent-decline)}
+.text-main { color: var(--clr-main)}
+.text-accent { color: var(--clr-accent)}
+.text-contrast { color: var(--clr-contrast)}
+.text-punch { color: var(--clr-punch)}
+/* fonts */
+.fs-900 { font-size: var(--fs-900)} 
+.fs-800 { font-size: var(--fs-800)} 
+.fs-700 { font-size: var(--fs-700)}
+.fs-600 { font-size: var(--fs-600)}
+.fs-500 { font-size: var(--fs-500)}
+.fs-400 { font-size: var(--fs-400)} 
+.fs-300 { font-size: var(--fs-300)}
+.fs-200 { font-size: var(--fs-200)}
+.fs-100 { font-size: var(--fs-100)}
+/* fonts families */
+.ff-primary { font-family: var(--ff-primary)}
+.ff-primary-medium { font-family: var(--ff-primary-medium)}
+.ff-primary-bold { font-family: var(--ff-primary-bold)}
+.ff-secondary { font-family: var(--ff-secondary)}
+.ff-decorative { font-family: var(--ff-decorative)}
+/* font weight */
+.bold {font-weight: bold}
+.italic {font-style: italic}
+.lowercase {text-transform: lowercase}
+.all-cap {text-transform: uppercase}
+.capitalize {text-transform: capitalize}
+/* font hierarchy */
+/* page title */
+h1 { font-size: var(--fs-600); font-family: var(--ff-display); margin-block: var(--header-common-margin);}
+/* action button */
+h2 { font-size: var(--fs-600); font-family: var(--ff-display);}
+/*  pop title  */
+h3 { font-size: var(--fs-700); font-family: var(--ff-primary-medium);}
+/* medium details */
+h4 { font-size: var(--fs-300); font-family: var(--ff-primary-italic);}
+/* cta button */
+h5 { font-size: var(--fs-500); font-family: var(--ff-display); text-align: left; margin-inline: var(--header-common-margin); }
