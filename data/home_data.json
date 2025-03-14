@@ -6,6 +6,12 @@
         "barLabel": "Why hire me?",
         "multi": true,
         "content": [{
+            "label": "Social Skills",
+            "subcontent": {
+                 "because": "<h3>I can empathize & communicate.</h3>",
+                "detail": "<p>I have a lot of experience with customer service and I know how to make people feel at ease. As a past travel counsellor and tea specialist, I provided information and recommendations tailored to the customer's needs. I  can balance listening and talking time, empathize with situations or feelings, and ensure a smooth experience throughout.</p><p>I believe my previous working experiences will be foundational in my product designer career either to design empathically, interview users, present designs, and communicate well with colleagues.</p>"
+                }
+            },{
                 "label": "Artistic Skills",
                 "subcontent": {
                     "because": "<h3>I can draw.</h3>",
@@ -16,12 +22,6 @@
                 "subcontent": {
                     "because": "<h3>I can code.</h3>",
                     "detail": "<p>I am very tech savvy and I like to get technical. I am keen to learn new programming languages or libraries and know both their potential and limits.</p>"
-                }
-            },{
-                "label": "Social Skills",
-                "subcontent": {
-                     "because": "<h3>I can empathize & communicate.</h3>",
-                    "detail": "<p>I have a lot of experience with customer service and I know how to make people feel at ease. As a past travel counsellor and tea specialist, I provided information and recommendations tailored to the customer's needs. I  can balance listening and talking time, empathize with situations or feelings, and ensure a smooth experience throughout.</p><p>I believe my previous working experiences will be foundational in my product designer career either to design empathically, interview users, present designs, and communicate well with colleagues.</p>"
                 }
             }
         ]
@@ -83,7 +83,7 @@
         "barLabel": "Best Conceptual Project",
         "link": "projects/read.html",
         "content": {
-            "title": "<span class='proj-tit'>read.my.column</span>",
+            "title": "<span class='proj-tit'>read.&shymy.&shycolumn</span>",
             "medium": "Web Experience, WEBGL, Generated Poetry",
             "thumbnail": "assets/images/thumbnails/read.jpg",
             "summary": "<i>read.my.column</i> is a WebGL navigable prototype. It critiques how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography."

@@ -42,35 +42,46 @@ body {
     right: 2%;
     z-index: 2;
 } #westWorld {
-    /* position: relative; 
-    width: 30%;
-    height: 90%; */
+    /* margin-bottom: 5%; */
     padding: var(--pad-marg-xl);
     overflow-y: auto;
     overflow-x: hidden; 
     gap: var(--pad-marg-s)
+} #westWorld>h4 {
+    background-color: var(--clr-unique-accent);
+    width:fit-content
 } #east {
     overflow-y: auto; 
     overflow-x: hidden;
     background-color: hsl(240, 100%, 50%, 0) ;
+    z-index: 0;
 } #eastIslands {
     gap: var(--pad-marg-xl);
     padding-block: var(--pad-marg-jumbo);
     padding-inline: var(--pad-marg-xl);
     background-color: hsl(240, 100%, 50%, 0) ;
+    z-index: 2;
 }
 /* --------------- */
 /* Utility classes */
 /* --------------- */
 .flex {display: flex}
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: baseline; */
-} .p-abs-h-100 {
-    position: absolute;
-    height: 100vh;
-} .container-pop {
+.flex-column {display: flex; flex-direction: column;} 
+
+
+.underless {text-decoration: none} 
+.scrollable {overflow-y: scroll; overflow-x: hidden;} 
+.ref {font-size: var(--fs-200)} 
+.eyebrow {font-size: var(--fs-400)}
+
+.cards {gap: var(--pad-marg-l)} 
+.p-abs-h-100 {position: absolute; height: 100vh;} 
+.text-box {max-height: 250px; overflow-y: scroll;}
+
+.nav-list-button:hover {text-decoration: overline}
+.cta:hover {background-color: var(--clr-contrast)}
+
+.container-pop {
     position: absolute;
     border: var(--border-w) solid var(--clr-accent);
     display: flex;
@@ -81,7 +92,15 @@ body {
     background-color: var(--clr-main);
     /* box-shadow: 10px 10px grey; */
     /* color: LightGreen; */
-} .bar {
+} .ss-ss-tit {
+    border-style: solid;
+    width: fit-content;
+    border-width: 0px  0px 0px var(--border-w-bold);
+    padding-inline: var(--pad-marg-s);
+    font-weight: bold;
+}
+
+.bar {
     justify-content: space-between;
     align-items: center;
     padding-left: var(--header-common-margin);
@@ -95,12 +114,6 @@ body {
     background-color: var(--clr-accent);
     color: var(--clr-main);
     /* border: var(--border-w) solid lime; */
-} .cta:hover {
-    background-color: var(--clr-contrast);
-    /* color: red; */
-    /* border: var(--border-w) solid magenta; */
-    /* font-family: var(--ff-primary-medium); */
-    /* box-shadow: 5px 5px red;      */
 } .nav-list-button, .list-button {
     text-align: left;
     margin-block: var(--header-common-margin);
@@ -111,21 +124,10 @@ body {
     background-color: var(--clr-contrast);
     color: var(--clr-main);
     /* text-decoration: overline; */
-} .nav-list-button:hover {
-    text-decoration: overline;
-} .text-box {
-    max-height: 250px;
-    overflow-y: scroll;
-    /* margin-block: 10%; */
 } .infoContent {
     overflow-y: scroll; 
     padding: var(--pad-marg-xl); 
     gap: var(--pad-marg-m);
-} .noScrollBar::-webkit-scrollbar {
-    height: 0px;
-    width: 0px;
-} .underless {
-    text-decoration: none;
 } .projectNav {
     position: absolute;
     bottom: 0;
@@ -162,10 +164,15 @@ body {
     background-color: var(--clr-unique-accent) !important;
     color: var(--clr-main);
 } .grid {
-    display: grid;
+    display: grid; 
     justify-items: stretch;
-} .grid > * + * + * + * {
-    border-top: 1px solid var(--clr-accent);
+    row-gap: var(--pad-marg-s);
+} .grid > div {
+    /* border-inline-start : 1px solid var(--clr-main); */
+    border-block-end: 1px solid var(--clr-main);
+    /* background-color: var(--clr-unique-accent); */
+    color: var(--clr-main);
+    padding: var(--pad-marg-s);
 } .grid > div > span {
     font-weight: bold;
     font-size: var(--fs-500);
@@ -174,21 +181,19 @@ body {
     flex-direction: column;
     width: 100%;
     background-color: var(--clr-secondary-decline-light);
-} .scrollable {
-    overflow-y: scroll;
-    overflow-x: hidden;
-} .caption {
-    background-color: hsla(0, 0%, 100%, 0.5);
-    color: var(--clr-accent);   
+} 
+.caption, .caption-gal {
+    background-color: var(--clr-unique-accent);
+    color: var(--clr-main);   
     margin: 0; 
-    padding-inline-start: var(--pad-marg-s);
+    padding-inline-start: var(--pad-marg-l);
     text-transform: capitalize;
     /* text-align: center; */
-} .cards {
-    gap: var(--pad-marg-l);
-    justify-items: baseline;
-} .cards > div > * {
+} 
+.cards > div > * {
     margin-block: var(--pad-marg-m);
+} .card-label {
+    border: var(--border-w) solid var(--clr-main);
 } #westProvince > p {
     padding-block: var(--pad-marg-s);
 } .longView > *{
@@ -218,7 +223,7 @@ body {
     /* background-color: blue; */
 } .island {
     /* background-color: var(--clr-accent); */
-    background-color: var(--clr-secondary-decline-dark);
+    background-color: blue;
     /* color: var(--clr-accent); */
     padding: var(--pad-marg-s);
     margin-inline: 15%;
@@ -237,16 +242,19 @@ body {
     font-weight: bold;
     /* color: var(--clr-secondary); */
     font-size: var(--fs-500);
-} .ref {
-    font-size: var(--fs-200);
-} .accentTXT {
+} 
+.accentTXT {
     color: var(--clr-secondary);
-    /* font-family: var(--ff-display); */
     background-color: var(--clr-accent);
 } .gallery {
     display: flex;
     /* flex-wrap: wrap; */
     gap: var(--pad-marg-s);
+} .gallery-label {
+    font-size: var(--fs-500);
+    /* width:fit-content;
+    color: var(--clr-secondary);
+    background-color: var(--clr-main); */
 } .gallery-item {
     position: relative;
 } .large-quote {
@@ -258,26 +266,29 @@ body {
 } .proj-tit {
     font-family: var(--ff-decorative);
     font-size: var(--fs-800);
-}
-
+} .image, .image-gal {
+    gap: var(--pad-marg-s);
+} 
+.light-link, .light-link:visited {color: var(--clr-secondary)}
 .link, link:visited{ color: var(--clr-link)} 
 .link:hover, link:visited:hover  { color: var(--clr-link-hover)} 
 /* ------------- */
 /* Other classes */
 /* ------------- */
+.noScrollBar::-webkit-scrollbar {height: 0px; width: 0px;} 
 ::-webkit-scrollbar {
     height: 3px;
-    width: 1px;
+    width: 3px;
 } /* Track */
 ::-webkit-scrollbar-track {
-    background: inherit;
+    background: var(--clr-main);
 } /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--clr-accent);   
+    background: var(--clr-secondary);   
     width: 13px;
 } /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: pink;
+    background: var(--clr-unique-accent);
 }
 /* remove animation for people who turned them off */
 @media (prefers-reduced-motion: reduce) {

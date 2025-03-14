@@ -5,43 +5,21 @@ html {
     /* COLOR SCHEME 1 */
     --clr-main: #144C4B; 
     --clr-secondary: honeydew;
-    --clr-accent: mediumspringgreen;
-    --clr-contrast: orchid;
-    --clr-punch: #f7323d;
-    --clr-focus: #cec14f;
-    --clr-highlight: RoyalBlue;
-    /* unique color for each project page (5 now) */
-    --clr-unique-accent: var(--clr-accent);
-
-
-    --clr-link: orchid;
-    --clr-link-hover: #f7323d; 
-    --clr-secondary-decline-dark: hsla(115, 100%, 76%, 0.646);
     --clr-secondary-decline-light: hsla(115, 100%, 95%, 0.5);
-    --clr-display: #ff6230;
-    --clr-display-light: #ffBE98;
-    /* COLOR SCHEME 2 */
-
-
-
+    --clr-accent: #00fa9a;
+    --clr-contrast: violet;
+    --clr-punch: #f7323d;
+    --clr-focus: #f9e853;
+    --clr-highlight: #ffa430;
+    /* --clr-highlight: #ff7e7e; */
+    --clr-cold: DeepSkyBlue;
+    --clr-unique-accent: var(--clr-accent);
+    --clr-link: var(--clr-contrast);
+    --clr-link-hover: var(--clr-punch); 
     /* great color */
     /* --clr-link: rgb(255, 0, 212); */
-
-
-
-
-    /* --clr-main: #d599fb;
-    --clr-secondary: lavenderBlush;
-    --clr-secondary-decline-dark: hsla(115, 100%, 76%, 0.646);
-    --clr-secondary-decline-light: hsla(115, 100%, 95%, 0.5);
-    --clr-accent: #5E1Af4;
-    --clr-display: #ff6230;
-    --clr-display-light: #ffBE98;
-    --clr-link: rgb(255, 0, 212);
-    --clr-link-hover: white;
-    --clr-contrast: rgb(211, 21, 192); */
     /* fonts sizes */
-    --fs-900: 6.25rem;
+    --fs-900: 5.25rem;
     --fs-800: 3.5rem;   
     --fs-700: 2rem; 
     --fs-600: 1.75rem;
@@ -58,7 +36,6 @@ html {
     --ff-primary-italic: tabular-italic;
     --ff-secondary: archiv-grotesk-bold;
     --ff-decorative: archiv-grotesk-bold;
-    
     /* placement values */
     --section-marg-inline: 5%;
     --header-common-margin: 2%;
@@ -70,15 +47,17 @@ html {
     --pad-marg-jumbo: 5em;
     /* decoration */
     --border-w: 1px;  
+    --border-w-bold: 2px; 
 } 
 /* SINGLE VALUE CLASSES */
 /* colors */
 .bg-main { background-color: var(--clr-main)}
 .bg-secondary { background-color: var(--clr-secondary)}
 .bg-accent { background-color: var(--clr-accent)}
-.bg-accent-decline { background-color: var(--clr-accent-decline)}
+.bg-unique-accent { background-color: var(--clr-unique-accent)}
 .text-main { color: var(--clr-main)}
 .text-accent { color: var(--clr-accent)}
+.text-secondary { color: var(--clr-secondary)}
 .text-contrast { color: var(--clr-contrast)}
 .text-punch { color: var(--clr-punch)}
 /* fonts */

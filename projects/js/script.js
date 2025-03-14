@@ -1,9 +1,7 @@
 /* 
 TO DO 
-- find howw to signal that there is more to read in the specs section (west) gradient? animation? arrows?
-- add the name of the next and previous projects on hover
-- scroll bar???
 - in mobile view have the center be a two button situation two expand one or the other section for better view
+- Do I include the context in specs??
 */
 "use strict"
 // constants
@@ -146,8 +144,14 @@ function dataToString(dataObject) {
 function navPages() { // !!!!!!!!!!!!!!!!!!!! check if disable works okay once the other pages are good
     if (thisProjectIndex === 0) { // if first
         $("#previous").prop("disabled", true).css("opacity", 0.2); // disable button and hide
-    } else if (thisProjectIndex === pages.length) { // if last
+        $("#next").on("click", function() {
+            window.location.replace(pages[thisProjectIndex+1].url);
+        });
+    } else if (thisProjectIndex === pages.length-1) { // if last
         $("#next").prop("disabled", true).css("opacity", 0.2); // disable button and hide
+        $("#previous").on("click", function() {
+            window.location.replace(pages[thisProjectIndex-1].url);
+        });
     } else { // if in between
         $("#previous, #next").prop("disabled", false).css("opacity", 1); // enable buttons
         // $("#next").prop("disabled", false);
@@ -157,10 +161,22 @@ function navPages() { // !!!!!!!!!!!!!!!!!!!! check if disable works okay once t
         $("#next").on("click", function() {
             window.location.replace(pages[thisProjectIndex+1].url);
         });
-        $("#home").on("click", function() {
-            window.location.replace("/index.html");
-        });
     }
+    $("#home").on("click", function() {
+        window.location.replace("/index.html");
+    });
+    let previousTXT = $("#previous").text();
+    let nextTXT = $("#next").text();
+    $("#previous").on("mouseover", function() {
+        $(this).html(`${previousTXT} <span class='fs-300'>(${projects[thisProjectIndex-1].title})</span>`);
+    }).on("mouseleave", function() {
+        $(this).html(`${previousTXT}`);
+    });
+    $("#next").on("mouseover", function() {
+        $(this).html(`<span class='fs-300'>(${projects[thisProjectIndex+1].title})</span> ${nextTXT}`);
+    }).on("mouseleave", function() {
+        $(this).html(`${nextTXT}`);
+    });
 } // Manage the layout according to screen size
 function responsive() {
     let screenWidth = $(window).width();

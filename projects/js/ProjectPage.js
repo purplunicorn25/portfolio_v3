@@ -24,10 +24,11 @@ class ProjectPage {
                 container: '<div id="westWorld" class="flex-column">',
                 title: `<h1 class="bold ff-decorative fs-900">${this.title}</h1>`,
                 medium: `<h4 class="">${this.medium}</h4>`,
-                abstract: `<p><span class="bold fs-600">abstract<br></span>${this.abstract}</p>`,
                 year: `<p><span class="bold fs-600">year<br></span>${this.year}</p>`,
-                tools: `<p><span class="bold fs-600">tools<br></span><span class="tool">${toolList}</span></p>`,
+                abstract: `<p><span class="bold fs-600">abstract<br></span>${this.abstract}</p>`,
                 goals: `<p><span class="bold fs-600">learning goals<br></span>${goalList}</p>`,
+                context: `<p><span class="bold fs-600">context<br></span>${this.context}</p>`,
+                tools: `<p><span class="bold fs-600">tools<br></span><span class="tool">${toolList}</span></p>`,
                 containerEnd: '</div>'
             } // Turn into a single string
             let HTMLstring = dataToString(specs); 
@@ -60,17 +61,17 @@ class ProjectPage {
                 } else if (proj[i].type === 'ss-tit') { // SOUS-TITRE
                     string = `<p class='fs-700 ${proj[i].type}'>${proj[i].text}</p>`
                 } else if (proj[i].type === 'ss-ss-tit') { // SOUS-TITRE
-                    string = `<p class='fs-700 ${proj[i].type}'>${proj[i].text}</p>`
-                }else if (proj[i].type === 'img') { // IMG
+                    string = `<p class='fs-400 ${proj[i].type}'>${proj[i].text}</p>`
+                } else if (proj[i].type === 'img') { // IMG
                     string = `<div id="image${i}" class="image flex-column" style="width:${proj[i].size}">
                     <img src="${proj[i].href}" width="100%">
                     <span id="caption${i}" class="caption fs-300">${proj[i].text}</span></div>`
                 } else if (proj[i].type === 'cards') { // CARDS
                     for (let ii in proj[i].text) {
-                        let temp = `<p class='fs-400 bg-main' style='padding: 0.5em'>${proj[i].text[ii].header}</p>`;
-                        temp += proj[i].text[ii].image;
+                        let temp = `<p class='fs-500 card-label' style='padding: 0.5em'>${proj[i].text[ii].header}</p>`;
+                        temp += `<div>${proj[i].text[ii].image}</div>`;
                         temp += `<p>${proj[i].text[ii].body}</p>`;
-                        string += `<div>${temp}</div>`;
+                        string += `<div class='card-item'  style='width:${proj[i].size}'>${temp}</div>`;
                     }
                     string = `<div class='flex cards'>${string}</div>`;
                 } else if (proj[i].type === 'ol-large') { // ORDERED LIST LARGE NUMBERS
@@ -103,7 +104,7 @@ class ProjectPage {
                     for (let ii in proj[i].images) {
                         temp += `<div id="image-gal${ii}" class="image-gal gallery-item flex-column" style="width:${proj[i].size};">
                         <img src="${proj[i].images[ii].href}" width="100%">
-                        <span id="caption-gal${ii}" class="caption caption-gal fs-200">${proj[i].images[ii].caption}</span></div>`;
+                        <span id="caption-gal${ii}" class="caption caption-gal fs-300">${proj[i].images[ii].caption}</span></div>`;
                     }
                     console.log(proj[i].wrap)
                     string = `<div class='gallery-label'>${proj[i].text}</div><div class='gallery' style="flex-wrap: ${proj[i].wrap}">${temp}</div>`;
