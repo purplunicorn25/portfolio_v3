@@ -11,11 +11,11 @@
             "goals": ["Apply the Agile method with a concrete product design",
             "Design in a team", "Increase my knowledge on product design"],
             "tools": ["Figma", "Adobe Xd", "Adobe Illustrator", "Adobe  InDesign", "LucidSpark"],
-            "abstract": "<i>read.my.column</i> is a WebGL navigable prototype. It hopes to critique how newspaper headlines are often over sensationalistic and diverge from their primary informational purpose. <i>read.my.column</i> brings to awareness click bates in the informative online medias and further pushes the disconnected between headline and content by means of generative poetry and typography.",
+            "abstract": "<i>pART</i> combines art and technology; it is a mobile application prototype that enables local artists to publish their art digitally in any public location. App users may then admire these artworks with augmented reality technologies.",
             "href": "/projects/part.html", 
             "body": [
                 {
-                    "section": "Case Study Introduction",
+                    "section": "First Things First <span class='eyebrow'>[Case Study Introduction]</span>",
                     "wordCount": 178,
                     "background": "",
                     "content": [
@@ -52,13 +52,13 @@
                         }
                     ]
                 },{
-                    "section": "Project Overview",
-                    "wordCount": 178,
+                    "section": "What is pART? <span class='eyebrow'>[Project Overview]</span>",
+                    "wordCount": 665,
                     "background": "",
                     "content": [
                         {
                             "type": "ss-tit",
-                            "text": "Our Primary Vision <span class='eyebrow'>[The Idea]</span> "
+                            "text": "Our Primary Vision <span class='eyebrow'>[The Idea]</span>"
                         },{
                             "type": "p",
                             "text": "The idea for this project comes from our own observation that while Montreal has a strong cultural offer for public art, it accommodates few permanent digital artworks beside projections."
@@ -131,10 +131,269 @@
                             }]
                         },{
                             "type": "ss-tit",
-                            "text": "How do we believe we can achieve this?"
+                            "text": "How do we believe we can achieve this? <span class='eyebrow'>[Customers & End-users]</span>"
+                        },{
+                            "type": "p",
+                            "text": "By combining the potential of:<ul><li>Public Wi-fi in Montreal (our beta location);</li><li>Augmented reality technology and its increased position as a tool and entertainment (user familiarity);</li><li>Mobile devices being increasingly powerful and multi-function (ready at hand device).</li></ul>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "What are our immediate challenges? <span class='eyebrow'>[Challenge Forecast]</span>"
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "About AR"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>Will AR be easy implement to our mobile app; is the technology readily available?</li><li>Who is comfortable using this technology, are our user base more restricted than we expect?</li><li>Will artists be confident enough to use AR in their art practice?</li><li>How large are AR files? Will it be an issue if we need to restrict file size (cannot upload artwork with intended quality or detail) or if we don't restrict (loading is too long and users abandon before completion)?</li></ul>"
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "About Location-Based Requirements"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>Will users make the effort  to travel to specific locations to view artworks? Should the traveling be mandatory or optional?</li><li>Will the app require a large amount of data for users? Will it be an issue to some of them?</li></ul>"
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "About Spatial Value"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>Will artist use this opportunity to connect art and space meaningfully? Or will their choice of location be driven by other things like convenience, proximity, high traffic, etc.?</li><li>Will local businesses and communities see the potential of this app to communicate and serve their purpose?</li></ul>"
                         }
                     ]
-                }  
+                },{
+                    "section": "Gathering Insight <span class='eyebrow'>[Secondary Research]</span>",
+                    "wordCount": 616,
+                    "background": "",
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Why Montreal? <span class='eyebrow'>[Scope]</span>"
+                        },{
+                            "type": "p",
+                            "text": "To be realistic about our allotted time for each design task, we restrained the scope of <i>pART</i> to a single city: Montreal. We selected Montreal because the notion of public art is well established within and it is effervescent with artists and digital creativity. But also, it is - or was - our home, place of study, and main source of inspiration."
+                        },{
+                            "type": "ss-tit",
+                            "text": "What populates Montreal's current public art landscape? <span class='eyebrow'>[Landscape Analysis]</span>"
+                        },{
+                            "type": "p",
+                            "text": "Let's take a quick look!<br>We selected these projects or installations that were relevant to our goals."
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "Art Public Montreal <a href='https://artpublicmontreal.ca/en/' target='_blank' class style='font-weight:normal'>[website]</a>"
+                        },{
+                            "type": "p",
+                            "text": "This catalog is a project by Tourisme Montréal and the city of Montreal and features over 1,000 works of public art by nearly 500 professional artists. This website was a source of inspiration because its cataloging, filtering, and curating features were similar to functionalities we wanted to implement in our mobile app."
+                        },{
+                            "type": "gallery",
+                            "text": "",
+                            "size": "30%",
+                            "wrap": "wrap",
+                            "images": [{
+                                "href": "/assets/images/part/artpublic1.png",
+                                "caption": "Artworks Collection"
+                            },{
+                                "href": "/assets/images/part/artpublic.png",
+                                "caption": "Tour Suggestions"
+                            }]
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "Cité Mémoire <a href='https://www.montrealenhistoires.com/en/cite_memoire_montreal/' target='_blank' class style='font-weight:normal'>[website]</a>"
+                        },{
+                            "type": "p",
+                            "text": "This initiative is the largest video projection circuit in the world and  located in the heart of Montreal. It includes 25 tableaux of cultural or historical projections. This experience, ongoing for more than 5 years, encouraged us to think that our idea was sustainable in terms of widespread Wi-fi, mobile application circuit, and enough craze for users to travel to a specific location at a specific time to witness the projection."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/part/citemem.png",
+                            "size": ""
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "Jacques Cartier Bridge"
+                        },{
+                            "type": "p",
+                            "text": "First connected bridge in the world, this Montreal iconic landmark is lit and animated everynight. The animation is determined by various data like traffic, weather, and social media content trends. This installation is inspiring because it reinvigorates an existing city icon as we hope artist using our apps will do."
+                        },{
+                            "type": "img",
+                            "text": "https://www.flickr.com/photos/caribb/34634232141/in/photostream/",
+                            "href": "/assets/images/part/bridge.jpg",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "How other apps use AR? <span class='eyebrow'>[Competitive Audit Summary]</span>"
+                        },{
+                            "type": "p",
+                            "text": "We tested many existing apps using AR technology. We found these three to be the most relevant to our objectives."
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "Pokemon GO <a href='https://pokemongolive.com/?hl=en' target='_blank' class style='font-weight:normal'>[website]</a>"
+                        },{
+                            "type": "p",
+                            "text": "The successful mobile app Pokemon Go proves that location-based AR have the potential to motivate users to get out and explore new areas for collectibles. Pokemon Go inspired some basic function of <i>pART</i> and reinforced its potential for gamification."
+                        },{
+                            "type": "img",
+                            "text": "https://www.flickr.com/photos/vastateparksstaff/28555410026",
+                            "href": "/assets/images/part/pokemon.jpg",
+                            "size": "20%"
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "ARLOOPA <a href='https://app.arloopa.com/#' target='_blank' class style='font-weight:normal'>[website]</a>"
+                        },{
+                            "type": "p",
+                            "text": "This mobile app allowed users to place 3D models in their environment. However, the experience was unrefined, but it convinced us that the technology was available and manageable, while shabby. Models appeared in random locations in ARLOOPA and could not achieve the connection with the environment we hoped to generate with pART."
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "Google Art & Culture <a href='https://artsandculture.google.com/' target='_blank' class style='font-weight:normal'>[website]</a>"
+                        },{
+                            "type": "p",
+                            "text": "Google Arts & Culture is an app with a mission to preserve and bring the world's art and culture online. One of its feature is that users can view artworks with augmented reality. A seamless experience overall that informed our design of <i>pART</i>. Yet, its catalog includes only artworks that have entered institutions; its goal to democratize access to art is a success while our goal to ensure artists of all backgrounds and mediums have a space to publish could not be fulfilled by Google Art & Culture."
+                        },{
+                            "type": "img",
+                            "text": "https://play.google.com/store/apps/details?id=com.google.android.apps.cultural&hl=en",
+                            "href": "/assets/images/part/google.jpg",
+                            "size": "20%"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Key Takeways <span class='eyebrow'>[Conclusion]</span>"
+                        },{
+                            "type": "p",
+                            "text": "Moving forward, we kept these ideas in mind:"
+                        },{
+                            "type": "cards",
+                            "orientation": "column",
+                            "text": [{
+                                "header": "Technological Familiarity",
+                                "image": "",
+                                "body": "Augmented reality experiences on mobile have been implemented in various successful apps. It suggests that the technology will be easier to develop, implement, and manage. Users will be more familiar and require less in-app training."
+                            },{
+                                "header": "With the right motivators, users will show up",
+                                "image": "",
+                                "body": "Motivations like tourism,  gamification, exclusive or ephemere content, collectibles, or curated tours with clear paths and metrics successfully gets users out in the world."
+                            },{
+                                "header": "We cannot plan how users will use",
+                                "image": "",
+                                "body": "We can guide them, share our intent to choose locations purposefully, but user research and testing is needed before we can make sure the link between art and environment is well understood and easily executed."
+                            }]
+                        }
+                    ]
+                },{
+                    "section": "Understanding Our Users <span class='eyebrow'>[Primary Research]</span>",
+                    "wordCount": 507,
+                    "background": "/assets/images/part/waad.png",
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Meeting Potential Users <span class='eyebrow'>[Collecting Data]</span>"
+                        },{
+                            "type": "p",
+                            "text": "To gather user insight we conducted a total of 12 semi-structured interviews composed of 10 open-ended questions with non-artists, amateur artists, and professional artists ranging from 20 to 60 years old."
+                        },{
+                            "type": "p",
+                            "text": "We reached the members of Urban Sketchers Montreal, an artist group that sketches urban scene and is active on social media, with a survey. Unfortunately, our call was unanswered."
+                        },{
+                            "type": "ss-tit",
+                            "text": "What did we want to know from potential users? <span class='eyebrow'>[Research Goals]</span>"
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "GOAL #1<br>How do they feel about augmented reality?"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>Did they ever use it? If no, would they? If yes, what did they like and dislike?</li><li>Are they confident with their ability to use it for creation or consumption? Do they have technical concerns?</li><li>Without any technical knowledge, what does this idea of public AR art sparks. Make them share that vision.</li></ul>"
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "GOAL #2<br>What will get them to explore?"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>What areas do they think will benefit most from  public AR art? Where would they publish their art if they could?</li><li>How do they feel about public art? Is it an encounter that simply occurs or something to intentionally visit?</li><li>What would motivate them to view more public art instances?</li></ul>"
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "GOAL #3<br>What is their experience with publishing/sharing artworks? [for creatives]<br>OR<br>How do they keep informed about their favourite artists? [for all]"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>What were the challenges they faced when wanting to share their work on social media or in art institution.</li><li>Did they ever thought or wanted to share artworks? If they did not, why? If they did, how did it went?</li></ul>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Comparing & Grouping Methods <span class='eyebrow'>[Data Analysis Tools]</span>"
+                        },{
+                            "type": "p",
+                            "text": "Moving onward, we compiled all our notes from the 12 interviews in a table which allowed to quickly compare different answers to the same question."
+                        },{
+                            "type": "img",
+                            "text": "Compiling our interview notes together in a Google Sheet Document",
+                            "href": "/assets/images/part/interview.png",
+                            "size": ""
+                        },{
+                            "type": "p",
+                            "text": "With the qualitative data from our interviews we build a WAAD (work activity affinity diagram) to cluster and organize our findings. By using sticky notes and boxes, we were able to make meaning and set our focus before moving to actual design."
+                        },{
+                            "type": "img",
+                            "text": "Lucid Spark Diagram",
+                            "href": "/assets/images/part/waad.png",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "What It Taught Us <span class='eyebrow'>[Conclusions]</span>"
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "About AR (Goal #1)"
+                        },{
+                            "type": "cards",
+                            "orientation": "column",
+                            "text": [{
+                                "header": "",
+                                "image": "<img src='/assets/images/part/1.2.png' width='100%'>",
+                                "body": "Most interviewees had technical concerns with using AR, mainly about the rendering quality."
+                            },{
+                                "header": "",
+                                "image": "<img src='/assets/images/part/1.1.png' width='100%'>",
+                                "body": "Most interviewees had experienced AR before. Those who did not had a good understanding of the basics of AR."
+                            },{
+                                "header": "",
+                                "image": "<img src='/assets/images/part/1.3.png' width='100%'>",
+                                "body": "Some quickly had ideas for how they could use public AR art and shared their vision and ideas with us."
+                            }]
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "About Motivation & Opportunities (Goal #2 & #3)"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>Most interviewees were curious about our idea, but acknowledged that motivation could be an issue.</li></ul>"
+                        },{
+                            "type": "gallery",
+                            "text": "",
+                            "size": "30%",
+                            "wrap": "",
+                            "images": [{
+                                "href": "/assets/images/part/2.1.png",
+                                "caption": "Artworks Collection"
+                            },{
+                                "href": "/assets/images/part/2.2.png",
+                                "caption": "Tour Suggestions"
+                            }]
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>Some noted that the concept could work well outside cities too                                                                 .</li><li>Some noticed a potential for storytelling and education.</li><li>And some manifested their preference for social interaction like following or commenting artworks.</li></ul>"
+                        },{
+                            "type": "ss-ss-tit",
+                            "text": "About Location-Based Experience"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>The sample was equally divided as to where they would publish their art:<ul><li>⅓ Strategically in high traffic areas;</li><li>⅓ In sync with the artistic process choosing either the place of inspiration or production;</li><li>The last ⅓ mentionned more natural areas and soundscape for the experience and showed concern for the safety of users.</li></ul></ul>"
+                        }
+                    ]
+                },{
+                    "section": "Modelling Our Persona",
+                    "wordCount": 0,
+                    "background": "",
+                    "content": []
+                },{
+                    "section": "Giving It Shape",
+                    "wordCount": 0,
+                    "background": "",
+                    "content": []
+                },{
+                    "section": "More to come :)",
+                    "wordCount": 0,
+                    "background": "",
+                    "content": []
+                }
             ]
         },
         {  

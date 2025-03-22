@@ -7,7 +7,8 @@ TO DO
 // constants
 let CHECK_INTERVAL = 1;
 let MOBILE_BREAKPOINT = 900;
-let MOBILE_PROPORTION = .4; // proportion of the first part
+let MOBILE_PROPORTION = .375; // proportion of the first part
+let MOBILE_MIDDLE_PROPORTION = .025;
 let DESKTOP_PROPORTION = .3;
 // variables
 let project = '';
@@ -74,7 +75,7 @@ function toggleView() {
             $(`#${thisSection}Long`).remove();
             $(`#${thisWordCount}`).show();
             $(`#navButton${thisIndex}`).remove();
-            $(`#${thisPrevTxt}>span`).text(project.arrow.r);
+            $(`#${thisPrevTxt}>arrow`).text(project.arrow.r);
             project.sectionsArr[thisIndex].open = false;
         }
         let open = function() {
@@ -83,7 +84,7 @@ function toggleView() {
             $(`#${thisSection}`).addClass('adapt'); // add a class to elongate the box
             $(`#${thisSection}`).append(`<div id="${thisSection}Long" class="longView">${project.formatSection(thisIndex)}</div><button id='navButton${thisIndex}' class='navButton'>minimize section</button>`); // add the content
             $(`#${thisWordCount}`).hide();
-            $(`#${thisPrevTxt}>span`).text(project.arrow.d);
+            $(`#${thisPrevTxt}>arrow`).text(project.arrow.d);
             project.sectionsArr[thisIndex].open = true; // 
             imgCaption(thisIndex);   
         }
@@ -141,7 +142,7 @@ function dataToString(dataObject) {
     }
     return HTMLstring; 
 } // Change from one page to the other in linear fashion
-function navPages() { // !!!!!!!!!!!!!!!!!!!! check if disable works okay once the other pages are good
+function navPages() { 
     if (thisProjectIndex === 0) { // if first
         $("#previous").prop("disabled", true).css("opacity", 0.2); // disable button and hide
         $("#next").on("click", function() {
@@ -178,26 +179,34 @@ function navPages() { // !!!!!!!!!!!!!!!!!!!! check if disable works okay once t
         $(this).html(`${nextTXT}`);
     });
 } // Manage the layout according to screen size
-function responsive() {
+function responsive() { // !!!!!!!!!!!!! ben trop hard coded... mais les proportion en flex faudrait tester comment ca reagi
     let screenWidth = $(window).width();
     console.log(screenWidth)
     if (screenWidth < MOBILE_BREAKPOINT) { // if smaller than 
         mobile = true;
         // $('html').css("font-size", "16px"); // change the default to grow all font size (set at 16px for desktop)
         console.log('mobile');
+        $("#westWorld>h1").css('font-size','var(--fs-800)');
+        $("#westWorld").css('margin-bottom','0');
         $("#west").css({
             'width': '100%',
             'height': `${100*MOBILE_PROPORTION}%`,
             'border-bottom': 'var(--border-w) solid var(--clr-main)'
         });
-        $("#westWorld>h1").css('font-size','var(--fs-800)');
+        $('#switzerland').css({
+            'display': 'flex',
+            'width': '100%',
+            'height': `${100*MOBILE_MIDDLE_PROPORTION}%`,
+            'position': 'absolute',
+            'top': `${100*MOBILE_PROPORTION}%`,
+        });
         $("#east").css({
             'width': '100%',
             'height': `${100*(1-MOBILE_PROPORTION)}%`,
-            'top': `${100*MOBILE_PROPORTION}%`,
+            'top': `${100*MOBILE_PROPORTION + 100*MOBILE_MIDDLE_PROPORTION}%`,
             'left': 0
         })
-        $("#eastIslands").css('padding-inline-end', 'var(--pad-marg-xl)');
+        $("#eastIslands").css({'padding-inline-end': 'var(--pad-marg-xl)', 'padding-block-start': 'var(--pad-marg-xl)' });
     } else { // largen then
         mobile = false;
         // $('html').css("font-size", "16px"); // change to default
@@ -206,6 +215,7 @@ function responsive() {
             'width': `${100*DESKTOP_PROPORTION}%`,
             'height': '100%'
         });
+        $("#westWorld").css('margin-bottom','5%');
         $("#westWorld>h1").css('font-size','var(--fs-900)');
         $("#east").css({
             'width': `${100*(1-DESKTOP_PROPORTION)}%`,
@@ -214,7 +224,47 @@ function responsive() {
             'left': `${100*DESKTOP_PROPORTION}%`,
         });
         $("#eastIslands").css('padding-inline-end', 'var(--pad-marg-jumbo)');
+        $('#switzerland').css('display', 'none');
     }
+    $('#coll-down').on('click', function() {
+        $('#west').css(`height`,`${100 - 100*MOBILE_MIDDLE_PROPORTION}%`);
+        $('#east').hide();
+        $('#switzerland').css({'bottom': '5%', "top": 'auto'});
+        $('.coll').hide();
+        $('#switzerland').append('<div id="dual" class="coll">Dual View 🡡</div>');
+        $("#westWorld").css('margin-bottom','10%');
+        $('#dual').on('click', function() {
+            console.log('dual');
+            $('#east').show();
+            $('#west').css(`height`,`${100*MOBILE_PROPORTION}%`);
+            $('#switzerland').css({"top": `${100*MOBILE_PROPORTION}%`});
+            $("#westWorld").css('margin-bottom','0');
+            $('.coll').show();
+            $('#dual').remove();
+        });
+    })
+    $('#coll-up').on('click', function() {
+        $('#east').css({
+            'height':`${100 - 100*MOBILE_MIDDLE_PROPORTION}%`, 
+            'top': `${MOBILE_MIDDLE_PROPORTION}%`,
+            'padding-block-start': "var(--pad-marg-l)"
+        });
+        $('#west').hide();
+        $('#switzerland').css({'bottom': 'auto', "top": '0px'});
+        $('.coll').hide();
+        $('#switzerland').append('<div id="dual" class="coll">Dual View 🡣   </div>');
+        $('#dual').on('click', function() {
+            $('#east').css({
+                'height':`${100*(1-MOBILE_PROPORTION)}%`,
+                'top': `${100*MOBILE_PROPORTION}%`, 
+                'padding-block-start': "var(--pad-marg-xl)"
+            });
+            $('#west').show();
+            $('#switzerland').css({"top": `${100*MOBILE_PROPORTION}%`});
+            $('.coll').show();
+            $('#dual').remove();
+        });
+    })
 } // On hover make the section background an image  
 function sectionHover() {
     $('.sectionHeader').on('mouseenter',function() {

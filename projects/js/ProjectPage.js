@@ -39,7 +39,7 @@ class ProjectPage {
                 let section = { // assemble all components
                     container: `<div id="section${i}" class="section">`,
                     box: `<div id="sectionHeader${i}" class="sectionHeader" data-active='false'>`,
-                    title: `<div id="section-prev-txt${i}" class="section-prev-txt fs-500" style="margin-inline: var(--section-marg-inline)"><span class=" ">${this.arrow.r}</span> ${this.body[i].section}</div>`,
+                    title: `<div id="section-prev-txt${i}" class="section-prev-txt fs-500" style="margin-inline: var(--section-marg-inline)"><span class="arrow">${this.arrow.r}</span> ${this.body[i].section}</div>`,
                     wordCount: `<div id="word${i}" class="wordCount section-prev-txt italic" style="margin-inline: var(--section-marg-inline)">${this.body[i].wordCount} words</div>`,
                     boxEnd: '</div>',
                     containerEnd: `</div>`

@@ -12,7 +12,7 @@ html {
     --clr-focus: #f9e853;
     --clr-highlight: #ffa430;
     /* --clr-highlight: #ff7e7e; */
-    --clr-cold: DeepSkyBlue;
+    --clr-cold: rgb(106, 218, 255);
     --clr-unique-accent: var(--clr-accent);
     --clr-link: var(--clr-contrast);
     --clr-link-hover: var(--clr-punch); 
@@ -45,6 +45,7 @@ html {
     --pad-marg-l: 1.5em;
     --pad-marg-xl: 2em;
     --pad-marg-jumbo: 5em;
+    --pad-marg-mega: 7em;
     /* decoration */
     --border-w: 1px;  
     --border-w-bold: 2px; 

@@ -57,10 +57,19 @@ body {
     z-index: 0;
 } #eastIslands {
     gap: var(--pad-marg-xl);
-    padding-block: var(--pad-marg-jumbo);
+    padding-block-end: var(--pad-marg-mega);
     padding-inline: var(--pad-marg-xl);
     background-color: hsl(240, 100%, 50%, 0) ;
     z-index: 2;
+} #switzerland {
+    display: none;
+    background-color: var(--clr-main);
+    color: var(--clr-secondary);
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+} #coll-down {
+    text-align: right;
 }
 /* --------------- */
 /* Utility classes */
@@ -80,6 +89,13 @@ body {
 
 .nav-list-button:hover {text-decoration: overline}
 .cta:hover {background-color: var(--clr-contrast)}
+.coll {
+    font-size: var(--fs-300);
+} .coll:hover {
+    /* background-color: var(--clr-unique-accent);
+    color: var(--clr-main); */
+    text-decoration: underline;
+}
 
 .container-pop {
     position: absolute;
@@ -189,6 +205,7 @@ body {
     padding-inline-start: var(--pad-marg-l);
     text-transform: capitalize;
     /* text-align: center; */
+    width: fit-content;
 } 
 .cards > div > * {
     margin-block: var(--pad-marg-m);
