@@ -3,6 +3,370 @@
     "note": "projects should appear in the same order as on the index page",
     "projects": [
         {
+            "id": "pain",
+            "title": "Play The Pain",
+            "year": "2022",
+            "context": "Research Assistant for this Media Health project over the course of 2 years.",
+            "medium": "UX Evaluation, UI Design, Neuroscience Research",
+            "tools": ["Adobe Xd", "Adobe Illustrator", "Figma"],
+            "goals": ["Understand the needs of chronic pain patients and specialists","Understand the steps of product development.","Find, analyze, and fix usability issues"],
+            "abstract": "Play the Pain is a media Health platform designed to put chronic pain patients and their caregivers at the heart of pain research. I intervened during their second iteration for a mobile and Web application. I worked as a UX/UI designer to improved their UI and the overall navigation for a better user experience.", 
+            "href": "/projects/pain.html", 
+            "body": [
+                {
+                    "section": "My Role: Research Assistant & UX/UI Designer in The Making",
+                    "wordCount": 120,
+                    "background": "/assets/images/play_pain/thumbnail.png", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "From Studying UX to Hands-on App Design"
+                        },{
+                            "type": "p",
+                            "text": "I became involved in the project at a moment where the framework of the mobile app Play the Pain was already in place. The app was successfully developed and it was in its second user testing phase. However, the general style of the app and its flow needed some work. This is where I came in."
+                        },{
+                            "type": "p",
+                            "text": "My tasks included:<ul><li>Conducting usability evaluations;</li><li>Analyzing over a 100 user test reports;</li><li>Redesigning the logos for a more polished and uniform look;</li><li>Rethinking the flow between app features;</li><li>Pondering whether gamification was beneficial to the app's endeavour;</li><li>Considering the reality of chronic pain patients;</li><li>Ensuring that the design is accurately implemented in the new app.</li></ul>"
+                        },{
+                            "type": "img",
+                            "text": "Cover page for my inital usability report",
+                            "href": "/assets/images/play_pain/report.png",
+                            "size": "75%"
+                        }
+                    ]
+                },{
+                    "section": "<i>Play The Pain</i> In a Few Words",
+                    "wordCount": 58,
+                    "background": "/assets/images/play_pain/thumbnail_1.png", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Chronic Pain Research App"
+                        },{
+                            "type": "p",
+                            "text": "<i>Play The Pain</i> is a tool for neurological research. It aims to gather data from chronic pain patients to measure if gamefulness has a beneficial impact. Users are approached by their medical professionals to participate and fill daily entries with their general and playful habits."
+                        },{
+                            "type": "p",
+                            "text": "Its main features are:<ul><li>Track</li><li>Talk</li><li>Share</li><li>Play</li><li>Report</li></ul>"
+                        },{
+                            "type": "img",
+                            "text": "Excerpt from the brochure",
+                            "href": "/assets/images/play_pain/features.png",
+                            "size": "60%"
+                        }
+                    ]
+                },{
+                    "section": "UX: Chaotic Wayfinding Intervention",
+                    "wordCount": 185,
+                    "background": "/assets/images/play_pain/map.png", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Does it need a map?"
+                        },{
+                            "type": "p",
+                            "text": "The most blatant usability issue was that navigating the app felt like a maze."
+                        },{
+                            "type": "p",
+                            "text": "This is an accurate map of the entanglement, all line are possible ways to get from one page to another."
+                        },{
+                            "type": "p",
+                            "text": "Black lines are the most obvious links to a page; pink lines are all alternative paths."
+                        },{
+                            "type": "img",
+                            "text": "I made a map to visualize the magnitude of the issue",
+                            "href": "/assets/images/play_pain/map.png",
+                            "size": ""
+                        },{
+                            "type": "ss-tit",
+                            "text": "Made it a Priority"
+                        },{
+                            "type": "p",
+                            "text": "By correcting duplicate gateways and labelling issues, user could more easily track their position and recall the way to get there."
+                        },{
+                            "type": "ss-tit",
+                            "text": "To Gamify or not to Gamify?"
+                        },{
+                            "type": "p",
+                            "text": "This was an early discussion because the current system was not evolved enough to feel rewarding and compelling. It felt like an afterthought rather than a central part of the experience."
+                        },{
+                            "type": "p",
+                            "text": "It was decided to reduce to a minimum the gamified elements. While it would a been interesting for the app itself to be playful, it would have taken a lot of fine tuning and testing. The time, budget, and priorities were not in favor."
+                        },{
+                            "type": "p",
+                            "text": "We kept the day streak, tracked the number of interaction for each feature, and awarded a badge at specific tresholds (10, 20, 50, 100)."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/play_pain/game.png",
+                            "size": ""
+                        }
+                    ]
+                },{
+                    "section": "UI Makeover",
+                    "wordCount": 169,
+                    "background": "/assets/images/play_pain/before_after/ui_pain_a_xs.png", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "<span style='color: var(--clr-punch)'>!DISCLAIMER!</span>"
+                        },{
+                            "type": "p",
+                            "text": "<span style='color: var(--clr-punch)'>I am aware of that most of the pictures in this section are of poor quality. I had to use third party online services to open old Adobe Xd files since I no longer have a licence. I am sorry for the inconvience and the unprofessional look.</span>"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Nothing like a <i>Before & After</i>"
+                        },{
+                            "type": "p",
+                            "text": "In terms of style, the app as a I found it needed some care and attention. The changes I made were not drastic. I keep the same colours and the same concepts, but made sure the UI elements had a cohesive look and were both clear and attractive to the eye."
+                        },{
+                            "type": "ss-tit",
+                            "text": "The Main Features"
+                        },{
+                            "type": "gallery",
+                            "text": "Onboarding Feature Explanation - Before & After",
+                            "size": "60%",
+                            "wrap": "wrap",
+                            "images": [{
+                                "href": "/assets/images/play_pain/before_after/features_b.png",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/play_pain/before_after/features_a.png",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "gallery",
+                            "text": "Home Page - Before & After",
+                            "size": "30%",
+                            "wrap": "none",
+                            "images": [{
+                                "href": "/assets/images/play_pain/before_after/home_b.png",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/play_pain/before_after/home_a.png",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "gallery",
+                            "text": "TRACK - Before & After",
+                            "size": "30%",
+                            "wrap": "none",
+                            "images": [{
+                                "href": "/assets/images/play_pain/before_after/track_b.png",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/play_pain/before_after/track_a.png",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "gallery",
+                            "text": "TALK - Before & After",
+                            "size": "30%",
+                            "wrap": "none",
+                            "images": [{
+                                "href": "/assets/images/play_pain/before_after/talk_b.png",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/play_pain/before_after/talk_a.png",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "gallery",
+                            "text": "SHARE - Before & After",
+                            "size": "80%",
+                            "wrap": "wrap",
+                            "images": [{
+                                "href": "/assets/images/play_pain/before_after/share_b.png",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/play_pain/before_after/share_a.png",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "ss-tit",
+                            "text": "Icons & Placement"
+                        },{
+                            "type": "gallery",
+                            "text": "TRACK 🡢 Feelings - Before & After",
+                            "size": "30%",
+                            "wrap": "none",
+                            "images": [{
+                                "href": "/assets/images/play_pain/before_after/feels_b.png",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/play_pain/before_after/feels_a.png",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "gallery",
+                            "text": "TRACK 🡢 Pain - Before & After",
+                            "size": "30%",
+                            "wrap": "none",
+                            "images": [{
+                                "href": "/assets/images/play_pain/before_after/pain_b.png",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/play_pain/before_after/pain_a.png",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "gallery",
+                            "text": "TRACK 🡢 Pain 🡢 Sensations - Before & After",
+                            "size": "30%",
+                            "wrap": "none",
+                            "images": [{
+                                "href": "/assets/images/play_pain/before_after/sensation_b.png",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/play_pain/before_after/sensation_a.png",
+                                "caption": ""
+                            }]
+                        },{
+                            "type": "gallery",
+                            "text": "TRACK 🡢 Activities - Before & After",
+                            "size": "48%",
+                            "wrap": "none",
+                            "images": [{
+                                "href": "/assets/images/play_pain/before_after/ui_activity_b.png",
+                                "caption": ""
+                            },{
+                                "href": "/assets/images/play_pain/before_after/ui_activity_a.png",
+                                "caption": ""
+                            }]
+                        }
+                    ]
+                },{
+                    "section": "The Report's Evolution",
+                    "wordCount": 594,
+                    "background": "/assets/images/play_pain/report/report_a_1.png", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "What to filter?"
+                        },{
+                            "type": "p",
+                            "text": "The report feature has multiple functions:<ul><li>For medical professionals, it helps to track and diagnose based on patient input;</li><li>For the user, it serves as a tool to check correlations between habits and symptoms. For examples, the report could possibly answer questions like:<ul><li>\"When I sleep less than 6 hours, do I feel more pain?\"</li><li>\"When I play videogames, does it sooth or increase my anxiety feelings? Does my anxiety impact my back pain?\"</li><li>\"I want to track how my period impacts my feelings and symptoms.\"</li><li>\"I want to find out what is the trigger for my medication side-effects?\"</li></ul></ul>"
+                        },{
+                            "type": "p",
+                            "text": "The question then is, how to provide all the information neccessary without overwhelming the user and how to provide a clear and concise report to doctors?"
+                        },{
+                            "type": "ss-tit",
+                            "text": "Two Versions!"
+                        },{
+                            "type": "p",
+                            "text": "All accounts are categorized either as \"Patient\" or \"Care Giver\". The report then would be different for each user type because their needs are different."
+                        },{
+                            "type": "ss-tit",
+                            "text": "The Report as it was"
+                        },{
+                            "type": "p",
+                            "text": "The report was initially divided into three views: daily, monthly, and yearly."
+                        },{
+                            "type": "cards",
+                            "orientation": "column",
+                            "size": "33%",
+                            "text": [{
+                                "header": "Daily View",
+                                "image": "<img src='/assets/images/play_pain/report/r.png' width='100%'>",
+                                "body": "The daily view was very concise and brief as a medical report would be."
+                            },{
+                                "header": "Monthly View",
+                                "image": "<img src='/assets/images/play_pain/report/r1.png' width='100%'><img src='/assets/images/play_pain/report/r3.png' width='100%'>",
+                                "body": "The monthly view contained stats and graphs to compare pain versus playtime, a body to show the reported pain, all the emotions selected that month and the exact numbers of entry."
+                            },{
+                                "header": "Yearly View",
+                                "image": "<img src='/assets/images/play_pain/report/r2.png' width='100%'>",
+                                "body": "The yearly showed the ratio between play and pain for each month of that year."
+                            }]
+                        },{
+                            "type": "ss-tit",
+                            "text": "Major Issues"
+                        },{
+                            "type": "ol-large",
+                            "text": [
+                                "<span>1. </span>The time span covered in the report is too long. It is unlikely a user will use this app consistently for enough years to need to compare them. The goal of the app plus its context do not require such lenghts.",
+                                "<span>2. </span>The graphics lack legends. What they refer to is unclear. It is hard for a user seeking data to make sense out of them.",  
+                                "<span>3. </span>Any colored section in the graphs are clickable. However, they are too small for precise touch motions and might expose users to frustration.",
+                                "<span>4. </span>The content in the daily view does not cover all the information inputed by the user. Why is some left out? Users should be allowed to witness their data in full in a concise, but attractive way. "
+                            ]
+                        },{
+                            "type": "ss-tit",
+                            "text": "Immidiate Actions"
+                        },{
+                            "type": "ol-large",
+                            "text": [
+                                "<span>1. </span>Ditch the yearly view and make three views: daily, weekly, and monthly.",
+                                "<span>2. </span>Design graphics with clear legends that allow users to easily compare the most relevant data.",  
+                                "<span>3. </span>Remove the clickable elements in the graphics. Use arrows and a calendar widget to navigate in between dates and months.",
+                                "<span>4. </span>Present a report that contains all the information inputed to the risk of it being crowded."
+                            ]
+                        },{
+                            "type": "ss-tit",
+                            "text": "First Attempt"
+                        },{
+                            "type": "cards",
+                            "orientation": "column",
+                            "size": "33%",
+                            "text": [{
+                                "header": "Daily View",
+                                "image": "<img src='/assets/images/play_pain/report/report_a.png' width='100%'>",
+                                "body": ""
+                            },{
+                                "header": "Weekly View",
+                                "image": "<img src='/assets/images/play_pain/report/report_a_1.png' width='100%'>",
+                                "body": "This design with pie radar charts was intended to give a better understanding of the relationship between, sleep time, play time, pain, and emotions.<br><br>While this page desperatly needs to slack on the overlaping elements and vertical text, I believe it had the potential to turn the report into a tool rather than just a written account of user data."
+                            },{
+                                "header": "Monthly View",
+                                "image": "<img src='/assets/images/play_pain/report/report_a_2.png' width='100%'>",
+                                "body": ""
+                            }]
+                        },{
+                            "type": "p",
+                            "text": "The amount of icons, font size, overlap, etc. is disconcerting. I put it all in to figure out what needed to stay and what needed some more thoughts. "
+                        },{
+                            "type": "ss-tit",
+                            "text": "Second Attemp"
+                        },{
+                            "type": "p",
+                            "text": "<i>Play the Pain</i> at this point went into a transition from mobile app to Web app. It thus afforded more space in the web version."
+                        },{
+                            "type": "img",
+                            "text": "",
+                            "href": "/assets/images/play_pain/report/report_w.png",
+                            "size": "60%"
+                        },{
+                            "type": "p",
+                            "text": "Now divided into the four main features, TRACK, TALK, SHARE, and PLAY, the report was more digestible."
+                        },{
+                            "type": "p",
+                            "text": "In its mobile form, it retained its collapsible menus for users to save on the scrolling and quickly find what they are looking for. "
+                        }
+                    ]
+                },{
+                    "section": "Lessons Learned",
+                    "wordCount": 218,
+                    "background": "/assets/images/play_pain/artboard.png", 
+                    "content": [
+                        {
+                            "type": "ss-tit",
+                            "text": "Learning by doing"
+                        },{
+                            "type": "p",
+                            "text": "Looking back, I realise that neither I or the researcher in charge had prior experience in making a mobile or Web app. Post-production, I can find areas that I will in the future address differently:"
+                        },{
+                            "type": "p",
+                            "text": "<ul><li>Budget limitations were not as transparent as I wish they had been. I was designing with a “dream big” mindset while we could have saved time and energy by focusing strategically on specific tasks and realistic solutions;</li><li>The data gathered from user testing did not include chronic pain patients or health professionals. I would have hoped for more input from relevant or potential users;</li><li>I wish I would have trusted my insight better and have been less passive. As a second year undergraduate student, I was afraid to stand my ground because I could only back myself with theory, not experience - not to mention the whole student/teacher hierarchy.</li></ul>"
+                        },{
+                            "type": "p",
+                            "text": "There were also good things about my experience with <i>Play the Pain</i>.<br>I am grateful that: "
+                        },{
+                            "type": "p",
+                            "text": "<ul><li> I learned to communicate my design verbally, visually, and support my design decision with convincing thoughts;</li><li>This experience lead me right into user experience design and made it my career goal at the end of my degree;</li><li>It made me curious about accessibility issues in digital products and, still today, motivates me to specialize in this area.</li></ul>"
+                        }
+                    ]
+                }
+            ]
+        },{
             "id": "part",
             "title": "pART",
             "year": "2023 (10 weeks)",
@@ -131,7 +495,7 @@
                             }]
                         },{
                             "type": "ss-tit",
-                            "text": "How do we believe we can achieve this? <span class='eyebrow'>[Customers & End-users]</span>"
+                            "text": "How do we believe we can achieve this? <span class='eyebrow'>[Available Means]</span>"
                         },{
                             "type": "p",
                             "text": "By combining the potential of:<ul><li>Public Wi-fi in Montreal (our beta location);</li><li>Augmented reality technology and its increased position as a tool and entertainment (user familiarity);</li><li>Mobile devices being increasingly powerful and multi-function (ready at hand device).</li></ul>"
@@ -143,7 +507,7 @@
                             "text": "About AR"
                         },{
                             "type": "p",
-                            "text": "<ul><li>Will AR be easy implement to our mobile app; is the technology readily available?</li><li>Who is comfortable using this technology, are our user base more restricted than we expect?</li><li>Will artists be confident enough to use AR in their art practice?</li><li>How large are AR files? Will it be an issue if we need to restrict file size (cannot upload artwork with intended quality or detail) or if we don't restrict (loading is too long and users abandon before completion)?</li></ul>"
+                            "text": "<ul><li>Will AR be easy implement to our mobile app; is the technology readily available?</li><li>Who is comfortable using this technology, are our user base more restricted than we believe it to be?</li><li>Will artists be confident enough to use AR in their art practice?</li><li>How large are AR files? Will it be an issue if we need to restrict file size (cannot upload artwork with intended quality or detail) or if we don't restrict (loading is too long and users abandon before completion)?</li></ul>"
                         },{
                             "type": "ss-ss-tit",
                             "text": "About Location-Based Requirements"
@@ -184,7 +548,7 @@
                         },{
                             "type": "gallery",
                             "text": "",
-                            "size": "30%",
+                            "size": "",
                             "wrap": "wrap",
                             "images": [{
                                 "href": "/assets/images/part/artpublic1.png",
@@ -209,7 +573,7 @@
                             "text": "Jacques Cartier Bridge"
                         },{
                             "type": "p",
-                            "text": "First connected bridge in the world, this Montreal iconic landmark is lit and animated everynight. The animation is determined by various data like traffic, weather, and social media content trends. This installation is inspiring because it reinvigorates an existing city icon as we hope artist using our apps will do."
+                            "text": "First connected bridge in the world, this Montreal iconic landmark is lit and animated every night. The animation is determined by various data like traffic, weather, and social media content trends. This installation is inspiring because it reinvigorates an existing city icon as we hope artist using our apps will do."
                         },{
                             "type": "img",
                             "text": "https://www.flickr.com/photos/caribb/34634232141/in/photostream/",
@@ -254,7 +618,7 @@
                             "text": "Key Takeways <span class='eyebrow'>[Conclusion]</span>"
                         },{
                             "type": "p",
-                            "text": "Moving forward, we kept these ideas in mind:"
+                            "text": "Moving onwards, we kept these ideas in mind:"
                         },{
                             "type": "cards",
                             "orientation": "column",
@@ -269,7 +633,7 @@
                             },{
                                 "header": "We cannot plan how users will use",
                                 "image": "",
-                                "body": "We can guide them, share our intent to choose locations purposefully, but user research and testing is needed before we can make sure the link between art and environment is well understood and easily executed."
+                                "body": "We can guide them, share our intent to choose locations purposefully, but user research and testing is needed before we can make sure the link between art and environment is naturally understood and easily executed."
                             }]
                         }
                     ]
@@ -284,9 +648,6 @@
                         },{
                             "type": "p",
                             "text": "To gather user insight we conducted a total of 12 semi-structured interviews composed of 10 open-ended questions with non-artists, amateur artists, and professional artists ranging from 20 to 60 years old."
-                        },{
-                            "type": "p",
-                            "text": "We reached the members of Urban Sketchers Montreal, an artist group that sketches urban scene and is active on social media, with a survey. Unfortunately, our call was unanswered."
                         },{
                             "type": "ss-tit",
                             "text": "What did we want to know from potential users? <span class='eyebrow'>[Research Goals]</span>"
@@ -313,7 +674,7 @@
                             "text": "Comparing & Grouping Methods <span class='eyebrow'>[Data Analysis Tools]</span>"
                         },{
                             "type": "p",
-                            "text": "Moving onward, we compiled all our notes from the 12 interviews in a table which allowed to quickly compare different answers to the same question."
+                            "text": "We compiled all our notes from the 12 interviews in a table which allowed to quickly compare different answers to the same question."
                         },{
                             "type": "img",
                             "text": "Compiling our interview notes together in a Google Sheet Document",
@@ -362,14 +723,14 @@
                             "wrap": "",
                             "images": [{
                                 "href": "/assets/images/part/2.1.png",
-                                "caption": "Artworks Collection"
+                                "caption": "Short-Lived Motivation"
                             },{
                                 "href": "/assets/images/part/2.2.png",
-                                "caption": "Tour Suggestions"
+                                "caption": "True Potential"
                             }]
                         },{
                             "type": "p",
-                            "text": "<ul><li>Some noted that the concept could work well outside cities too                                                                 .</li><li>Some noticed a potential for storytelling and education.</li><li>And some manifested their preference for social interaction like following or commenting artworks.</li></ul>"
+                            "text": "<ul><li>Some noted that the concept could work well outside cities too.</li><li>Some noticed a potential for storytelling and education.</li><li>And some manifested their preference for social interaction like following or commenting artworks.</li></ul>"
                         },{
                             "type": "ss-ss-tit",
                             "text": "About Location-Based Experience"
@@ -378,16 +739,6 @@
                             "text": "<ul><li>The sample was equally divided as to where they would publish their art:<ul><li>⅓ Strategically in high traffic areas;</li><li>⅓ In sync with the artistic process choosing either the place of inspiration or production;</li><li>The last ⅓ mentionned more natural areas and soundscape for the experience and showed concern for the safety of users.</li></ul></ul>"
                         }
                     ]
-                },{
-                    "section": "Modelling Our Persona",
-                    "wordCount": 0,
-                    "background": "",
-                    "content": []
-                },{
-                    "section": "Giving It Shape",
-                    "wordCount": 0,
-                    "background": "",
-                    "content": []
                 },{
                     "section": "More to come :)",
                     "wordCount": 0,
@@ -423,7 +774,7 @@
                             "text": "I validated my perception by visiting numerous mainstream news media. While some were better than others, I still found clickbait headlines with content less scandalous than advertised. I suspect Web analytics to have a role in this because an online newspapers' success is measured yes in terms of subscription, but more importantly in terms of clicks."
                         },{
                             "type": "p",
-                            "text": "I did not focus on the issue of 'fake news', but it is inherent to my subject. Headlines, for fake news artists, are the best weapon. They frame the rest of the experience, but can affect what existing knowledge is activated in our heads and influence our mindset to recall details that coincide with expectation.”<a href='https://www.newyorker.com/science/maria-konnikova/headlines-change-way-think'><span class=ref>[1]</span></a> Thus, a misleading headline would have an impact not only prior reading the article (if read at all), but also after, as it is remembered and maybe shared with others. "
+                            "text": "I did not focus on the issue of 'fake news', but it is inherent to my subject. Headlines, for fake news artists, are their best weapon. They frame the rest of the experience, but can affect what existing knowledge is activated in our heads and influence our mindset to recall details that coincide with expectation.”<a href='https://www.newyorker.com/science/maria-konnikova/headlines-change-way-think'><span class=ref>[1]</span></a> Thus, a misleading headline would have an impact not only prior reading the article (if read at all), but also after, as it is remembered and maybe shared with others. "
                         },{
                             "type": "ss-tit",
                             "text": "Why call it \"read.my.column\"?"
@@ -445,6 +796,9 @@
                             "type": "ss-tit",
                             "text": "A Tribute to these inspiring artworks"
                         },{
+                            "type": "p",
+                            "text": "They fed my imagination and showed polished work that made me confident in my project as well."
+                        },{
                             "type": "cards",
                             "orientation": "column",
                             "text": [{
@@ -462,8 +816,7 @@
                             }]
                         }
                     ]
-                },
-                {
+                },{
                     "section": "Visual Storyboard",
                     "wordCount": 189, 
                     "background": "/assets/images/read_my_column/storyboard.jpg",
@@ -504,6 +857,9 @@
                         {
                             "type": "ss-tit",
                             "text": "The Right tool for the right job"
+                        },{
+                            "type": "p",
+                            "text": "I used a combination of tools, library, and languages to create <i>read.my.column</i>."
                         },{
                             "type": "grid",
                             "col": "25% 25% 50%",   
@@ -577,6 +933,9 @@
                             "text": "screenshot from testing prototype",
                             "href": "/assets/images/read_my_column/still.png",
                             "size": ""
+                        },{
+                            "type": "p",
+                            "text": "From my user testing on my early prototype..."
                         },{
                             "type": "ss-tit",
                             "text": "I wanted to learn"
@@ -669,7 +1028,7 @@
                             "text": "Strengths"
                         },{
                             "type": "p",
-                            "text": "<ul><li>The columns are aligned on a grid with equal spacing and thus creates narrow corridors that are easy to navigate.</li><li>The height of the columns is high enough to evoke trees or even skyscraper and street.</li><li>The fonts and random colors are shared by all units to avoid competition and hierarchy. The sole indicator of individuality is the headline string.</li><li>Poem structure is respected and results are occasionally witty or funny.</li></ul>"
+                            "text": "<ul><li>The columns are aligned on a grid with equal spacing and thus creates narrow corridors that are easy to navigate.</li><li>The height of the columns smoothly evoke trees or even skyscrapers.</li><li>The fonts and random colors are shared by all units to avoid competition and hierarchy. The sole indicator of individuality is the headline string.</li><li>Poem structure is respected and results are occasionally witty or funny.</li></ul>"
                         },{
                             "type": "img",
                             "text": "columns in their final form",
@@ -713,7 +1072,7 @@
                         "text": "Ever heard of rooftop agriculture?"
                     },{
                         "type": "p",
-                        "text": "This environment design project is inspired by the leadership of Montreal in terms of rooftop greenhouse agriculture. <span class='accentTXT'>As of April 2021, the world's largest rooftop greenhouse was in Montreal.</span><a href='https://montreal.lufa.com/en/farms'><span class=ref>[1]</span></a>"
+                        "text": "This environment design project is inspired by the leadership of Montreal in terms of rooftop greenhouse agriculture. As of April 2021, the world's largest rooftop greenhouse was in Montreal.</span><a href='https://montreal.lufa.com/en/farms'><span class=ref>[1]</a>"
                     },{
                         "type": "ss-tit",
                         "text": "Why a greenhouse?"
@@ -728,17 +1087,17 @@
                         "text": "<i>Greenhouse machine sets up in a time where access to sunlight is limited in large cities like Montreal because of thick smog pollution. Availability of fresh fruits and veggies is inconsistent and unaffordable for most urban citizens. An initiative to promote local food growth and household vegetable garden launches this flying greenhouse product that sits atop buildings during dark hours, but flies above smog to get sunlight during daytime.</i>"
                     },{
                         "type": "p",
-                        "text": "<i>Hopes are to improve air quality, fresh food intake, reduce pollution from perishable transportation, and water usage with rainwater collector and filter. The greenhouse machine proudly includes the  City of Montreal logo in its design to commemorate its leadership in rooftop agriculture.</i>"
+                        "text": "<i>Hopes are to improve air quality, fresh food intake, reduce pollution from transportation, and water usage with rainwater collector and filter. The greenhouse machine proudly includes the  City of Montreal logo in its design to commemorate its leadership in rooftop agriculture.</i>"
                     },{
                         "type": "img",
                         "text": "Rough sketch during ideation phase",
                         "href": "/assets/images/greenhouse_machine/sketch.png",
-                        "size": "75%"
+                        "size": "65%"
                     },{
                         "type": "img",
                         "text": "Quick storyboad",
                         "href": "/assets/images/greenhouse_machine/storyboard.png",
-                        "size": "45%"
+                        "size": "65%"
                     }
                     ]
                 },{
@@ -842,7 +1201,7 @@
                         "text": "What is Procedural Texturing?"
                     },{
                         "type": "p",
-                        "text": "Procedural texturing refers to a method in computer graphics where textures are generated using mathematical algorithms or functions. Rather than being created directly from pre-existing images, it allowds for dynamic and customizable textures by manipulating parameters within the algorithm. It is commonly used to create natural-looking surfaces like wood, marble, or stone. "
+                        "text": "Procedural texturing refers to a method in computer graphics where textures are generated using mathematical algorithms or functions. Rather than being created directly from pre-existing images, it allows for dynamic and customizable textures by manipulating parameters within the algorithm. It is commonly used to create natural-looking surfaces like wood, marble, or stone. "
                     },{
                         "type": "ss-tit",
                         "text": "A Technical Challenge"
@@ -867,6 +1226,9 @@
                             "href": "/assets/images/greenhouse_machine/textures/rust_ref_2.jpg",
                             "caption": "https://images.pexels.com/photos/27901403/pexels-photo-27901403.jpeg?cs=srgb&dl=pexels-shottrotter-27901403.jpg&fm=jpg"
                         }]
+                    },{
+                        "type": "p",
+                        "text": "<span class='gallery-label'>My Textures</span>"
                     },{
                         "type": "img",
                         "text": "Texture for the metal structure of the greenhouse. ",
@@ -895,6 +1257,9 @@
                             "href": "/assets/images/greenhouse_machine/textures/wood_ref_3.jpg",
                             "caption": "https://img.freepik.com/free-photo/relief-texture-brown-bark-tree-close-up_158595-6482.jpg"
                         }]
+                    },{
+                        "type": "p",
+                        "text": "<span class='gallery-label'>My Textures</span>"
                     },{
                         "type": "img",
                         "text": "Light and fine grain wood texture.",
@@ -1015,7 +1380,7 @@
                             "text": "Challenging Challenges"
                         },{
                             "type": "p",
-                            "text": "Time is of the essence...I learned that:"
+                            "text": "Time is of the essence... I learned that:"
                         },{
                             "type": "p",
                             "text": "<ul><li>I drastically underestimated the quantity of objects a scene required to make a rich environment and atmosphere;</li><li>I did not have any assets at the ready and I was too optimistic for the time versus detail ratio. I wanted to achieve a photorealistic look, but quickly had to reduce my expectations.</li><li>Due to time constraints, I had to rely on a few external models. While it ultimately saved a few hours, the search for good quality free model was still time consuming and unnerving.</li></ul>"
@@ -1024,7 +1389,7 @@
                             "text": "Areas of Improvement"
                         },{
                             "type": "p",
-                            "text": "<span class='accentTXT'>IT IS TOO CLEAN.</span>"
+                            "text": "<span class='gallery-label'>It is too clean!</span>"
                         },{
                             "type": "p",
                             "text": "The glass is clean, tables are clean, air is clean... Where is the dirt, the bird droppings, the bugs, the dead leaves, the moss, the mess...? "
@@ -1033,16 +1398,16 @@
                             "text": "Because I was unable to add chaos and messiness to my scene, the rusty frame feels off.  "
                         },{
                             "type": "p",
-                            "text": "<span class='accentTXT'>IT IS TOO HEAVY.</span>"
+                            "text": "<span class='gallery-label'>It is too heavy!</span>"
                         },{
                             "type": "p",
-                            "text": "My ambitions to create natural looking textures got the better of me. There is no way this thing could fly. Concrete, wood, rocks, metal, glass... What was I thinking? The concept in that sense definitely needs some refining."
+                            "text": "My ambitions to create natural looking textures got the better of me. There is no way this thing could fly. Concrete, wood, rocks, metal, glass... What was I thinking? The concept in that sense definitely needs some rethinking."
                         },{
                             "type": "ss-tit",
                             "text": "Special Mention: Jet Engines"
                         },{
                             "type": "p",
-                            "text": "The jet engines are my favourite part of this scene and were given a lot of time and attention. They were a challenge to model, but ended up being the section I am most fond of. They reference common plane engines and Hayao Miyazaki's use of organic shapes and movement on flying devices."
+                            "text": "The jet engines are my favourite part of this scene and were given a lot of time and attention. They were a challenge to model, but ended up being the part I am most fond of. They reference common plane engines and Hayao Miyazaki's use of organic shapes and movement on flying devices."
                         },{
                             "type": "img",
                             "text": "Side view of the jet engines",
@@ -1166,7 +1531,7 @@
                             "size": "60%"
                         },{
                             "type": "ss-tit",
-                            "text": "Compilling findings"
+                            "text": "Moodboard From Research"
                         },{
                             "type": "p",
                             "text": "Additionally, I researched other instances where mathematics or physics create aesthetically pleasing phenomena. I came across fractals, cymatics, and acoustic levitation, to name a few, and compilled it into a moodboard."
@@ -1330,375 +1695,13 @@
                             "text": "A Second chance?"
                         },{
                             "type": "p",
-                            "text": "If the prototype was to be redone from scratch with more time and resources, I would:<ul><li>Invest in a pro licence to track human bodies instead of objects as intended;</li><li>Create the simulation in TouchDesigner with its OpenGL feature that was not covered in class;</li><li>Associate myself with someone with python and physics knowledge for a more accurate simulation;</li><li>Have the simulation projected on a large screen to attract traffic and make it more immersive;</li><li>Have it implemented that the strengh of the \"magnetic field\" is mapped and dependent on quick versus slow movements.</li></ul>"
+                            "text": "If the prototype was redone from scratch with more time and resources, I would:<ul><li>Invest in a pro licence to track human bodies instead of objects as intended;</li><li>Create the simulation in TouchDesigner with its OpenGL feature that was not covered in class;</li><li>Associate myself with someone with python and physics knowledge for a more accurate simulation;</li><li>Have the simulation projected on a large screen to attract traffic and make it more immersive;</li><li>Have it implemented that the strengh of the \"magnetic field\" is mapped and dependent on quick versus slow movements.</li></ul>"
                         },{
                             "type": "ss-tit",
                             "text": "Proud Nevertheless"
                         },{
                             "type": "p",
                             "text": "Despite this long list of to-do improvements, I trust this concept to be strong and would love to see it realised in its full capacity."
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "pain",
-            "title": "Play The Pain",
-            "year": "2022",
-            "context": "Research Assistant for this Media Health project over the course of 2 years.",
-            "medium": "UX Evaluation, UI Design, Neuroscience Research",
-            "tools": ["Adobe Xd", "Adobe Illustrator", "Figma"],
-            "goals": ["Understand the needs of chronic pain patients and specialists","Understand the steps of product development.","Find, analyze, and fix usability issues"],
-            "abstract": "Play the Pain is a media Health platform designed to put chronic pain patients and their caregivers at the heart of pain research. I intervened during their second iteration for a mobile and Web application. I worked as a UX/UI designer to improved their UI and the overall navigation for a better user experience.", 
-            "href": "/projects/pain.html", 
-            "body": [
-                {
-                    "section": "My Role: Research Assistant & UX/UI Designer in The Making",
-                    "wordCount": 120,
-                    "background": "/assets/images/play_pain/thumbnail.png", 
-                    "content": [
-                        {
-                            "type": "ss-tit",
-                            "text": "From Studying UX to Hands-on App Design"
-                        },{
-                            "type": "p",
-                            "text": "I became involved in the project at a moment where the framework of the mobile app Play the Pain was already in place. The app was successfully developed and it was in its second user testing phase. However, the general style of the app and its flow needed some work. This is where I came in."
-                        },{
-                            "type": "p",
-                            "text": "The main tasks included:<ul><li>Conducting usability evaluations;</li><li>Analyzing over a 100 user test reports;</li><li>Redesigning the logos for a more polished and uniform look;</li><li>Rethinking the flow between app features;</li><li>Pondering whether gamification was beneficial to the app's endeavour;</li><li>Considering the reality of chronic pain patients;</li><li>Ensuring that the design is accurately implemented in the new app.</li></ul>"
-                        },{
-                            "type": "img",
-                            "text": "Cover page for my inital usability report",
-                            "href": "/assets/images/play_pain/report.png",
-                            "size": "75%"
-                        }
-                    ]
-                },{
-                    "section": "<i>Play The Pain</i> In a Few Words",
-                    "wordCount": 58,
-                    "background": "/assets/images/play_pain/thumbnail_1.png", 
-                    "content": [
-                        {
-                            "type": "ss-tit",
-                            "text": "Chronic Pain Research App"
-                        },{
-                            "type": "p",
-                            "text": "<i>Play The Pain</i> is a tool for neurological research. It aims to gather data from chronic pain patients to measure if gamefulness has a beneficial impact. Users are approached by their medical professionals to participate and fill daily entries with their general and playful habits."
-                        },{
-                            "type": "p",
-                            "text": "Its main features are:<ul><li>Track</li><li>Talk</li><li>Share</li><li>Play</li><li>Report</li></ul>"
-                        },{
-                            "type": "img",
-                            "text": "Excerpt from the brochure",
-                            "href": "/assets/images/play_pain/features.png",
-                            "size": "60%"
-                        }
-                    ]
-                },{
-                    "section": "UX: Chaotic Wayfinding Intervention",
-                    "wordCount": 185,
-                    "background": "/assets/images/play_pain/map.png", 
-                    "content": [
-                        {
-                            "type": "ss-tit",
-                            "text": "Does it need a map?"
-                        },{
-                            "type": "p",
-                            "text": "The most blatant usability issue was that navigating the app felt like a maze."
-                        },{
-                            "type": "p",
-                            "text": "This is an accurate map of the entanglement, all line are possible ways to get from one page to another. Black lines are the most obvious links to a page. Pink lines are all the alternative paths.:"
-                        },{
-                            "type": "img",
-                            "text": "I made a map to visualize the magnitude of the issue",
-                            "href": "/assets/images/play_pain/map.png",
-                            "size": ""
-                        },{
-                            "type": "ss-tit",
-                            "text": "Made it a Priority"
-                        },{
-                            "type": "p",
-                            "text": "By correcting the duplicate gateways and labelling issues, user could more easily track their position and recall the way to get there."
-                        },{
-                            "type": "ss-tit",
-                            "text": "To Gamify or not to Gamify?"
-                        },{
-                            "type": "p",
-                            "text": "This was an early discussion because the current system was not evolved enough to feel rewarding and compelling. It felt like an afterthought rather than a central part of the experience."
-                        },{
-                            "type": "p",
-                            "text": "It was decided to reduce to a minimum the gamified elements. While it would a been interesting for the app itself to be playful, it would have taken a lot of fine tuning and testing. The time, budget, and priorities were not in favor."
-                        },{
-                            "type": "p",
-                            "text": "We kept the day streak, tracked the number of interaction for each feature, and awarded a badge for each tresholds (10, 20, 50, 100)."
-                        },{
-                            "type": "img",
-                            "text": "",
-                            "href": "/assets/images/play_pain/game.png",
-                            "size": ""
-                        }
-                    ]
-                },{
-                    "section": "UI Makeover",
-                    "wordCount": 169,
-                    "background": "/assets/images/play_pain/before_after/ui_pain_a_xs.png", 
-                    "content": [
-                        {
-                            "type": "ss-tit",
-                            "text": "<span style='color: var(--clr-punch)'>!DISCLAIMER!</span>"
-                        },{
-                            "type": "p",
-                            "text": "I am aware of that most of the pictures in this section are of poor quality. I had to use third party online services to open old Adobe Xd files since I no longer have a licence. I am sorry for the inconvience and the unprofessional look."
-                        },{
-                            "type": "ss-tit",
-                            "text": "Nothing like a <i>Before & After</i>"
-                        },{
-                            "type": "p",
-                            "text": "In terms of style, the app as a I found it needed some care and attention. The changes I made were not drastic. I keep the same colours and the same concepts, but made sure the UI elements had a cohesive look and were both clear and attractive to the eye."
-                        },{
-                            "type": "ss-tit",
-                            "text": "The Main Features"
-                        },{
-                            "type": "gallery",
-                            "text": "Onboarding Feature Explanation - Before & After",
-                            "size": "60%",
-                            "wrap": "wrap",
-                            "images": [{
-                                "href": "/assets/images/play_pain/before_after/features_b.png",
-                                "caption": ""
-                            },{
-                                "href": "/assets/images/play_pain/before_after/features_a.png",
-                                "caption": ""
-                            }]
-                        },{
-                            "type": "gallery",
-                            "text": "Home Page - Before & After",
-                            "size": "30%",
-                            "wrap": "none",
-                            "images": [{
-                                "href": "/assets/images/play_pain/before_after/home_b.png",
-                                "caption": ""
-                            },{
-                                "href": "/assets/images/play_pain/before_after/home_a.png",
-                                "caption": ""
-                            }]
-                        },{
-                            "type": "gallery",
-                            "text": "TRACK - Before & After",
-                            "size": "30%",
-                            "wrap": "none",
-                            "images": [{
-                                "href": "/assets/images/play_pain/before_after/track_b.png",
-                                "caption": ""
-                            },{
-                                "href": "/assets/images/play_pain/before_after/track_a.png",
-                                "caption": ""
-                            }]
-                        },{
-                            "type": "gallery",
-                            "text": "TALK - Before & After",
-                            "size": "30%",
-                            "wrap": "none",
-                            "images": [{
-                                "href": "/assets/images/play_pain/before_after/talk_b.png",
-                                "caption": ""
-                            },{
-                                "href": "/assets/images/play_pain/before_after/talk_a.png",
-                                "caption": ""
-                            }]
-                        },{
-                            "type": "gallery",
-                            "text": "SHARE - Before & After",
-                            "size": "80%",
-                            "wrap": "wrap",
-                            "images": [{
-                                "href": "/assets/images/play_pain/before_after/share_b.png",
-                                "caption": ""
-                            },{
-                                "href": "/assets/images/play_pain/before_after/share_a.png",
-                                "caption": ""
-                            }]
-                        },{
-                            "type": "ss-tit",
-                            "text": "Icons & Placement"
-                        },{
-                            "type": "gallery",
-                            "text": "TRACK 🡢 Feelings - Before & After",
-                            "size": "30%",
-                            "wrap": "none",
-                            "images": [{
-                                "href": "/assets/images/play_pain/before_after/feels_b.png",
-                                "caption": ""
-                            },{
-                                "href": "/assets/images/play_pain/before_after/feels_a.png",
-                                "caption": ""
-                            }]
-                        },{
-                            "type": "gallery",
-                            "text": "TRACK 🡢 Pain - Before & After",
-                            "size": "30%",
-                            "wrap": "none",
-                            "images": [{
-                                "href": "/assets/images/play_pain/before_after/pain_b.png",
-                                "caption": ""
-                            },{
-                                "href": "/assets/images/play_pain/before_after/pain_a.png",
-                                "caption": ""
-                            }]
-                        },{
-                            "type": "gallery",
-                            "text": "TRACK 🡢 Pain 🡢 Sensations - Before & After",
-                            "size": "30%",
-                            "wrap": "none",
-                            "images": [{
-                                "href": "/assets/images/play_pain/before_after/sensation_b.png",
-                                "caption": ""
-                            },{
-                                "href": "/assets/images/play_pain/before_after/sensation_a.png",
-                                "caption": ""
-                            }]
-                        },{
-                            "type": "gallery",
-                            "text": "TRACK 🡢 Activities - Before & After",
-                            "size": "48%",
-                            "wrap": "none",
-                            "images": [{
-                                "href": "/assets/images/play_pain/before_after/ui_activity_b.png",
-                                "caption": ""
-                            },{
-                                "href": "/assets/images/play_pain/before_after/ui_activity_a.png",
-                                "caption": ""
-                            }]
-                        }
-                    ]
-                },{
-                    "section": "The Report's Evolution",
-                    "wordCount": 594,
-                    "background": "/assets/images/play_pain/report/report_a_1.png", 
-                    "content": [
-                        {
-                            "type": "ss-tit",
-                            "text": "What to filter?"
-                        },{
-                            "type": "p",
-                            "text": "The report feature has multiple functions:<ul><li>For medical professionals, it help to track and diagnose based on patient's data;</li><li>For the user, it could serve as a tool to check correlations between habits and symptoms. For example:<ul><li>\"When I sleep less than 6 hours, do I feel more pain?\"</li><li>\"When I play videogames, does it soften or accentuate my anxiety feelings? Does my anxiety impact my back pain?\"</li><li>\"I want to track how my period impacts my feelings and symptoms.\"</li><li>\"I want to find out what is the trigger for my medication side-effects?\"</li></ul></ul>"
-                        },{
-                            "type": "p",
-                            "text": "The question then is, how to provide all the information neccessary without overwhelming the user and how to provide a clear and concise report to doctors?"
-                        },{
-                            "type": "ss-tit",
-                            "text": "Two Versions"
-                        },{
-                            "type": "p",
-                            "text": "All accounts are categorized either as \"Patient\" or \"Care Giver\". The reports then would be different for each because their needs are different."
-                        },{
-                            "type": "ss-tit",
-                            "text": "The Report as it was"
-                        },{
-                            "type": "p",
-                            "text": "The report was initially divided into three views: daily, monthly, and yearly."
-                        },{
-                            "type": "cards",
-                            "orientation": "column",
-                            "size": "33%",
-                            "text": [{
-                                "header": "Daily View",
-                                "image": "<img src='/assets/images/play_pain/report/r.png' width='100%'>",
-                                "body": "The daily view was very concise and brief as a medical report would be."
-                            },{
-                                "header": "Monthly View",
-                                "image": "<img src='/assets/images/play_pain/report/r1.png' width='100%'><img src='/assets/images/play_pain/report/r3.png' width='100%'>",
-                                "body": "The monthly view contained stats and graphs to compare pain versus playtime, a body to show the reported pain, all the emotions selected that month and the exact numbers of entry."
-                            },{
-                                "header": "Yearly View",
-                                "image": "<img src='/assets/images/play_pain/report/r2.png' width='100%'>",
-                                "body": "The yearly showed the ratio between play and pain for each month of that year."
-                            }]
-                        },{
-                            "type": "ss-tit",
-                            "text": "Major Issues"
-                        },{
-                            "type": "ol-large",
-                            "text": [
-                                "<span>1. </span>The time span covered in the report is too long. It is unlikely a user will use this app consistently for enough years to need to compare them. The goal of the app plus its context do not require such lenghts.",
-                                "<span>2. </span>The graphics lack legends. What they refer to is unclear. It is hard for a user seeking data to make sense out of them.",  
-                                "<span>3. </span>Any colored section in the graphs are clickable. However, they are too small for precise touch motions and might expose users to frustration.",
-                                "<span>4. </span>The content in the daily view does not cover all the information inputed by the user. Why is some left out? Users should be allowed to witness their data in full in a concise, but attractive way. "
-                            ]
-                        },{
-                            "type": "ss-tit",
-                            "text": "Immidiate Actions"
-                        },{
-                            "type": "ol-large",
-                            "text": [
-                                "<span>1. </span>Ditch the yearly view and make three views: daily, weekly, and monthly.",
-                                "<span>2. </span>Design graphics with clear legends that allow users to easily compare the most relevant data.",  
-                                "<span>3. </span>Remove the clickable elements in the graphics. Use arrows and a calendar widget to navigate in between dates and months.",
-                                "<span>4. </span>Present a report that contains all the information inputed to the risk of it being crowded."
-                            ]
-                        },{
-                            "type": "ss-tit",
-                            "text": "First Attempt"
-                        },{
-                            "type": "cards",
-                            "orientation": "column",
-                            "size": "33%",
-                            "text": [{
-                                "header": "Daily View",
-                                "image": "<img src='/assets/images/play_pain/report/report_a.png' width='100%'>",
-                                "body": ""
-                            },{
-                                "header": "Weekly View",
-                                "image": "<img src='/assets/images/play_pain/report/report_a_1.png' width='100%'>",
-                                "body": "This design with pie radar charts was intended to give a better understanding of the relationship between, sleep time, play time, pain, and emotions.<br><br>While this page desperatly needs to slack on the overlaping elements and vertical text, I believe it had the potential to turn the report into a tool rather than just a written account of user data."
-                            },{
-                                "header": "Monthly View",
-                                "image": "<img src='/assets/images/play_pain/report/report_a_2.png' width='100%'>",
-                                "body": ""
-                            }]
-                        },{
-                            "type": "p",
-                            "text": "The amount of icons, font size, overlap, etc. is disconcerting. I put it all in to figure out what needed to stay and what needed some more thoughts. "
-                        },{
-                            "type": "ss-tit",
-                            "text": "Second Attemp"
-                        },{
-                            "type": "p",
-                            "text": "<i>Play the Pain</i> at this point went into a transition from mobile app to Web app. It thus afforded more space in the web version."
-                        },{
-                            "type": "img",
-                            "text": "",
-                            "href": "/assets/images/play_pain/report/report_w.png",
-                            "size": "60%"
-                        },{
-                            "type": "p",
-                            "text": "Now divided into the four main features, TRACK, TALK, SHARE, and PLAY, the report was more digestible."
-                        },{
-                            "type": "p",
-                            "text": "In its mobile form, it retained its collapsible menus for users to save on the scrolling and quickly find what they are looking for. "
-                        }
-                    ]
-                },{
-                    "section": "Lessons Learned",
-                    "wordCount": 218,
-                    "background": "/assets/images/play_pain/artboard.png", 
-                    "content": [
-                        {
-                            "type": "ss-tit",
-                            "text": "Learning by doing"
-                        },{
-                            "type": "p",
-                            "text": "Looking back, I realise that neither I or the researcher in charge had prior experience in making a mobile or Web app. Post-production, I can find areas that I will in the future address differently:"
-                        },{
-                            "type": "p",
-                            "text": "<ul><li>Budget limitations were not as transparent as I wish they had been. I was designing with a “dream big” mindset while we could have saved time and energy by focusing strategically on specific tasks and realistic solutions;</li><li>The data gathered from user testing did not include chronic pain patients or health professionals. I would have hoped for more input from relevant or potential users;</li><li>I wish I would have trusted my insight better and have been less passive. As a second year undergraduate student, I was afraid to stand my ground because I could only back myself with theory, not experience - plus the whole student/teacher dynamics.</li></ul>"
-                        },{
-                            "type": "p",
-                            "text": "There were also good things about my experience with <i>Play the Pain</i>.<br>I am grateful that: "
-                        },{
-                            "type": "p",
-                            "text": "<ul><li> I learned to communicate my design verbally, visually, and support my design decision with convincing thoughts;</li><li>This experience lead me right into user experience design and made it my career goal at the end of my degree;</li><li>It made me curious about accessibility issues in digital products and, still today, motivates me to specialize in this area.</li></ul>"
                         }
                     ]
                 }

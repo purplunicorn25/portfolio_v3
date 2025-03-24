@@ -27,6 +27,7 @@ body {
     min-height: 100vh;
     font-family: var(--ff-primary);
     font-size:var(--fs-400);
+    cursor: url('/assets/images/cursor.png'),auto;
 } #westCountry {
     /* background-color: lime; */
     position: relative; 
@@ -38,7 +39,7 @@ body {
 } #closePOP {
     display: none;
     position: absolute; 
-    bottom: 1%; 
+    top: 1%; 
     right: 2%;
     z-index: 2;
 } #westWorld {
@@ -58,6 +59,7 @@ body {
 } #eastIslands {
     gap: var(--pad-marg-xl);
     padding-block-end: var(--pad-marg-mega);
+    padding-block: var(--pad-marg-jumbo);
     padding-inline: var(--pad-marg-xl);
     background-color: hsl(240, 100%, 50%, 0) ;
     z-index: 2;
@@ -239,20 +241,19 @@ body {
     height: 30px;
     /* background-color: blue; */
 } .island {
-    /* background-color: var(--clr-accent); */
-    background-color: blue;
+    background-color: antiquewhite;
     /* color: var(--clr-accent); */
     padding: var(--pad-marg-s);
     margin-inline: 15%;
     display: flex;
     /* justify-content: space-between; */
     gap: 25%;
-    border: var(--border-w) solid var(--clr-accent);
+    border: var(--border-w) solid var(--clr-unique-accent);
 } .flow-line-top {
     /* background-color: lime; */
     width: 30%; 
     height: 100%;
-    border-right: 1px dashed var(--clr-accent);
+    border-right: 1px dashed var(--clr-unique-accent);
 } .flow-chart-header {
     /* background-color: blueviolet; */
     width: 50px;

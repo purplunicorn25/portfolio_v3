@@ -49,7 +49,7 @@ function loadJSON(file) {
 function setupHome() {
     responsive();
     $( window ).on( "resize", responsive);
-    p5setup();
+    // p5setup();
     // determine the initial size of pop containers
     // create project POPs
     for (let i = 0; i < projects.length; i++) {
@@ -75,7 +75,7 @@ function responsive() {
     if (screenWidth < MOBILE_BREAKPOINT) { // if smaller than 
         mobile = true;
         popSize(); // adjust size of pop containers
-        $('html').css("font-size", "18px"); // change the default to grow all font size (set at 16px for desktop)
+        $('html').css("font-size", "12px"); // change the default to grow all font size (set at 16px for desktop)
         console.log('mobile');
     } else { // largen then
         mobile = false;
@@ -129,6 +129,7 @@ function appendPOP(containerID, popID, dataObject, barLabel, height) {
     let coordinates = randomCoordinates(containerID); // get random x,y in specific container
     $(`#${popID}`).css({'left': `${coordinates.x}px`, 'top': `${coordinates.y}px`}); // assign x,y to current POP
     $(`#${popID}`).draggable({ containment: "#world" });
+    // $(`#${popID}`).effect( "pulsate", "fast" );
     closePOP(); // button to close all at once
 } // create pop-up for action buttons
 function managePop(buttonID, dataObject, barLabel, height, multi, index) {  
