@@ -15,7 +15,7 @@
                 "label": "Artistic Skills",
                 "subcontent": {
                     "because": "<h3>I can draw.</h3>",
-                    "detail": "<p>From technical drawings to free-hand painting, I can get around with many traditional medium. I think early sketches are an essentiel part of the design process and I like to use them to define my vision.</p><p>Need proof? <a href='drawings.html'>Take a look.</a></p>"
+                    "detail": "<p>From technical drawings to free-hand painting, I can get around with many traditional medium. I think early sketches are an essentiel part of the design process and I like to use them to define my vision.</p><p>Need proof? <a href='drawings.html' target='_blank'>Take a look.</a></p>"
                 }
             },{
                 "label": "Technical Skills",
@@ -51,7 +51,7 @@
             },{
                 "label": "Curriculum Vitae",
                 "subcontent": {
-                    "cv": "<embed src='assets/files/cv_fr.pdf' width='100%' height='700px'/>"
+                    "cv": "<embed src='assets/files/cv_fr.pdf' width='100%' height='150%'/>"
                 }
             }
         ]
@@ -75,7 +75,7 @@
         "content": {
             "title": "<span class='proj-tit'>pART</span>",
             "medium": "User Experience Design, Mobile App Prototype, Augmented Reality & Public Art",
-            "thumbnail": "assets/images/thumbnails/part.PNG",
+            "thumbnail": "assets/images/thumbnails/part.png",
             "summary": "<i>pARt</i> combines art and technology; it is a mobile application prototype that enables local artists to publish their art digitally in any public location. App users may then admire these artworks with augmented reality technologies."
         }
     },{

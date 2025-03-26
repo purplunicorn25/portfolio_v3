@@ -135,7 +135,7 @@ function appendPOP(containerID, popID, dataObject, barLabel, height) {
 function managePop(buttonID, dataObject, barLabel, height, multi, index) {  
     let popID = buttonID + 'POP'; // create the ID of the future pop-up
     let toggle = false; // create toggle to manage display vs hidden
-    $(`#${buttonID}`).on("click", () => { // on click
+    $(`#${buttonID}`).click(() => { // on click
         if (!toggle) { // if hidden
             if (multi) { // if multiple pop container
                 for (let i in actions[index].content) { 
@@ -156,7 +156,7 @@ function managePop(buttonID, dataObject, barLabel, height, multi, index) {
                 appendPOP('eastland', popID, dataObject, barLabel, height); // append pop
             }
         } // exit button hides 
-        $('.button-info-hide').on("click", () => { // remove the pop-up with x button
+        $('.button-info-hide').click(() => { // remove the pop-up with x button
             if (multi) { // if multiple pop container
                 for (let i in actions[index].content) { 
                     $(`#${popID+i}`).remove(); // remove pops
@@ -173,13 +173,13 @@ function managePop(buttonID, dataObject, barLabel, height, multi, index) {
 } // button to close all pop-up at once
 function closePOP() {
     $('#closePOP').show();
-    $('#closePOP').on('click', () => {
+    $('#closePOP').click(() => {
         $('.container-pop').remove(); 
         $('#closePOP').hide()
     });
 } // if click on pop-up bring forward
 function overlap() {
-    $('.container-pop').on("click", function() {
+    $('.container-pop').click(function() {
         $(this).appendTo('#eastland');
     });
 } // get random coordinates inside a container
