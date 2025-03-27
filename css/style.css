@@ -27,9 +27,8 @@ body {
     min-height: 100vh;
     font-family: var(--ff-primary);
     font-size:var(--fs-400);
-    cursor: url('/assets/images/cursor.png'),auto;
+    /* cursor: url('/assets/images/cursor.png'),auto; */
 } #westCountry {
-    /* background-color: lime; */
     position: relative; 
     width: 100%;
     height: 100%;
@@ -42,8 +41,8 @@ body {
     top: 1%; 
     right: 2%;
     z-index: 2;
+    background-color: var(--clr-main);
 } #westWorld {
-    /* margin-bottom: 5%; */
     padding: var(--pad-marg-xl);
     overflow-y: auto;
     overflow-x: hidden; 
@@ -72,34 +71,63 @@ body {
     z-index: 1;
 } #coll-down {
     text-align: right;
+} #tableau {
+    background-color: var(--clr-main);
+    display: block; 
+    width: 100%; 
+    height:100%; 
+    position: absolute;
+    z-index: 3;
+} #pins {
+    position: absolute;
+    width: 96%;
+    height: fit-content;
+    margin-block: var(--pad-marg-xl);
+    left: 2%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+} #westProvince > p {
+    padding-block: var(--pad-marg-s)
 }
 /* --------------- */
 /* Utility classes */
 /* --------------- */
+/* unique value classes*/
+.cards {gap: var(--pad-marg-l)} 
+.cards > div > * {margin-block: var(--pad-marg-m)}
+.card-label {border: var(--border-w) solid var(--clr-main)}
+.coll {font-size: var(--fs-300)}
+.coll:hover {text-decoration: underline}
+.cta:hover {background-color: var(--clr-contrast)}
+.eyebrow {font-size: var(--fs-400)}
 .flex {display: flex}
 .flex-column {display: flex; flex-direction: column;} 
-
-
-.underless {text-decoration: none} 
-.scrollable {overflow-y: scroll; overflow-x: hidden;} 
-.ref {font-size: var(--fs-200)} 
-.eyebrow {font-size: var(--fs-400)}
-
-.cards {gap: var(--pad-marg-l)} 
-.p-abs-h-100 {position: absolute; height: 100vh;} 
-.text-box {max-height: 250px; overflow-y: scroll;}
-
+.flow-chart { flex-direction: column}
+.flow-line {height: 30px} 
+.gallery-item {position: relative}
+.gallery-label {font-size: var(--fs-500)}
+.image, .image-gal {gap: var(--pad-marg-s)}
+.navButton {text-decoration: underline}
 .nav-list-button:hover {text-decoration: overline}
-.cta:hover {background-color: var(--clr-contrast)}
-.coll {
-    font-size: var(--fs-300);
-} .coll:hover {
-    /* background-color: var(--clr-unique-accent);
-    color: var(--clr-main); */
-    text-decoration: underline;
-}
-
-.container-pop {
+.ol-large > p > span {font-size: var(--fs-700)}
+.p-abs-h-100 {position: absolute; height: 100vh;} 
+.pin {margin-block: var(--pad-marg-m)} 
+.ref {font-size: var(--fs-200)} 
+.scrollable {overflow-y: scroll; overflow-x: hidden;} 
+.text-box {max-height: 250px; overflow-y: scroll;}
+.underless {text-decoration: none}
+.light-link, .light-link:visited {color: var(--clr-secondary)}
+.link, link:visited{ color: var(--clr-link)} 
+.link:hover, link:visited:hover  { color: var(--clr-link-hover)} 
+ a, a:visited {color: var(--clr-link)}
+ a:hover, a:visited:hover { color: var(--clr-link-hover)} 
+/* multi-values classes */
+  .col {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+} .container-pop {
     position: absolute;
     border: var(--border-w) solid var(--clr-accent);
     display: flex;
@@ -108,17 +136,13 @@ body {
     max-width: 80%;
     z-index: 1;
     background-color: var(--clr-main);
-    /* box-shadow: 10px 10px grey; */
-    /* color: LightGreen; */
 } .ss-ss-tit {
     border-style: solid;
     width: fit-content;
     border-width: 0px  0px 0px var(--border-w-bold);
     padding-inline: var(--pad-marg-s);
     font-weight: bold;
-}
-
-.bar {
+} .bar {
     justify-content: space-between;
     align-items: center;
     padding-left: var(--header-common-margin);
@@ -131,7 +155,6 @@ body {
     padding-block: var(--pad-marg-s); 
     background-color: var(--clr-accent);
     color: var(--clr-main);
-    /* border: var(--border-w) solid lime; */
 } .nav-list-button, .list-button {
     text-align: left;
     margin-block: var(--header-common-margin);
@@ -141,7 +164,6 @@ body {
 } .list-button:hover {
     background-color: var(--clr-contrast);
     color: var(--clr-main);
-    /* text-decoration: overline; */
 } .infoContent {
     overflow-y: scroll; 
     padding: var(--pad-marg-xl); 
@@ -186,95 +208,50 @@ body {
     justify-items: stretch;
     row-gap: var(--pad-marg-s);
 } .grid > div {
-    /* border-inline-start : 1px solid var(--clr-main); */
     border-block-end: 1px solid var(--clr-main);
-    /* background-color: var(--clr-unique-accent); */
     color: var(--clr-main);
     padding: var(--pad-marg-s);
 } .grid > div > span {
     font-weight: bold;
     font-size: var(--fs-500);
-    /* background-color: var(--clr-main); */
 } .adapt {
     flex-direction: column;
     width: 100%;
     background-color: var(--clr-secondary-decline-light);
-} 
-.caption, .caption-gal {
+} .caption, .caption-gal {
     background-color: var(--clr-unique-accent);
     color: var(--clr-main);   
     margin: 0; 
     padding-inline-start: var(--pad-marg-l);
     text-transform: capitalize;
-    /* text-align: center; */
     width: fit-content;
-} 
-.cards > div > * {
-    margin-block: var(--pad-marg-m);
-} .card-label {
-    border: var(--border-w) solid var(--clr-main);
-} #westProvince > p {
-    padding-block: var(--pad-marg-s);
 } .longView > *{
     margin-block: var(--margin-p, 1.5rem);
     margin-inline: var(--section-marg-inline);
-} a, a:visited {
-    color: var(--clr-link)
-} a:hover, a:visited:hover {
-    color: var(--clr-link-hover)
-} p {
+}  p {
     margin-block: var(--margin-p, 0);
     font-size: var(--fs-400);
-} .navButton {
-    text-decoration: underline;
-    /* background-color: var(--clr-secondary); */
-    /* color: var(--clr-main); */
 } .navButton:hover {
     background-color: var(--clr-unique-accent);
     color: var(--clr-main);
-} .ol-large > p > span {
-    /* font-weight: bold; */
-    font-size: var(--fs-700)
-} .flow-chart {
-    flex-direction: column;
-} .flow-line {
-    height: 30px;
-    /* background-color: blue; */
 } .island {
     background-color: antiquewhite;
-    /* color: var(--clr-accent); */
     padding: var(--pad-marg-s);
     margin-inline: 15%;
     display: flex;
-    /* justify-content: space-between; */
     gap: 25%;
     border: var(--border-w) solid var(--clr-unique-accent);
 } .flow-line-top {
-    /* background-color: lime; */
     width: 30%; 
     height: 100%;
     border-right: 1px dashed var(--clr-unique-accent);
 } .flow-chart-header {
-    /* background-color: blueviolet; */
     width: 50px;
     font-weight: bold;
-    /* color: var(--clr-secondary); */
     font-size: var(--fs-500);
-} 
-.accentTXT {
-    color: var(--clr-secondary);
-    background-color: var(--clr-accent);
 } .gallery {
     display: flex;
-    /* flex-wrap: wrap; */
     gap: var(--pad-marg-s);
-} .gallery-label {
-    font-size: var(--fs-500);
-    /* width:fit-content;
-    color: var(--clr-secondary);
-    background-color: var(--clr-main); */
-} .gallery-item {
-    position: relative;
 } .large-quote {
     font-weight: bold;
     font-size: var(--fs-500);
@@ -284,30 +261,15 @@ body {
 } .proj-tit {
     font-family: var(--ff-decorative);
     font-size: var(--fs-800);
-} .image, .image-gal {
-    gap: var(--pad-marg-s);
 } 
-.light-link, .light-link:visited {color: var(--clr-secondary)}
-.link, link:visited{ color: var(--clr-link)} 
-.link:hover, link:visited:hover  { color: var(--clr-link-hover)} 
 /* ------------- */
 /* Other classes */
 /* ------------- */
 .noScrollBar::-webkit-scrollbar {height: 0px; width: 0px;} 
-::-webkit-scrollbar {
-    height: 3px;
-    width: 3px;
-} /* Track */
-::-webkit-scrollbar-track {
-    background: var(--clr-main);
-} /* Handle */
-::-webkit-scrollbar-thumb {
-    background: var(--clr-secondary);   
-    width: 13px;
-} /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--clr-unique-accent);
-}
+::-webkit-scrollbar {height: 3px; width: 3px;}
+::-webkit-scrollbar-track {background: var(--clr-scrollbar-track)}  /* Track */
+::-webkit-scrollbar-thumb {background: var(--clr-scrollbar-thumb); width: 13px;} /* Handle */
+::-webkit-scrollbar-thumb:hover {background: var(--clr-scrollbar-hover)} /* Handle on hover */
 /* remove animation for people who turned them off */
 @media (prefers-reduced-motion: reduce) {
     *,

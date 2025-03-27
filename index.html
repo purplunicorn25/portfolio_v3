@@ -27,7 +27,7 @@
   <script src="js/p5.js"></script>
 </head>
 <body>
-<div id="world" class="p-abs-h-100 bg-main text-accent" style="width: 100%;">
+<div id="world" class="p-abs-h-100 bg-main text-accent" style="width: 100%; --clr-scrollbar-track: var(--clr-main); --clr-scrollbar-thumb: var(--clr-accent); --clr-scrollbar-hover: var(--clr-contrast)">
   <div id="westsea" class="p-abs-h-100">
     <div id="westland" class="p-abs-h-100 flex-column">
       <nav id="westCountry" class="flex-column">
@@ -52,7 +52,6 @@
     </div>
   </div>
   <div id="eastsea" class="p-abs-h-100">
-    <!-- <canvas id="hurricane" class="p-abs-h-100"></canvas> -->
     <div id="eastland" class="p-abs-h-100"></div>
     <button id="closePOP" class="navButton">close all</button>
   </div>

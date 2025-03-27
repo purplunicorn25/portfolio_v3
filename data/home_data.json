@@ -15,7 +15,7 @@
                 "label": "Artistic Skills",
                 "subcontent": {
                     "because": "<h3>I can draw.</h3>",
-                    "detail": "<p>From technical drawings to free-hand painting, I can get around with many traditional medium. I think early sketches are an essentiel part of the design process and I like to use them to define my vision.</p><p>Need proof? <a href='drawings.html' target='_blank'>Take a look.</a></p>"
+                    "detail": "<p>From technical drawings to free-hand painting, I can get around with many traditional medium. I think early sketches are an essentiel part of the design process and I like to use them to define my vision.</p><div id='drawing'>Need proof? <span class='link'>Take a look.</span></div>"
                 }
             },{
                 "label": "Technical Skills",
@@ -51,7 +51,7 @@
             },{
                 "label": "Curriculum Vitae",
                 "subcontent": {
-                    "cv": "<embed src='assets/files/cv_fr.pdf' width='100%' height='150%'/>"
+                    "cv": "<embed src='assets/files/CV_FR_EN.pdf' width='100%' height='500px'/>"
                 }
             }
         ]
@@ -61,7 +61,7 @@
         "multi": false,
         "content": {
             "title": "<h3>Artist Statement</h3>",
-            "first": "<p>I am a fashion designer.<br>I am an art historian.<br>I am a programmer.</p><p>But I am also neither.</p><p>I despise the waste and capitalist hierarchy of the fashion industry.<br>I despise the colonial past and present of museal institutions.<br>I despise my dependency for digital tools and entertainment.</p>",
+            "first": "<p>I am a fashion designer.<br>I am an art historian.<br>I am a programmer.</p><p>But I am also neither.</p><p>I deplore the waste and capitalist hierarchy of the fashion industry.<br>I deplore the colonial past and present of museal institutions.<br>I deplore my dependency for digital tools and entertainment.</p>",
             "second": "<p>I like to think of where these disciplines intersect.</p><p>I ask these questions: </p><p>Can the history of clothing inform largely on the spirit of an era?<br>Can digital artforms benefit museums in their display of historical clothing?<br>Can digital video games be included in traditional exhibition spaces and art education?<br>Can I answer these questions?</p>",
             "third": "<p>I am a designer.</p><p>I am someone who likes problems: thinking, evolving, solving.<br>I am someone who prefers written words to images and who thrives with logic gates.<br>I am inspired by human beings, their beauty, their flaws.<br>I am a firm believer in beautiful things as necessary, never dismissible.<br></p><p>I am, also, an anaphora lover.</p>"
         }

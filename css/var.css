@@ -11,13 +11,13 @@ html {
     --clr-punch: #f7323d;
     --clr-focus: #f9e853;
     --clr-highlight: #ffa430;
-    /* --clr-highlight: #ff7e7e; */
     --clr-cold: rgb(106, 218, 255);
     --clr-unique-accent: var(--clr-accent);
     --clr-link: var(--clr-contrast);
     --clr-link-hover: var(--clr-punch); 
-    /* great color */
-    /* --clr-link: rgb(255, 0, 212); */
+    --clr-scrollbar-track: var(--clr-main) ; 
+    --clr-scrollbar-thumb: var(--clr-secondary);
+    --clr-scrollbar-hover: var(--clr-unique-accent);
     /* fonts sizes */
     --fs-900: 5.25rem;
     --fs-800: 3.5rem;   

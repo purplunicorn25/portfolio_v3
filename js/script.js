@@ -1,12 +1,4 @@
 "use strict"
-// TO-DO
-// 1. add visual cue that pop-up is visible with button style
-// 2. for multi pop up, make the x button individual (major issue) !!!!
-// 3. Better thumbnail for play the pain
-// 4. Divide artistic statement in 3 visual entities
-// 5. In why hire, I can animate is not the right word...
-// add interaction to title a boutet portfolio
-
 // CONSTANTS
 let CHECK_INTERVAL = 1;
 let MOBILE_BREAKPOINT = 900;
@@ -16,6 +8,9 @@ let WEST_PROPORTION = '40%';
 let EAST_PROPORTION = '60%';
 let POP_NARROW = '50%';
 let POP_WIDE = '80%';
+// DRAWINGS
+let IMG_QTY = 19; // Check in file for the number of images
+let NUM_COL = 3;
 // VARIABLES
 let jsonLoaded = false; 
 let xbuttonID = 0; 
@@ -24,6 +19,7 @@ let mobile = false;
 let actions = []; 
 let projects = []; 
 let projectPages = ['test','test2'];
+let drawings = [];
 // PROGRAM INITIATE
 $(document).ready(preloadHome);
 // Download JSON before calling setup
@@ -49,15 +45,13 @@ function loadJSON(file) {
 function setupHome() {
     responsive();
     $( window ).on( "resize", responsive);
-    // p5setup();
-    // determine the initial size of pop containers
+    setDrawings(); 
     // create project POPs
     for (let i = 0; i < projects.length; i++) {
         let project = new PopHTML(projects[i]); // gather project content data
         let contentHTML = project.composeHTML(); // define HTML format for data in constructor
         managePop(projects[i].id, contentHTML, projects[i].barLabel,'auto', false, i);
-    }
-    // create action POPs
+    } // create action POPs
     for (let i = 0; i < actions.length; i++) {
         managePop(actions[i].id, actions[i].content, actions[i].barLabel, actions[i].height, actions[i].multi, i);
     }
@@ -66,7 +60,7 @@ function responsive() {
     // desktop = eastsea 1/2 + westsea 1/2 --> eastworld 1/2 of eastsea + westworld 1/2 of westsea (quarters form)
     // mobile = eastsea 1/3 + westsea 2/3 --> eastworld 100% of eastsea + westworld 75% of westsea (thirds form)
     let screenWidth = $(window).width();
-    console.log(screenWidth)
+    // console.log(screenWidth)
     $('#eastsea').css("width", EAST_PROPORTION);
     $('#eastsea').css("left", WEST_PROPORTION);
     $('#eastland').css("width", "100%");
@@ -155,20 +149,10 @@ function managePop(buttonID, dataObject, barLabel, height, multi, index) {
                 $(`#${popID}`).remove(); // remove pop
                 appendPOP('eastland', popID, dataObject, barLabel, height); // append pop
             }
-        } // exit button hides 
-        $('.button-info-hide').click(() => { // remove the pop-up with x button
-            if (multi) { // if multiple pop container
-                for (let i in actions[index].content) { 
-                    $(`#${popID+i}`).remove(); // remove pops
-                }
-            } else { // if single pop container
-                $(`#${popID}`).remove(); // remove pop
-            }
-            if ($('#eastland').children().length === 0) { // if no pop, hide the close all button
-                $('#closePOP').hide()
-            }
-        });
-        overlap(); 
+        }
+        exitPOP(); // manage the closing of pop containers
+        overlap(); // on click bring the clicked element in front
+        drawGall(); // display the drawing gallery
     });
 } // button to close all pop-up at once
 function closePOP() {
@@ -200,4 +184,50 @@ function specs(id) {
     let elem = document.getElementById(id);
     let rect = elem.getBoundingClientRect();
     return rect; 
+} // store images in array for drawing gallery
+function setDrawings() {
+    let href = "/assets/images/drawings/"
+        for (let i = 0; i < IMG_QTY; i++) {
+            let tempREF = href + (i+1) + '.jpg';
+            drawings.push(tempREF);
+        }
+} // display the complex unique pop of drawing gallery
+function drawGall() {
+    let introString = 'This is a simple pin board of academic or personal hand drawings.<br><br>It includes a diverse range of both mediums and subjects.';
+    $('#drawing').on('click', function () {
+        $('#world').append(`
+            <div id="tableau" class="scrollable">
+                <div class='bar flex bg-accent text-main capitalize'>
+                    <div>Pop-up Art Gallery</div>
+                    <button id="x${xbuttonID}" class="button-info-hide fs-500">✕</button></div>
+                <div id="pins"> 
+                    <div id="col0" class="col"><div class='draw-lbl' style="color: var(--clr-accent)">${introString}</div> </div> <div id="col1" class="col">
+                    </div> <div id="col2" class="col"></div> 
+                </div> 
+            </div>`);   
+        let counter = 0;
+        let treshold = Math.round(IMG_QTY/NUM_COL);
+        for (let i = 0; i < drawings.length; i++) {
+            if (i < treshold-1) {
+                $('#col0').append(`<div class='pin'><img src='${drawings[i]}'><div>`);
+            } else if (i < treshold*2) {
+                $('#col2').append(`<div class='pin'><img src='${drawings[i]}'><div>`);
+            } else {
+                $('#col1').append(`<div class='pin'><img src='${drawings[i]}'><div>`);
+            }
+            counter ++;
+        }
+        exitPOP();
+    })
+    
+} // exit button hides 
+function exitPOP() {
+    $('.button-info-hide').click(function() { // remove the pop-up with x button
+        let xID = $(this).attr('id');
+        let parent = $(`#${xID}`).parents().get(1).id;
+        $(`#${parent}`).remove();
+        if ($('#world').find('.container-pop').length === 0) {
+            $('#closePOP').hide()
+        }
+    });
 }
